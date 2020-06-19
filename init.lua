@@ -25,8 +25,12 @@ function ui.main_window:on_destroy()
   Gtk.main_quit()
 end
 
-ui.main_window:set_auto_startup_notification(false)
-if ('select name from company') then
+function ui.menu_about_item:on_button_press_event()
+	ui.about_window:run()
+	ui.about_window:hide()
+end
+
+if ('Lua_Player') then
 	require('components.volume')
 end
 
