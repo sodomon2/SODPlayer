@@ -251,23 +251,10 @@
                 <property name="vexpand">False</property>
                 <property name="orientation">vertical</property>
                 <child>
-                  <object class="GtkLabel" id="winInfoViewText">
-                    <property name="visible">True</property>
-                    <property name="can_focus">False</property>
-                    <attributes>
-                      <attribute name="weight" value="bold"/>
-                    </attributes>
-                  </object>
-                  <packing>
-                    <property name="expand">False</property>
-                    <property name="fill">True</property>
-                    <property name="position">0</property>
-                  </packing>
-                </child>
-                <child>
                   <object class="GtkBox">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
+                    <property name="margin_top">5</property>
                     <property name="spacing">10</property>
                     <child>
                       <object class="GtkLabel" id="info_current_time">
