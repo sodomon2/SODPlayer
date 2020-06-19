@@ -39,7 +39,7 @@
 
 */ </property>
     <property name="authors">Díaz Urbaneja Víctor Diego Alejandro(Sodomon) &lt;sodomon2@gmail.com&gt;</property>
-    <property name="logo_icon_name">media-playback-start</property>
+    <property name="logo">player.svg</property>
     <child type="titlebar">
       <placeholder/>
     </child>
@@ -73,6 +73,7 @@
   <object class="GtkWindow" id="main_window">
     <property name="can_focus">False</property>
     <property name="window_position">center</property>
+    <property name="icon">player.svg</property>
     <property name="gravity">center</property>
     <child type="titlebar">
       <object class="GtkHeaderBar">
@@ -169,7 +170,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkDrawingArea">
+          <object class="GtkDrawingArea" id="video">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
           </object>
@@ -269,7 +270,7 @@
                     <property name="can_focus">False</property>
                     <property name="spacing">10</property>
                     <child>
-                      <object class="GtkLabel" id="winInfoViewCurrentTime">
+                      <object class="GtkLabel" id="info_current_time">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="label" translatable="yes">0:00</property>
