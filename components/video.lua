@@ -6,6 +6,10 @@
  @date      19.06.2020 15:58:49 -04
 --]]  
 
+pipeline = Gst.Pipeline.new('pipeline')
+play     = Gst.ElementFactory.make('playbin', 'play')
+vsink    = Gst.ElementFactory.make('xvimagesink', 'sink')
+
 media_name = ui.load_media:get_filename()
 
 local function bus_callback(bus, message)

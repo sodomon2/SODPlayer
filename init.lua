@@ -22,10 +22,6 @@ builder   = Gtk.Builder()
 assert(builder:add_from_file('vistas/player.ui'))
 ui = builder.objects
 
-pipeline = Gst.Pipeline.new('pipeline')
-play     = Gst.ElementFactory.make('playbin', 'play')
-vsink    = Gst.ElementFactory.make('xvimagesink', 'sink')
-
 function ui.main_window:on_destroy()
   Gtk.main_quit()
 end
