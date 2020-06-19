@@ -39,7 +39,7 @@
 
 */ </property>
     <property name="authors">Díaz Urbaneja Víctor Diego Alejandro(Sodomon) &lt;sodomon2@gmail.com&gt;</property>
-    <property name="logo">player.svg</property>
+    <property name="logo">images/player.svg</property>
     <child type="titlebar">
       <placeholder/>
     </child>
@@ -73,7 +73,7 @@
   <object class="GtkWindow" id="main_window">
     <property name="can_focus">False</property>
     <property name="window_position">center</property>
-    <property name="icon">player.svg</property>
+    <property name="icon">images/player.svg</property>
     <property name="gravity">center</property>
     <child type="titlebar">
       <object class="GtkHeaderBar">
