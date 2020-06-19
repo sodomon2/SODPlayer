@@ -21,6 +21,8 @@ builder   = Gtk.Builder()
 assert(builder:add_from_file('vistas/player.ui'))
 ui = builder.objects
 
+play = Gst.ElementFactory.make('playbin', 'play')
+
 function ui.main_window:on_destroy()
   Gtk.main_quit()
 end
@@ -32,6 +34,7 @@ end
 
 if ('Lua_Player') then
 	require('components.volume')
+	require('components.video')
 end
 
 ui.main_window:show_all()
