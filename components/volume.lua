@@ -12,7 +12,7 @@ end
 
 function ui.volume_control:on_value_changed()
 	ui.volume_control:set_range(0, 100 )
-	local value = (math.floor(ui.volume_control:get_value())/200)
+	local value = (math.floor(ui.volume_control:get_value())/100)
 	print( value )
 	play.volume = value
 end
