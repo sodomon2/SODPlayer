@@ -286,7 +286,7 @@
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkLabel" id="info_fullt_ime">
+                      <object class="GtkLabel" id="info_full_time">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="label" translatable="yes">0:00</property>
