@@ -19,12 +19,10 @@ local function bus_callback(bus, message)
 	return true
 end
 
---media_name = ui.load_media:get_filename()
+media_name = ui.load_media:get_filename()
 
---play.uri = 'file://' .. media_name 
-play.uri = 'file:///home/diego/Videos/1.mp4'
---play.bus:add_watch(GLib.PRIORITY_DEFAULT, bus_callback)
-
+play.uri = 'file://' .. media_name 
+--play.uri = 'file:///home/diego/Videos/1.mp4'
 pipeline:add_many(play)
 pipeline.bus:add_watch(GLib.PRIORITY_DEFAULT, bus_callback)
 
