@@ -81,7 +81,7 @@
         <property name="title" translatable="yes">LuaPlayer</property>
         <property name="show_close_button">True</property>
         <child>
-          <object class="GtkFileChooserButton" id="load_file">
+          <object class="GtkFileChooserButton" id="load_media">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="margin_top">5</property>
@@ -285,7 +285,9 @@
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="adjustment">media_player_control</property>
+                        <property name="restrict_to_fill_level">False</property>
                         <property name="fill_level">100</property>
+                        <property name="round_digits">0</property>
                         <property name="digits">0</property>
                         <property name="draw_value">False</property>
                       </object>
