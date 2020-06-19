@@ -6,8 +6,9 @@
  @date      19.06.2020 15:58:49 -04
 --]]  
 
-local function bus_callback(bus, message)
+media_name = ui.load_media:get_filename()
 
+local function bus_callback(bus, message)
 	if message.type.ERROR then
 		print('Error:', message:parse_error().message)
 		pipeline.state = 'READY'
@@ -19,10 +20,7 @@ local function bus_callback(bus, message)
 	return true
 end
 
-media_name = ui.load_media:get_filename()
-
 play.uri = 'file://' .. media_name 
---play.uri = 'file:///home/diego/Videos/1.mp4'
 pipeline:add_many(play)
 pipeline.bus:add_watch(GLib.PRIORITY_DEFAULT, bus_callback)
 
@@ -56,5 +54,10 @@ function ui.media_slider:on_value_changed(id)
 			value * Gst.SECOND
 		)
 	end
+end
+
+function ui.video:on_realize()
+   print(self:get_xid())
+   vsink:set_window_handle(ui.main_window:get_xid())
 end
 
