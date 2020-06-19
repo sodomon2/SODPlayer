@@ -11,6 +11,7 @@
 lgi       = require 'lgi'             -- La libreria que me permitira usar GTK
 GObject   = lgi.GObject               -- Parte de lgi
 GLib      = lgi.GLib                  -- para el treeview
+Gdk       = lgi.Gdk
 Gtk       = lgi.require('Gtk', '3.0') -- El objeto GTK
 Gst       = lgi.require("Gst", "1.0")
 
@@ -21,7 +22,12 @@ builder   = Gtk.Builder()
 assert(builder:add_from_file('vistas/player.ui'))
 ui = builder.objects
 
-play = Gst.ElementFactory.make('playbin', 'play')
+
+pipeline = Gst.Pipeline.new('pipeline')
+play     = Gst.ElementFactory.make('playbin', 'play')
+vsink    = Gst.ElementFactory.make('xvimagesink', 'sink')
+vsink.force_aspect_ratio = true
+
 
 function ui.main_window:on_destroy()
   Gtk.main_quit()
