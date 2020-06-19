@@ -15,8 +15,8 @@ Gtk       = lgi.require('Gtk', '3.0') -- El objeto GTK
 Gst       = lgi.require("Gst", "1.0")
 
 print(Gst._version)
-local assert    = lgi.assert
-local builder   = Gtk.Builder()
+assert    = lgi.assert
+builder   = Gtk.Builder()
 
 assert(builder:add_from_file('vistas/player.ui'))
 ui = builder.objects
