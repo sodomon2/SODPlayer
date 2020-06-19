@@ -265,7 +265,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkBox" id="winInfoViewMediaCtrlBox">
+                  <object class="GtkBox">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="spacing">10</property>
@@ -299,7 +299,7 @@
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkLabel" id="winInfoViewFullTime">
+                      <object class="GtkLabel" id="info_fullt_ime">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="label" translatable="yes">0:00</property>
@@ -383,13 +383,13 @@
     <property name="relative_to">btn_volume</property>
     <property name="position">bottom</property>
     <child>
-      <object class="GtkBox" id="menuBox">
+      <object class="GtkBox">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="orientation">vertical</property>
         <property name="spacing">4</property>
         <child>
-          <object class="GtkLabel" id="menuVolLabel">
+          <object class="GtkLabel">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="label" translatable="yes">Volumen</property>
