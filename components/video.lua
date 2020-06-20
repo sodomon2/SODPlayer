@@ -46,8 +46,12 @@ function ui.btn_play:on_clicked()
 	end)
 	pipeline.state = 'PLAYING'
 	main_loop:run()
-	pipeline.state = 'NULL'
+	pipeline.state = 'READY'
 end
+
+function ui.btn_stop:on_clicked()
+  pipeline.state = 'NULL'
+end  
 
 function ui.media_slider:on_value_changed(id)
 	if btn_play_trigger then
