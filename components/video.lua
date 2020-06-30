@@ -6,9 +6,10 @@
  @date      19.06.2020 15:58:49 -04
 --]]  
 
-pipeline = Gst.Pipeline.new('pipeline')
-play     = Gst.ElementFactory.make('playbin', 'play')
-vsink    = Gst.ElementFactory.make('xvimagesink', 'sink')
+pipeline  = Gst.Pipeline.new('pipeline')
+play      = Gst.ElementFactory.make('playbin', 'play')
+vsink     = Gst.ElementFactory.make('xvimagesink', 'sink')
+main_loop = GLib.MainLoop()
 
 local function bus_callback(bus, message)
 	if message.type.ERROR then
