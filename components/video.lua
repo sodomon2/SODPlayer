@@ -10,8 +10,6 @@ pipeline = Gst.Pipeline.new('pipeline')
 play     = Gst.ElementFactory.make('playbin', 'play')
 vsink    = Gst.ElementFactory.make('xvimagesink', 'sink')
 
-media_name = ui.load_media:get_filename()
-
 local function bus_callback(bus, message)
 	if message.type.ERROR then
 		print('Error:', message:parse_error().message)
@@ -24,12 +22,10 @@ local function bus_callback(bus, message)
 	return true
 end
 
-play.uri = 'file://' .. media_name 
-pipeline:add_many(play)
-pipeline.bus:add_watch(GLib.PRIORITY_DEFAULT, bus_callback)
-
 local btn_play_trigger = true
 function ui.btn_play:on_clicked()
+	media_name = ui.load_media:get_filename()
+	play.uri = 'file://' .. media_name 
 
 	GLib.timeout_add_seconds(GLib.PRIORITY_DEFAULT, 1,function()
 		local duration = pipeline:query_duration(Gst.Format.TIME)
@@ -48,6 +44,9 @@ function ui.btn_play:on_clicked()
 	main_loop:run()
 	pipeline.state = 'READY'
 end
+
+pipeline:add_many(play)
+pipeline.bus:add_watch(GLib.PRIORITY_DEFAULT, bus_callback)
 
 function ui.btn_stop:on_clicked()
   pipeline.state = 'NULL'
