@@ -35,6 +35,10 @@ function ui.main_window:on_destroy()
     quit()
 end
 
+function ui.menu_archive_item_quit:on_button_press_event()
+    quit()
+end
+
 function ui.menu_about_item:on_button_press_event()
 	ui.about_window:run()
 	ui.about_window:hide()
