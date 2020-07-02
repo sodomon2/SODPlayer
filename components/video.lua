@@ -61,6 +61,7 @@ function ui.btn_stop:on_clicked()
   pipeline.state = 'NULL'
   main_loop:quit()
   ui.media_slider:set_value(0)
+  ui.img_media_state.icon_name = 'media-playback-start'
 end  
 
 function ui.media_slider:on_value_changed(id)
