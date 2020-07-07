@@ -29,7 +29,7 @@ local btn_play_trigger = true
 function ui.btn_play:on_clicked()
 	media_name = ui.load_media:get_filename()
 	play.uri = 'file://' .. media_name
-  ui.img_media_state.icon_name = 'media-playback-pause'
+	ui.img_media_state.icon_name = 'media-playback-pause'
 
 	GLib.timeout_add_seconds(GLib.PRIORITY_DEFAULT, 1,function()
 		local duration = pipeline:query_duration(Gst.Format.TIME)
