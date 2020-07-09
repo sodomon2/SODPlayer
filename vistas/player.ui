@@ -235,7 +235,7 @@
                   <object class="GtkImage">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="icon_name">media-skip-backward</property>
+                    <property name="pixbuf">images/control/media-seek-backward.svg</property>
                   </object>
                 </child>
               </object>
@@ -251,7 +251,7 @@
                   <object class="GtkImage" id="img_media_state">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="icon_name">media-playback-start</property>
+                    <property name="pixbuf">images/control/media-playback-start.svg</property>
                   </object>
                 </child>
               </object>
@@ -270,7 +270,7 @@
                   <object class="GtkImage">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="icon_name">media-playback-stop</property>
+                    <property name="pixbuf">images/control/media-playback-stop.svg</property>
                   </object>
                 </child>
               </object>
@@ -360,7 +360,7 @@
                   <object class="GtkImage">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="icon_name">media-skip-forward</property>
+                    <property name="pixbuf">images/control/media-seek-forward.svg</property>
                   </object>
                 </child>
               </object>
@@ -378,7 +378,7 @@
                   <object class="GtkImage">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="icon_name">audio-volume-high</property>
+                    <property name="pixbuf">images/control/audio-volume-high.svg</property>
                   </object>
                 </child>
               </object>
