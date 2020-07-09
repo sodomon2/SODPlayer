@@ -10,13 +10,20 @@ pipeline    = Gst.Pipeline.new('pipeline')
 play        = Gst.ElementFactory.make('playbin', 'play')
 main_loop   = GLib.MainLoop()
 
+function stop_media()
+  pipeline.state = 'NULL'
+  main_loop:quit()
+  ui.media_slider:set_value(0)
+  ui.img_media_state.icon_name = 'media-playback-start'
+end
+
 local function bus_callback(bus, message)
 	if message.type.ERROR then
 		print('Error:', message:parse_error().message)
 		pipeline.state = 'READY'
 	elseif message.type.EOS then
 		print 'end of stream'
-		pipeline.state = 'READY'
+		stop_media()
     elseif message.type.STATE_CHANGED then
       local old, new, pending = message:parse_state_changed()
       print(string.format('state changed: %s->%s:%s', old, new, pending))
@@ -54,10 +61,7 @@ pipeline:add_many(play)
 pipeline.bus:add_watch(GLib.PRIORITY_DEFAULT, bus_callback)
 
 function ui.btn_stop:on_clicked()
-  pipeline.state = 'NULL'
-  main_loop:quit()
-  ui.media_slider:set_value(0)
-  ui.img_media_state.icon_name = 'media-playback-start'
+  stop_media()
 end
 
 function ui.media_slider:on_value_changed(id)
