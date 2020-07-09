@@ -235,7 +235,7 @@
                   <object class="GtkImage">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="pixbuf">images/control/media-seek-backward.svg</property>
+                    <property name="pixbuf">images/control/media-skip-backward.svg</property>
                   </object>
                 </child>
               </object>
@@ -360,7 +360,7 @@
                   <object class="GtkImage">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="pixbuf">images/control/media-seek-forward.svg</property>
+                    <property name="pixbuf">images/control/media-skip-forward.svg</property>
                   </object>
                 </child>
               </object>
