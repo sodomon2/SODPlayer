@@ -32,9 +32,17 @@ local function bus_callback(bus, message)
 	return true
 end
 
+function ui.btn_chooser_open:on_clicked()
+    media_name = ui.file_media_chooser:get_filename(chooser)
+    ui.file_media_chooser:hide()
+end
+
+function ui.btn_chooser_close:on_clicked()
+    ui.file_media_chooser:hide()
+end
+
 local btn_play_trigger = true
 function ui.btn_play:on_clicked()
-	media_name = ui.load_media:get_filename()
 	play.uri = 'file://' .. media_name
 	ui.img_media_state.icon_name = 'media-playback-pause'
 
@@ -83,6 +91,5 @@ end
 
 -- paint the background
 function ui.video:on_draw(cr)
-  --pat = cairo.Pattern.create_linear(0,0,0,400)
   cr:paint()
 end
