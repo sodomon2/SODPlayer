@@ -80,3 +80,9 @@ function ui.video:on_realize()
    print(self.window:get_xid())
    play:set_window_handle(self.window:get_xid())
 end
+
+-- paint the background
+function ui.video:on_draw(cr)
+  --pat = cairo.Pattern.create_linear(0,0,0,400)
+  cr:paint()
+end
