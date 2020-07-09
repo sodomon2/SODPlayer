@@ -64,7 +64,6 @@ function ui.btn_play:on_clicked()
 	pipeline.state = 'READY'
 end
 
-
 pipeline:add_many(play)
 pipeline.bus:add_watch(GLib.PRIORITY_DEFAULT, bus_callback)
 

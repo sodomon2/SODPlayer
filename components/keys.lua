@@ -25,7 +25,7 @@ function next()
 end
 
 keybindings = {
-   [string.byte('p')] = 
+   [string.byte(' ')] = 
    function() 
       pipeline.state = 'PAUSED' 
       ui.img_media_state.icon_name = 'media-playback-start' 
@@ -33,6 +33,16 @@ keybindings = {
    [Gdk.KEY_Left]     = function() prev() end,
    [Gdk.KEY_Right]    = function() next() end,
    [Gdk.KEY_q]        = function() pipeline.state = 'NULL' end,
+   [Gdk.KEY_f]        = function()
+   fullscreen = not fullscreen
+        if ( fullscreen ) then
+            ui.main_window:fullscreen()
+            ui.menu_media:hide()
+        else
+            ui.main_window:unfullscreen()
+            ui.menu_media:show()
+        end
+   end
 }
 
 function ui.main_window:on_key_press_event(event)
