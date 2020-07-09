@@ -1,5 +1,5 @@
 --[[--
- @package   pipelineer
+ @package   player
  @filename  init.lua
  @version   0.2
  @author    Diaz Urbaneja Victor Diego Alejandro <sodomon2@gmail.com>
