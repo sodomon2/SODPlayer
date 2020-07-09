@@ -188,7 +188,7 @@
               <object class="GtkButton" id="btn_prev">
                 <property name="name">btnPrev</property>
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
+                <property name="can_focus">False</property>
                 <property name="receives_default">True</property>
                 <property name="relief">none</property>
                 <child>
@@ -204,7 +204,7 @@
               <object class="GtkButton" id="btn_play">
                 <property name="name">btnPlay</property>
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
+                <property name="can_focus">False</property>
                 <property name="receives_default">True</property>
                 <property name="relief">none</property>
                 <child>
@@ -223,7 +223,7 @@
               <object class="GtkButton" id="btn_stop">
                 <property name="name">btnStop</property>
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
+                <property name="can_focus">False</property>
                 <property name="receives_default">True</property>
                 <property name="relief">none</property>
                 <child>
@@ -271,7 +271,7 @@
                     <child>
                       <object class="GtkScale" id="media_slider">
                         <property name="visible">True</property>
-                        <property name="can_focus">True</property>
+                        <property name="can_focus">False</property>
                         <property name="adjustment">media_player_control</property>
                         <property name="restrict_to_fill_level">False</property>
                         <property name="fill_level">100</property>
@@ -313,7 +313,7 @@
               <object class="GtkButton" id="btn_next">
                 <property name="name">btnNext</property>
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
+                <property name="can_focus">False</property>
                 <property name="receives_default">True</property>
                 <property name="relief">none</property>
                 <child>
@@ -332,7 +332,7 @@
             <child>
               <object class="GtkButton" id="btn_volume">
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
+                <property name="can_focus">False</property>
                 <property name="receives_default">True</property>
                 <child>
                   <object class="GtkImage">
