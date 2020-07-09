@@ -25,6 +25,11 @@ function next()
 end
 
 keybindings = {
+   [string.byte('p')] = 
+  function() 
+      pipeline.state = 'PAUSED' 
+      ui.img_media_state.icon_name = 'media-playback-start' 
+  end,
    [Gdk.KEY_Left]     = function() prev() end,
    [Gdk.KEY_Right]    = function() next() end,
    [Gdk.KEY_q]        = function() pipeline.state = 'NULL' end,
