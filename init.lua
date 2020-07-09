@@ -47,6 +47,7 @@ end
 if ('Lua_Player') then
 	require('components.volume')
 	require('components.video')
+	require('components.keys')
 end
 
 ui.main_window:show_all()
