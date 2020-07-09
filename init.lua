@@ -41,6 +41,7 @@ end
 
 function ui.menu_archive_item_open:on_button_press_event()
     ui.file_media_chooser:run()
+    ui.file_media_chooser:hide()
 end
 
 function ui.menu_about_item:on_button_press_event()
