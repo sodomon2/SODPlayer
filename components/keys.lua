@@ -61,6 +61,10 @@ function ui.main_window:on_key_press_event(event)
 	end
 end
 
+function ui.btn_fullscreen:on_clicked()
+    toggle_fullscren()
+end 
+
 function ui.btn_next:on_clicked(id)
   next()
 end
