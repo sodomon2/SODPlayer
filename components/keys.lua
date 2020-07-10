@@ -32,7 +32,7 @@ keybindings = {
    end,
    [Gdk.KEY_Left]     = function() prev() end,
    [Gdk.KEY_Right]    = function() next() end,
-   [Gdk.KEY_q]        = function() pipeline.state = 'NULL' end,
+   [Gdk.KEY_q]        = function() stop_media()end,
    [Gdk.KEY_f]        = function()
    fullscreen = not fullscreen
         if ( fullscreen ) then
