@@ -24,25 +24,34 @@ function next()
 	)
 end
 
+function toggle_pause()
+    playstate = not playstate
+    if (playstate) then
+        pipeline.state = 'PAUSED'
+        ui.img_media_state.icon_name = 'media-playback-start'
+    else
+        pipeline.state = 'PLAYING'
+        ui.img_media_state.icon_name = 'media-playback-pause'
+    end
+end 
+
+function toggle_fullscren()
+    fullscreen = not fullscreen
+    if ( fullscreen ) then
+        ui.main_window:fullscreen()
+        ui.menu_media:hide()
+    else
+        ui.main_window:unfullscreen()
+        ui.menu_media:show()
+    end
+end 
+
 keybindings = {
-   [string.byte(' ')] = 
-   function() 
-      pipeline.state = 'PAUSED' 
-      ui.img_media_state.icon_name = 'media-playback-start' 
-   end,
+   [string.byte(' ')] = function() toggle_pause() end,
    [Gdk.KEY_Left]     = function() prev() end,
    [Gdk.KEY_Right]    = function() next() end,
    [Gdk.KEY_q]        = function() stop_media()end,
-   [Gdk.KEY_f]        = function()
-   fullscreen = not fullscreen
-        if ( fullscreen ) then
-            ui.main_window:fullscreen()
-            ui.menu_media:hide()
-        else
-            ui.main_window:unfullscreen()
-            ui.menu_media:show()
-        end
-   end
+   [Gdk.KEY_f]        = function() toggle_fullscren() end
 }
 
 function ui.main_window:on_key_press_event(event)
