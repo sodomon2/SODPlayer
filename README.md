@@ -1,4 +1,4 @@
-# LuaPlayer
+# SODPlayer
 
 un reproductor hecho en lua Gtk y Gstreamer
 
