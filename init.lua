@@ -1,7 +1,7 @@
 #!/usr/bin/env lua
 
 --[[--
- @package   player
+ @package   SODplayer
  @filename  init.lua  
  @version   0.2
  @author    Diaz Urbaneja Victor Diego Alejandro <sodomon2@gmail.com> 
