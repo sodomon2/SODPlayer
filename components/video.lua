@@ -17,32 +17,8 @@ function stop_media()
   ui.img_media_state.icon_name = 'media-playback-start'
 end
 
-local function bus_callback(bus, message)
-	if message.type.ERROR then
-		print('Error:', message:parse_error().message)
-		pipeline.state = 'READY'
-	elseif message.type.EOS then
-		print 'end of stream'
-		stop_media()
-    elseif message.type.STATE_CHANGED then
-      local old, new, pending = message:parse_state_changed()
-      print(string.format('state changed: %s->%s:%s', old, new, pending))
-	end
-
-	return true
-end
-
-function ui.btn_chooser_open:on_clicked()
-    media_name = ui.file_media_chooser:get_filename(chooser)
-    ui.file_media_chooser:hide()
-end
-
-function ui.btn_chooser_close:on_clicked()
-    ui.file_media_chooser:hide()
-end
-
 local btn_play_trigger = true
-function ui.btn_play:on_clicked()
+function play_media()
 	play.uri = 'file://' .. media_name
 	ui.img_media_state.icon_name = 'media-playback-pause'
 
@@ -62,6 +38,35 @@ function ui.btn_play:on_clicked()
 	pipeline.state = 'PLAYING'
 	main_loop:run()
 	pipeline.state = 'READY'
+end
+
+local function bus_callback(bus, message)
+	if message.type.ERROR then
+		print('Error:', message:parse_error().message)
+		pipeline.state = 'READY'
+	elseif message.type.EOS then
+		print 'end of stream'
+		stop_media()
+    elseif message.type.STATE_CHANGED then
+      local old, new, pending = message:parse_state_changed()
+      print(string.format('state changed: %s->%s:%s', old, new, pending))
+	end
+
+	return true
+end
+
+function ui.btn_chooser_open:on_clicked()
+    media_name = ui.file_media_chooser:get_filename(chooser)
+    ui.file_media_chooser:hide()
+    play_media()
+end
+
+function ui.btn_chooser_close:on_clicked()
+    ui.file_media_chooser:hide()
+end
+
+function ui.btn_play:on_clicked()
+    toggle_pause()
 end
 
 pipeline:add_many(play)
