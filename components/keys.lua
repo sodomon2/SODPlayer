@@ -57,6 +57,15 @@ function toggle_mute()
     end
 end
 
+function show_control()
+    show = not show
+    if ( show ) then
+        ui.header_control:hide()
+    else
+        ui.header_control:show()        
+    end
+end
+
 function quit_fullscreen()
     fullscreen = not fullscreen
     ui.img_fullscreen.stock = 'gtk-fullscreen'
@@ -75,7 +84,8 @@ keybindings = {
    [Gdk.KEY_F11]      = function() toggle_fullscreen() end,
    [Gdk.KEY_Escape]   = function() quit_fullscreen() end,
    [Gdk.KEY_m]        = function() toggle_mute() end,
-   [Gdk.KEY_M]        = function() toggle_mute() end
+   [Gdk.KEY_M]        = function() toggle_mute() end,
+   [Gdk.KEY_h]        = function() show_control() end
 }
 
 function ui.main_window:on_key_press_event(event)
