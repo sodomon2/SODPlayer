@@ -248,6 +248,7 @@
                         <property name="label">gtk-open</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
+                        <property name="use_underline">True</property>
                         <property name="use_stock">True</property>
                         <property name="always_show_image">True</property>
                       </object>
@@ -357,6 +358,25 @@
                 <property name="position">2</property>
               </packing>
             </child>
+            <child>
+              <object class="GtkButton" id="btn_next">
+                <property name="name">btnNext</property>
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="receives_default">True</property>
+                <property name="relief">none</property>
+                <child>
+                  <object class="GtkImage">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="pixbuf">images/control/media-skip-forward.svg</property>
+                  </object>
+                </child>
+              </object>
+              <packing>
+                <property name="position">3</property>
+              </packing>
+            </child>
             <child type="title">
               <object class="GtkBox">
                 <property name="visible">True</property>
@@ -429,26 +449,6 @@
               </packing>
             </child>
             <child>
-              <object class="GtkButton" id="btn_next">
-                <property name="name">btnNext</property>
-                <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="receives_default">True</property>
-                <property name="relief">none</property>
-                <child>
-                  <object class="GtkImage">
-                    <property name="visible">True</property>
-                    <property name="can_focus">False</property>
-                    <property name="pixbuf">images/control/media-skip-forward.svg</property>
-                  </object>
-                </child>
-              </object>
-              <packing>
-                <property name="pack_type">end</property>
-                <property name="position">3</property>
-              </packing>
-            </child>
-            <child>
               <object class="GtkButton" id="btn_fullscreen">
                 <property name="name">btnNext</property>
                 <property name="visible">True</property>
@@ -456,10 +456,11 @@
                 <property name="receives_default">True</property>
                 <property name="relief">none</property>
                 <child>
-                  <object class="GtkImage">
+                  <object class="GtkImage" id="img_fullscreen">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="icon_name">media-tape</property>
+                    <property name="stock">gtk-fullscreen</property>
+                    <property name="icon_name">gtk-fullscreen</property>
                   </object>
                 </child>
               </object>
