@@ -530,7 +530,7 @@
         <child>
           <object class="GtkScale" id="volume_control">
             <property name="visible">True</property>
-            <property name="can_focus">True</property>
+            <property name="can_focus">False</property>
             <property name="adjustment">media_volume_control</property>
             <property name="show_fill_level">True</property>
             <property name="restrict_to_fill_level">False</property>
