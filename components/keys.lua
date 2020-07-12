@@ -35,7 +35,7 @@ function toggle_pause()
     end
 end 
 
-function toggle_fullscren()
+function toggle_fullscreen()
     fullscreen = not fullscreen
     if ( fullscreen ) then
         ui.main_window:fullscreen()
@@ -53,7 +53,7 @@ keybindings = {
    [Gdk.KEY_Left]     = function() prev() end,
    [Gdk.KEY_Right]    = function() next() end,
    [Gdk.KEY_q]        = function() stop_media() end,
-   [Gdk.KEY_f]        = function() toggle_fullscren() end
+   [Gdk.KEY_f]        = function() toggle_fullscreen() end,
 }
 
 function ui.main_window:on_key_press_event(event)
@@ -64,7 +64,7 @@ function ui.main_window:on_key_press_event(event)
 end
 
 function ui.btn_fullscreen:on_clicked()
-    toggle_fullscren()
+    toggle_fullscreen()
 end 
 
 function ui.btn_next:on_clicked(id)
