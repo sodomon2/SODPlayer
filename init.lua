@@ -54,7 +54,7 @@ function ui.menu_about_item:on_button_press_event()
 	ui.about_window:hide()
 end
 
-if ('Lua_Player') then
+if ('SODPlayer') then
 	require('components.volume')
 	require('components.video')
 	require('components.keys')
