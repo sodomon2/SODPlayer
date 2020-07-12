@@ -48,12 +48,23 @@ function toggle_fullscreen()
     end
 end 
 
+function quit_fullscreen()
+    fullscreen = not fullscreen
+    ui.img_fullscreen.stock = 'gtk-fullscreen'
+    ui.main_window:unfullscreen()
+    ui.menu_media:show()
+end
+
 keybindings = {
-   [string.byte(' ')] = function() toggle_pause() end,
+   [Gdk.KEY_space]    = function() toggle_pause() end,
    [Gdk.KEY_Left]     = function() prev() end,
    [Gdk.KEY_Right]    = function() next() end,
    [Gdk.KEY_q]        = function() stop_media() end,
+   [Gdk.KEY_Q]        = function() stop_media() end,
    [Gdk.KEY_f]        = function() toggle_fullscreen() end,
+   [Gdk.KEY_F]        = function() toggle_fullscreen() end,
+   [Gdk.KEY_F11]      = function() toggle_fullscreen() end,
+   [Gdk.KEY_Escape]   = function() quit_fullscreen() end
 }
 
 function ui.main_window:on_key_press_event(event)
@@ -74,5 +85,3 @@ end
 function ui.btn_prev:on_clicked(id)
   prev()
 end
-
-
