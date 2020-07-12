@@ -40,7 +40,9 @@ function toggle_fullscren()
     if ( fullscreen ) then
         ui.main_window:fullscreen()
         ui.menu_media:hide()
+        ui.img_fullscreen.stock = 'gtk-leave-fullscreen'
     else
+        ui.img_fullscreen.stock = 'gtk-fullscreen'
         ui.main_window:unfullscreen()
         ui.menu_media:show()
     end
