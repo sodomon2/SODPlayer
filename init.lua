@@ -44,6 +44,11 @@ function ui.menu_archive_item_open:on_button_press_event()
     ui.file_media_chooser:hide()
 end
 
+function ui.menu_subtitles_item:on_button_press_event()
+    ui.file_subtitle_chooser:run()
+    ui.file_subtitle_chooser:hide()
+end
+
 function ui.menu_about_item:on_button_press_event()
 	ui.about_window:run()
 	ui.about_window:hide()
@@ -53,6 +58,7 @@ if ('Lua_Player') then
 	require('components.volume')
 	require('components.video')
 	require('components.keys')
+	require('components.subtitle')
 end
 
 ui.main_window:show_all()
