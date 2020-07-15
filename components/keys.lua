@@ -15,7 +15,8 @@ function prev()
 	)
 end
 
-function next()
+-- 'next' es una función de Lua
+function next2()
 	local current = pipeline:query_position(Gst.Format.TIME)
 	pipeline:seek_simple(
 		Gst.Format.TIME,
@@ -74,18 +75,18 @@ function quit_fullscreen()
 end
 
 keybindings = {
-   [Gdk.KEY_space]    = function() toggle_pause() end,
-   [Gdk.KEY_Left]     = function() prev() end,
-   [Gdk.KEY_Right]    = function() next() end,
-   [Gdk.KEY_q]        = function() stop_media() end,
-   [Gdk.KEY_Q]        = function() stop_media() end,
-   [Gdk.KEY_f]        = function() toggle_fullscreen() end,
-   [Gdk.KEY_F]        = function() toggle_fullscreen() end,
-   [Gdk.KEY_F11]      = function() toggle_fullscreen() end,
-   [Gdk.KEY_Escape]   = function() quit_fullscreen() end,
-   [Gdk.KEY_m]        = function() toggle_mute() end,
-   [Gdk.KEY_M]        = function() toggle_mute() end,
-   [Gdk.KEY_h]        = function() show_control() end
+   [Gdk.KEY_space]    = toggle_pause,
+   [Gdk.KEY_Left]     = prev,
+   [Gdk.KEY_Right]    = next2,
+   [Gdk.KEY_q]        = stop_media,
+   [Gdk.KEY_Q]        = stop_media,
+   [Gdk.KEY_f]        = toggle_fullscreen,
+   [Gdk.KEY_F]        = toggle_fullscreen,
+   [Gdk.KEY_F11]      = toggle_fullscreen,
+   [Gdk.KEY_Escape]   = quit_fullscreen,
+   [Gdk.KEY_m]        = toggle_mute,
+   [Gdk.KEY_M]        = toggle_mute,
+   [Gdk.KEY_h]        = show_control
 }
 
 function ui.main_window:on_key_press_event(event)
@@ -95,14 +96,6 @@ function ui.main_window:on_key_press_event(event)
 	end
 end
 
-function ui.btn_fullscreen:on_clicked()
-    toggle_fullscreen()
-end 
-
-function ui.btn_next:on_clicked(id)
-  next()
-end
-
-function ui.btn_prev:on_clicked(id)
-  prev()
-end
+ui.btn_fullscreen.on_clicked = toggle_fullscreen() 
+ui.btn_next.on_clicked = next2
+ui.btn_prev.on_clicked = prev
