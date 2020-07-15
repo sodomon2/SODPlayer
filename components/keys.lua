@@ -7,22 +7,22 @@
 --]]
 
 function prev()
-	local current = pipeline:query_position(Gst.Format.TIME)
-	pipeline:seek_simple(
-		Gst.Format.TIME,
-		{Gst.SeekFlags.FLUSH, Gst.SeekFlags.KEY_UNIT},
-		current-10 * Gst.SECOND
-	)
+  local current = pipeline:query_position(Gst.Format.TIME)
+  pipeline:seek_simple(
+    Gst.Format.TIME,
+    {Gst.SeekFlags.FLUSH, Gst.SeekFlags.KEY_UNIT},
+    current-10 * Gst.SECOND
+  )
 end
 
 -- 'next' es una función de Lua
 function next2()
-	local current = pipeline:query_position(Gst.Format.TIME)
-	pipeline:seek_simple(
-		Gst.Format.TIME,
-		{Gst.SeekFlags.FLUSH, Gst.SeekFlags.KEY_UNIT},
-		current+10 * Gst.SECOND
-	)
+  local current = pipeline:query_position(Gst.Format.TIME)
+  pipeline:seek_simple(
+    Gst.Format.TIME,
+    {Gst.SeekFlags.FLUSH, Gst.SeekFlags.KEY_UNIT},
+    current+10 * Gst.SECOND
+  )
 end
 
 function toggle_pause()
@@ -34,7 +34,7 @@ function toggle_pause()
         pipeline.state = 'PLAYING'
         ui.img_media_state.icon_name = 'media-playback-pause'
     end
-end 
+end
 
 function toggle_fullscreen()
     fullscreen = not fullscreen
@@ -47,24 +47,18 @@ function toggle_fullscreen()
         ui.main_window:unfullscreen()
         ui.menu_media:show()
     end
-end 
+end
 
 function toggle_mute()
     mute = not mute
-    if ( mute ) then
-        ui.volume_control:set_value(0)
-    else
-        ui.volume_control:set_value(100)
-    end
+    if ( mute ) then ui.volume_control:set_value(0)
+    else ui.volume_control:set_value(100) end
 end
 
 function show_control()
     show = not show
-    if ( show ) then
-        ui.header_control:hide()
-    else
-        ui.header_control:show()        
-    end
+    if show then ui.header_control:hide()
+    else ui.header_control:show() end
 end
 
 function quit_fullscreen()
@@ -90,12 +84,10 @@ keybindings = {
 }
 
 function ui.main_window:on_key_press_event(event)
-	key = keybindings[event.keyval]
-	if key then
-		key()
-	end
+  key = keybindings[event.keyval]
+  if key then key() end
 end
 
-ui.btn_fullscreen.on_clicked = toggle_fullscreen() 
+ui.btn_fullscreen.on_clicked = toggle_fullscreen
 ui.btn_next.on_clicked = next2
 ui.btn_prev.on_clicked = prev
