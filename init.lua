@@ -54,11 +54,17 @@ function ui.menu_about_item:on_button_press_event()
 	ui.about_window:hide()
 end
 
+function ui.menu_preferences_item:on_button_press_event()
+	ui.preferences_window:run()
+	ui.preferences_window:hide()
+end
+
 if ('SODPlayer') then
 	require('components.volume')
 	require('components.video')
 	require('components.keys')
 	require('components.subtitle')
+	require('components.preferences')
 end
 
 ui.main_window:show_all()
