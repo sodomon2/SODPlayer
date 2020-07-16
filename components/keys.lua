@@ -100,9 +100,9 @@ function ui.btn_fullscreen:on_clicked()
 end 
 
 function ui.btn_next:on_clicked(id)
-  next_state()
+    next_state()
 end
 
 function ui.btn_prev:on_clicked(id)
-  prev_state()
+    prev_state()
 end

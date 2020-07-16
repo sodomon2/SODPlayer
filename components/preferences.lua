@@ -7,11 +7,11 @@
 --]]
 
 function ui.btn_preferences_cancel:on_clicked()
-	ui.preferences_window:hide()
+    ui.preferences_window:hide()
 end
 
 function ui.btn_preferences_save:on_clicked()
-	font_size = ui.subtitle_font_widget:get_font(fontchooser)
+    font_size = ui.subtitle_font_widget:get_font(fontchooser)
     ui.preferences_window:hide()
-	print(font_size)
+    print(font_size)
 end

@@ -11,10 +11,10 @@ play        = Gst.ElementFactory.make('playbin', 'play')
 main_loop   = GLib.MainLoop()
 
 function stop_media()
-  pipeline.state = 'NULL'
-  main_loop:quit()
-  ui.media_slider:set_value(0)
-  ui.img_media_state.icon_name = 'media-playback-start'
+    pipeline.state = 'NULL'
+    main_loop:quit()
+    ui.media_slider:set_value(0)
+    ui.img_media_state.icon_name = 'media-playback-start'
 end
 
 local btn_play_trigger = true
@@ -73,7 +73,7 @@ pipeline:add_many(play)
 pipeline.bus:add_watch(GLib.PRIORITY_DEFAULT, bus_callback)
 
 function ui.btn_stop:on_clicked()
-  stop_media()
+    stop_media()
 end
 
 function ui.media_slider:on_value_changed(id)
@@ -89,11 +89,11 @@ end
 
 -- Retarget video output to the drawingarea.
 function ui.video:on_realize()
-   print(self.window:get_xid())
-   play:set_window_handle(self.window:get_xid())
+    print(self.window:get_xid())
+    play:set_window_handle(self.window:get_xid())
 end
 
 -- paint the background
 function ui.video:on_draw(cr)
-  cr:paint()
+    cr:paint()
 end
