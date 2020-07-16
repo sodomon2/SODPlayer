@@ -6,7 +6,7 @@
  @date      02.07.2020 17:27:23 -04
 --]]
 
-function prev()
+function prev_state()
 	local current = pipeline:query_position(Gst.Format.TIME)
 	pipeline:seek_simple(
 		Gst.Format.TIME,
@@ -15,7 +15,7 @@ function prev()
 	)
 end
 
-function next()
+function next_state()
 	local current = pipeline:query_position(Gst.Format.TIME)
 	pipeline:seek_simple(
 		Gst.Format.TIME,
@@ -75,8 +75,8 @@ end
 
 keybindings = {
    [Gdk.KEY_space]    = function() toggle_pause() end,
-   [Gdk.KEY_Left]     = function() prev() end,
-   [Gdk.KEY_Right]    = function() next() end,
+   [Gdk.KEY_Left]     = function() prev_state() end,
+   [Gdk.KEY_Right]    = function() next_state() end,
    [Gdk.KEY_q]        = function() stop_media() end,
    [Gdk.KEY_Q]        = function() stop_media() end,
    [Gdk.KEY_f]        = function() toggle_fullscreen() end,
@@ -100,9 +100,9 @@ function ui.btn_fullscreen:on_clicked()
 end 
 
 function ui.btn_next:on_clicked(id)
-  next()
+  next_state()
 end
 
 function ui.btn_prev:on_clicked(id)
-  prev()
+  prev_state()
 end
