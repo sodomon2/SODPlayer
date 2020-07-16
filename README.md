@@ -4,7 +4,7 @@ un reproductor hecho en lua Gtk y Gstreamer
 
 ## Screenshot
 
-![screenshot](vistas/images/screenshot2.png) 
+![screenshot](vistas/images/screenshot3.png) 
 
 ### Dependencias 
 
