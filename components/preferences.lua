@@ -1,7 +1,7 @@
 --[[--
  @package   SODplayer
  @filename  preferences.lua
- @version   0.2
+ @version   1.0
  @author    Diaz Urbaneja Victor Diego Alejandro <sodomon2@gmail.com>
  @date      15.07.2020 21:50:42 -04
 --]]

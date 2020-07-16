@@ -1,7 +1,7 @@
 --[[--
  @package   SODplayer
  @filename  subtitles.lua
- @version   0.2
+ @version   1.0
  @author    Diaz Urbaneja Victor Diego Alejandro <sodomon2@gmail.com>
  @date      10.07.2020 03:01:54 -04
 --]]  
