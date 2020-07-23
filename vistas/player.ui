@@ -69,6 +69,7 @@
     <property name="can_focus">False</property>
     <property name="title" translatable="yes">SODPlayer - Enter URL</property>
     <property name="resizable">False</property>
+    <property name="window_position">center</property>
     <property name="type_hint">dialog</property>
     <child type="titlebar">
       <placeholder/>
@@ -153,7 +154,7 @@
             </child>
             <child>
               <object class="GtkEntry" id="entry_url">
-                <property name="width_request">0</property>
+                <property name="width_request">300</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="margin_left">5</property>
