@@ -6,6 +6,14 @@ un reproductor hecho en lua Gtk y Gstreamer
 
 ![screenshot](vistas/images/screenshot3.png) 
 
+## Instalacion
+
+```
+git clone https://github.com/sodomon2/SODPlayer.git
+cd SODPlayer/
+[sudo] make install
+```
+
 ### Dependencias 
 
 - [Gstreamer](https://gstreamer.freedesktop.org/download/)
