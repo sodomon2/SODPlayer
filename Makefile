@@ -21,6 +21,6 @@ install:
 uninstall :
 	rm -r /usr/share/sodplayer/
 	rm -f /usr/share/applications/sodplayer.desktop
-	rm -f /usr/share/pixmaps/sodplayer.png
+	rm -f /usr/share/pixmaps/sodplayer.svg
 	rm -f /usr/bin/$(EXECUTABLE)
 
