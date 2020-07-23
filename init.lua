@@ -59,6 +59,11 @@ function ui.menu_preferences_item:on_button_press_event()
 	ui.preferences_window:hide()
 end
 
+function ui.menu_archive_item_url:on_button_press_event()
+    ui.dialog_url:run()
+    ui.dialog_url:hide()
+end
+
 if ('SODPlayer') then
 	require('components.volume')
 	require('components.video')
