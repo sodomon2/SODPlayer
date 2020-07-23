@@ -10,8 +10,8 @@
     <property name="copyright" translatable="yes">Copyright (c) 2020 Diaz Urbaneja Victor Diego Alejandro (Sodomon) 
 
   </property>
-    <property name="comments" translatable="yes">© 2020 Sodomon
-Un reproductor hecho en Lua Gtk y Gstreamer</property>
+    <property name="comments" translatable="yes">Un reproductor hecho en Lua Gtk y Gstreamer
+© 2020 Sodomon</property>
     <property name="website">https://github.com/sodomon2/SODPlayer</property>
     <property name="website_label" translatable="yes">Github</property>
     <property name="license" translatable="yes">zlib License
