@@ -11,7 +11,7 @@
 lgi       = require 'lgi'             -- La libreria que me permitira usar GTK
 GObject   = lgi.GObject               -- Parte de lgi
 GLib      = lgi.GLib                  -- para el treeview
-Gdk       = lgi.Gdk
+Gdk       = lgi.Gdk                   -- para las keybindings
 Gtk       = lgi.require('Gtk', '3.0') -- El objeto GTK
 Gst       = lgi.require("Gst", "1.0")
 GdkX11    = lgi.GdkX11
