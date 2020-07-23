@@ -52,8 +52,10 @@ function toggle_mute()
     mute = not mute
     if ( mute ) then
         ui.volume_control:set_value(0)
+        ui.img_volume_state.icon_name = 'audio-volume-muted'
     else
         ui.volume_control:set_value(100)
+        ui.img_volume_state.icon_name = 'audio-volume-high'
     end
 end
 
