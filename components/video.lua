@@ -19,7 +19,6 @@ end
 
 local btn_play_trigger = true
 function play_media()
-	play.uri = 'file://' .. media_name
 	ui.img_media_state.icon_name = 'media-playback-pause'
 
 	GLib.timeout_add_seconds(GLib.PRIORITY_DEFAULT, 1,function()
@@ -59,11 +58,22 @@ end
 function ui.btn_chooser_open:on_clicked()
     media_name = ui.file_media_chooser:get_filename(chooser)
     ui.file_media_chooser:hide()
+    play.uri = 'file://' .. media_name
     play_media()
 end
 
 function ui.btn_chooser_close:on_clicked()
     ui.file_media_chooser:hide()
+end
+
+function ui.btn_url_ok:on_clicked()
+    play.uri = ui.entry_url.text
+    ui.dialog_url:hide()
+    play_media()
+end
+
+function ui.btn_url_cancel:on_clicked()
+    ui.dialog_url:hide()
 end
 
 function ui.btn_play:on_clicked()
