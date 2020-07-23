@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=SODPlayer
+Type=Application
+Exec=/usr/bin/sodplayer
+Icon=sodplayer
+Categories=AudioVideo;Audio;Video;Player;GTK;

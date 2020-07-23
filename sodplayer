@@ -1,0 +1,4 @@
+#!/bin/sh
+
+cd /usr/share/sodplayer
+exec /usr/share/sodplayer/init.lua
