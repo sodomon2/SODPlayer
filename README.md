@@ -22,4 +22,4 @@ cd SODPlayer/
 
 #### Execute
 
-lua5.1 `init.lua` or `sodplayer`
+lua5.1 `init.lua`
