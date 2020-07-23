@@ -63,7 +63,7 @@ if ('SODPlayer') then
 	require('components.volume')
 	require('components.video')
 	require('components.keys')
-	require('components.subtitle')
+	require('components.subtitles')
 	require('components.preferences')
 end
 
