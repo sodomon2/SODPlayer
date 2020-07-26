@@ -808,8 +808,8 @@
                     <property name="label" translatable="yes">@TODO</property>
                   </object>
                   <packing>
-                    <property name="name">page0</property>
-                    <property name="title" translatable="yes">Visualizacion</property>
+                    <property name="name">general</property>
+                    <property name="title" translatable="yes">General</property>
                   </packing>
                 </child>
                 <child>
@@ -819,7 +819,7 @@
                     <property name="language">es-es</property>
                   </object>
                   <packing>
-                    <property name="name">page1</property>
+                    <property name="name">subtitulos</property>
                     <property name="title" translatable="yes">Subtitulos</property>
                     <property name="position">1</property>
                   </packing>
@@ -839,5 +839,11 @@
         </child>
       </object>
     </child>
+  </object>
+  <object class="GtkStatusIcon" id="tray">
+    <property name="pixbuf">images/player.svg</property>
+    <property name="visible">False</property>
+    <property name="tooltip_text" translatable="yes">SODPlayer</property>
+    <property name="title" translatable="yes">SODPlayer</property>
   </object>
 </interface>
