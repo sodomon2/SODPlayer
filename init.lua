@@ -70,6 +70,7 @@ if ('SODPlayer') then
 	require('components.keys')
 	require('components.subtitles')
 	require('components.preferences')
+	require('components.statusicon')
 end
 
 ui.main_window:show_all()
