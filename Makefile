@@ -1,4 +1,4 @@
-# Vitronic Makefile
+# Sodomon Makefile
 #
 # Copyright (c) 2020  Díaz  Urbaneja Victor Diego Alejandro  aka  (Sodomon)
 #
