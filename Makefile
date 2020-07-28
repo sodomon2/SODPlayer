@@ -1,4 +1,4 @@
-# Sodomon Makefile
+# SODPlayer Makefile
 #
 # Copyright (c) 2020  Díaz  Urbaneja Victor Diego Alejandro  aka  (Sodomon)
 #
