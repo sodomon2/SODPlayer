@@ -1,7 +1,7 @@
 --[[--
  @package   SODPlayer
  @filename  volume.lua
- @version   2.0
+ @version   1.5
  @author    Diaz Urbaneja Victor Diego Alejandro <sodomon2@gmail.com>
  @date      19.06.2020 15:43:09 -04
 --]]  
