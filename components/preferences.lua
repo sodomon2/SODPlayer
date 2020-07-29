@@ -13,11 +13,11 @@ function ui.btn_preferences_cancel:on_clicked()
 end
 
 function subtitles()
-  font_size = ui.subtitle_font_widget:get_font(fontchooser)
-  conf['subtitles'] = {
-      font_size = font_size
-  }
-  inifile:save('sodplayer.ini', conf)
+    font_size = ui.subtitle_font_widget:get_font(fontchooser)
+    conf['subtitles'] = {
+        font_size = font_size
+    }
+    inifile:save('sodplayer.ini', conf)
 end
 
 function ui.btn_preferences_save:on_clicked()

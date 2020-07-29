@@ -5,12 +5,17 @@
  @author    Diaz Urbaneja Victor Diego Alejandro <sodomon2@gmail.com>
  @date      10.07.2020 03:01:54 -04
 --]]  
+function subtitle_load()
+    subtitle_size = conf.subtitles.font_size
+    srt_file = ui.file_subtitle_chooser:get_filename(chooser)
+    play.suburi = 'file://' .. srt_file
+    play.subtitle_font_desc = subtitle_size
+    print (subtitle_size)
+end
 
 function ui.btn_subtitle_open:on_clicked()
-    srt_file = ui.file_subtitle_chooser:get_filename(chooser)
+    subtitle_load()
     ui.file_subtitle_chooser:hide()
-    play.suburi = 'file://' .. srt_file
-    play.subtitle_font_desc = font_size
 end
 
 function ui.btn_subtitle_close:on_clicked()
