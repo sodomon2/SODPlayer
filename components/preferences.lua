@@ -6,14 +6,23 @@
  @date      15.07.2020 21:50:42 -04
 --]]
 
+conf = inifile:load('sodplayer.ini')
+
 function ui.btn_preferences_cancel:on_clicked()
     ui.preferences_window:hide()
 end
 
+function subtitles()
+  font_size = ui.subtitle_font_widget:get_font(fontchooser)
+  conf['subtitles'] = {
+      font_size = font_size
+  }
+  inifile:save('sodplayer.ini', conf)
+end
+
 function ui.btn_preferences_save:on_clicked()
-    font_size = ui.subtitle_font_widget:get_font(fontchooser)
+    subtitles()
     ui.preferences_window:hide()
-    print(font_size)
 end
 
 menu_preferences_tray      = Gtk.CheckMenuItem()
