@@ -17,11 +17,11 @@ function subtitles()
     conf['subtitles'] = {
         font_size = font_size
     }
-    inifile:save('sodplayer.ini', conf)
 end
 
 function ui.btn_preferences_save:on_clicked()
     subtitles()
+    inifile:save('sodplayer.ini', conf)
     ui.preferences_window:hide()
 end
 
