@@ -67,14 +67,13 @@ function ui.menu_archive_item_url:on_button_press_event()
     ui.dialog_url:hide()
 end
 
-if ('SODPlayer') then
-	require('components.volume')
-	require('components.video')
-	require('components.keys')
-	require('components.subtitles')
-	require('components.preferences')
-	require('components.statusicon')
-end
+-- SODPlayer
+require('components.volume')
+require('components.video')
+require('components.keys')
+require('components.subtitles')
+require('components.preferences')
+require('components.statusicon')
 
 ui.main_window:show_all()
 Gtk.main()
