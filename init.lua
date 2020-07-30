@@ -76,4 +76,5 @@ require('components.preferences')
 require('components.statusicon')
 
 ui.main_window:show_all()
+panel_sensitive(false)
 Gtk.main()

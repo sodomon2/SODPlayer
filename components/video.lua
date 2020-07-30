@@ -30,7 +30,7 @@ end
 
 local btn_play_trigger = true
 function play_media()
-    panel_sensitive(true)
+	panel_sensitive(true)
 	ui.img_media_state.icon_name = 'media-playback-pause'
 
 	GLib.timeout_add_seconds(GLib.PRIORITY_DEFAULT, 1,function()
