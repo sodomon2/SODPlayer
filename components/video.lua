@@ -10,8 +10,19 @@ pipeline    = Gst.Pipeline.new('pipeline')
 play        = Gst.ElementFactory.make('playbin', 'play')
 main_loop   = GLib.MainLoop()
 
+function panel_sensitive(state)
+    ui.btn_play.sensitive = state
+    ui.btn_prev.sensitive = state
+    ui.btn_next.sensitive = state
+    ui.btn_stop.sensitive = state
+    ui.media_slider.sensitive = state
+    ui.btn_volume.sensitive = state
+    ui.btn_fullscreen.sensitive = state
+end
+
 function stop_media()
     pipeline.state = 'NULL'
+    panel_sensitive(false)
     main_loop:quit()
     ui.media_slider:set_value(0)
     ui.img_media_state.icon_name = 'media-playback-start'
@@ -19,6 +30,7 @@ end
 
 local btn_play_trigger = true
 function play_media()
+    panel_sensitive(true)
 	ui.img_media_state.icon_name = 'media-playback-pause'
 
 	GLib.timeout_add_seconds(GLib.PRIORITY_DEFAULT, 1,function()
