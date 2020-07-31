@@ -79,4 +79,5 @@ require('components.statusicon')
 require('components.recents')
 
 ui.main_window:show_all()
+panel_sensitive(false)
 Gtk.main()

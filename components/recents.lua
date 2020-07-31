@@ -23,8 +23,8 @@ function create_submenu(depth)
 			submenu = create_submenu(depth - 1, true),
 			on_button_press_event = function ()
 				-- @TODO: esto se puede mejorar
-                stop_media()
-				play.uri = 'file://' .. uri
+			    stop_media()
+			    play.uri = 'file://' .. uri
 			    play_media()
 			end
 		}
@@ -32,6 +32,10 @@ function create_submenu(depth)
 	end
 	return menu_recent
 end
+
+--if i >= 10 then
+    --break
+--end
 
 if #recents_item < 1 then
     ui.menu_archive:popdown({menu_archive_recent})
