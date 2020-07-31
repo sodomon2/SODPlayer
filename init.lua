@@ -76,6 +76,7 @@ require('components.keys')
 require('components.subtitles')
 require('components.preferences')
 require('components.statusicon')
+require('components.recents')
 
 ui.main_window:show_all()
 Gtk.main()
