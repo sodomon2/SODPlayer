@@ -3,6 +3,8 @@
     "status_icon": true
   },
   "history": {
+    "max_item": 10,
+    "url_max_item": 50,
     "recents": []
   },
   "subtitles": {
