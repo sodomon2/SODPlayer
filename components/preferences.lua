@@ -18,10 +18,10 @@ function subtitles()
 end
 
 function recent_max_item()
-    local max_item = ui.recents_spin:get_value_as_int(ui.recents_spin)
-    local url_max_item = ui.url_spin:get_value_as_int(ui.url_spin)
-    conf.history.max_item = max_item
-    conf.history.url_max_item = url_max_item 
+	local max_item = ui.recents_spin:get_value_as_int(ui.recents_spin)
+	local url_max_item = ui.url_spin:get_value_as_int(ui.url_spin)
+	conf.history.max_item = max_item
+	conf.history.url_max_item = url_max_item 
 end
 
 recent_item = tonumber(conf.history.max_item)
@@ -32,7 +32,7 @@ ui.url_spin:set_value(url_item)
 
 function ui.btn_preferences_apply:on_clicked()
 	subtitles()
-    recent_max_item()
+	recent_max_item()
 	config:save('sodplayer.json', conf)
 	ui.preferences_window:hide()
 end
