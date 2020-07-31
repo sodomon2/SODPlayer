@@ -69,7 +69,9 @@ end
 
 function ui.btn_chooser_open:on_clicked()
     media_name = ui.file_media_chooser:get_filename(chooser)
+    table.insert(conf.history.recents, media_name)
     ui.file_media_chooser:hide()
+    config:save('sodplayer.json', conf)
     play.uri = 'file://' .. media_name
     play_media()
 end

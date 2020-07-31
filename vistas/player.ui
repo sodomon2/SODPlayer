@@ -246,6 +246,11 @@
     <property name="can_focus">False</property>
     <property name="stock">gtk-open</property>
   </object>
+  <object class="GtkImage" id="img_file1">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="stock">gtk-directory</property>
+  </object>
   <object class="GtkImage" id="img_preferences">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
@@ -368,6 +373,16 @@
                         <property name="can_focus">False</property>
                         <property name="use_underline">True</property>
                         <property name="image">img_file</property>
+                        <property name="use_stock">False</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="menu_archive_item_recent">
+                        <property name="label">_Recientes</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="use_underline">True</property>
+                        <property name="image">img_file1</property>
                         <property name="use_stock">False</property>
                       </object>
                     </child>

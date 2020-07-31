@@ -6,23 +6,21 @@
  @date      15.07.2020 21:50:42 -04
 --]]
 
-conf = inifile:load('sodplayer.ini')
-
 function ui.btn_preferences_cancel:on_clicked()
     ui.preferences_window:hide()
 end
 
 function subtitles()
-    font_size = ui.subtitle_font_widget:get_font(fontchooser)
-    conf['subtitles'] = {
-        font_size = font_size
-    }
+	local font_size = ui.subtitle_font_widget:get_font(fontchooser)
+	conf.subtitles = {
+		font_size = font_size
+	}
 end
 
 function ui.btn_preferences_save:on_clicked()
-    subtitles()
-    inifile:save('sodplayer.ini', conf)
-    ui.preferences_window:hide()
+	subtitles()
+	config:save('sodplayer.json', conf)
+	ui.preferences_window:hide()
 end
 
 menu_preferences_tray      = Gtk.CheckMenuItem()
@@ -31,8 +29,11 @@ ui.menu_preferences:add({menu_preferences_tray_item})
 
 function menu_preferences_tray_item:on_button_press_event()
     if (self:get_active()) then
-      ui.tray:set_visible(false)
+		ui.tray:set_visible(false)
+		conf.general.status_icon = false
     else
-      ui.tray:set_visible(true)
+		ui.tray:set_visible(true)
+		conf.general.status_icon = true
     end
+    config:save('sodplayer.json', conf)
 end
