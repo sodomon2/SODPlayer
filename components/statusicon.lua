@@ -6,6 +6,8 @@
  @date      26.07.2020 12:19:29 -04
 --]]  
 
+ui.tray:set_visible(conf.general.status_icon)
+
 function statusicon()
 	visible = not visible
     if visible then

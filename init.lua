@@ -9,7 +9,8 @@
 --]]
 
 require 'lib.middleclass'
-inifile   = require 'lib.inifile'
+json        = require 'lib.json'
+config      = require 'lib.configuration'
 
 lgi       = require 'lgi'             -- La libreria que me permitira usar GTK
 GObject   = lgi.GObject               -- Parte de lgi
@@ -28,6 +29,7 @@ builder   = Gtk.Builder()
 
 assert(builder:add_from_file('vistas/player.ui'))
 ui = builder.objects
+conf = config:load('sodplayer.json')
 
 function quit()
     Gtk.main_quit()
@@ -76,5 +78,4 @@ require('components.preferences')
 require('components.statusicon')
 
 ui.main_window:show_all()
-panel_sensitive(false)
 Gtk.main()
