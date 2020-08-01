@@ -17,6 +17,9 @@ function create_submenu(depth)
 	if depth < 1 then return nil end
 	local menu_recent = Gtk.Menu()
 	for i, uri in pairs(recents_item) do
+        if i > recent_item_max then
+			break
+        end
         ui.menu_archive:add({menu_archive_recent})
 		local item = Gtk.MenuItem {
 			label = ("%d. %s"):format(i, uri),
@@ -32,10 +35,6 @@ function create_submenu(depth)
 	end
 	return menu_recent
 end
-
---if i >= 10 then
-    --break
---end
 
 if #recents_item < 1 then
     ui.menu_archive:popdown({menu_archive_recent})
