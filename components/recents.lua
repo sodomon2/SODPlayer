@@ -17,12 +17,13 @@ function create_submenu(depth)
 	if depth < 1 then return nil end
 	local menu_recent = Gtk.Menu()
 	for i, uri in pairs(recents_item) do
+        filename = utils:path_name(uri)['name']
         if i > recent_item_max then
 			break
         end
         ui.menu_archive:add({menu_archive_recent})
 		local item = Gtk.MenuItem {
-			label = ("%d. %s"):format(i, uri),
+			label = ("%d. %s"):format(i, filename),
 			submenu = create_submenu(depth - 1, true),
 			on_button_press_event = function ()
 				-- @TODO: esto se puede mejorar
