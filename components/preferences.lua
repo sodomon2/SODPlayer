@@ -7,7 +7,7 @@
 --]]
 
 function ui.btn_preferences_cancel:on_clicked()
-    ui.preferences_window:hide()
+	ui.preferences_window:hide()
 end
 
 function subtitles()
@@ -24,11 +24,11 @@ function recent_max_item()
 	conf.history.url_max_item = url_max_item 
 end
 
-recent_item = tonumber(conf.history.max_item)
-url_item    = tonumber(conf.history.url_max_item)
+recent_item_max = tonumber(conf.history.max_item)
+url_item_max    = tonumber(conf.history.url_max_item)
 
-ui.recents_spin:set_value(recent_item)
-ui.url_spin:set_value(url_item)
+ui.recents_spin:set_value(recent_item_max)
+ui.url_spin:set_value(url_item_max)
 
 function ui.btn_preferences_apply:on_clicked()
 	subtitles()
@@ -38,7 +38,7 @@ function ui.btn_preferences_apply:on_clicked()
 end
 
 function ui.btn_preferences_ok:on_clicked()
-    ui.preferences_window:hide()
+	ui.preferences_window:hide()
 end
 
 menu_preferences_tray      = Gtk.CheckMenuItem()
