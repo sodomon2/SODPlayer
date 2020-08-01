@@ -9,8 +9,9 @@
 --]]
 
 require 'lib.middleclass'
-json        = require 'lib.json'
-config      = require 'lib.configuration'
+json      = require 'lib.json'
+config    = require 'lib.configuration'
+utils     = require 'lib.utils'
 
 lgi       = require 'lgi'             -- La libreria que me permitira usar GTK
 GObject   = lgi.GObject               -- Parte de lgi
