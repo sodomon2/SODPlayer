@@ -15,6 +15,8 @@ install:
 	install -m775 init.lua /usr/share/sodplayer
 	cp -r components/ /usr/share/sodplayer
 	cp -r vistas/ /usr/share/sodplayer
+	cp -r lib/ /usr/share/sodplayer
+	install -m775 sodplayer.json /usr/share/sodplayer
 	install -m644 vistas/images/player.svg /usr/share/pixmaps/sodplayer.svg
 	install -m644 sodplayer.desktop /usr/share/applications
 
