@@ -273,6 +273,8 @@
       <mime-type>audio/x-mpegurl</mime-type>
       <mime-type>video/x-matroska</mime-type>
       <mime-type>audio/x-matroska</mime-type>
+      <mime-type>video/webm</mime-type>
+      <mime-type>audio/webm</mime-type>
     </mime-types>
   </object>
   <object class="GtkFileChooserDialog" id="file_media_chooser">
