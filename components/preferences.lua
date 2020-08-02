@@ -5,6 +5,8 @@
  @author    Diaz Urbaneja Victor Diego Alejandro <sodomon2@gmail.com>
  @date      15.07.2020 21:50:42 -04
 --]]
+recent_item_max = tonumber(conf.history.max_item)
+url_item_max    = tonumber(conf.history.url_max_item)
 
 function ui.btn_preferences_cancel:on_clicked()
 	ui.preferences_window:hide()
@@ -23,9 +25,6 @@ function recent_max_item()
 	conf.history.max_item = max_item
 	conf.history.url_max_item = url_max_item 
 end
-
-recent_item_max = tonumber(conf.history.max_item)
-url_item_max    = tonumber(conf.history.url_max_item)
 
 ui.recents_spin:set_value(recent_item_max)
 ui.url_spin:set_value(url_item_max)
@@ -55,3 +54,5 @@ function menu_preferences_tray_item:on_button_press_event()
     end
     config:save('sodplayer.json', conf)
 end
+
+menu_preferences_tray_item:set_active(conf.general.status_icon)
