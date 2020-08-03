@@ -4,8 +4,8 @@
   },
   "history": {
     "max_item": 10,
-    "url_max_item": 50,
-    "recents": []
+    "recents": [],
+    "url_max_item": 50
   },
   "subtitles": {
     "font_size": "Sans 18"
