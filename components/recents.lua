@@ -6,11 +6,6 @@
  @date      31.07.2020 02:24:50 -04
 --]]
 
-menu_archive_recent = Gtk.ImageMenuItem {
-    label    = "Recientes",
-    image = Gtk.Image {stock = "gtk-directory"}
-}
-
 recents_item = conf.history.recents
 
 function create_submenu(depth)
