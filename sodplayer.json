@@ -1,6 +1,6 @@
 {
   "general": {
-    "status_icon": true
+    "status_icon": false
   },
   "history": {
     "max_item": 10,
