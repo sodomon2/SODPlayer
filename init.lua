@@ -32,6 +32,16 @@ assert(builder:add_from_file('vistas/player.ui'))
 ui = builder.objects
 conf = config:load('sodplayer.json')
 
+-- SODPlayer
+require('components.volume')
+require('components.video')
+require('components.keys')
+require('components.subtitles')
+require('components.preferences')
+require('components.statusicon')
+require('components.menus')
+require('components.recents')
+
 function quit()
     Gtk.main_quit()
     main_loop:quit()
@@ -41,7 +51,7 @@ function ui.main_window:on_destroy()
     quit()
 end
 
-function ui.menu_archive_item_quit:on_button_press_event()
+function menu_archive_item_quit:on_button_press_event()
     quit()
 end
 
@@ -65,19 +75,14 @@ function ui.menu_preferences_item:on_button_press_event()
 	ui.preferences_window:hide()
 end
 
-function ui.menu_archive_item_url:on_button_press_event()
+function menu_archive_item_url:on_button_press_event()
     ui.dialog_url:run()
     ui.dialog_url:hide()
 end
 
--- SODPlayer
-require('components.volume')
-require('components.video')
-require('components.keys')
-require('components.subtitles')
-require('components.preferences')
-require('components.statusicon')
-require('components.recents')
+ui.menu_archive:add({menu_archive_item_url})
+ui.menu_archive:add({separator})
+ui.menu_archive:add({menu_archive_item_quit})
 
 ui.main_window:show_all()
 panel_sensitive(false)
