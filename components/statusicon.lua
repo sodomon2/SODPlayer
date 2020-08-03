@@ -69,3 +69,5 @@ end
 function ui.tray:on_popup_menu(ev, time)
     create_menu(ev, time)
 end
+
+ui.menu_preferences_tray:set_active(conf.general.status_icon)

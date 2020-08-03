@@ -33,18 +33,13 @@ function ui.btn_preferences_apply:on_clicked()
 	subtitles()
 	recent_max_item()
 	config:save('sodplayer.json', conf)
-	ui.preferences_window:hide()
 end
 
 function ui.btn_preferences_ok:on_clicked()
 	ui.preferences_window:hide()
 end
 
-menu_preferences_tray      = Gtk.CheckMenuItem()
-menu_preferences_tray_item = menu_preferences_tray.new_with_mnemonic('_Show icon in system tray')
-ui.menu_preferences:add({menu_preferences_tray_item})
-
-function menu_preferences_tray_item:on_button_press_event()
+function ui.menu_preferences_tray:on_button_press_event()
     if (self:get_active()) then
 		ui.tray:set_visible(false)
 		conf.general.status_icon = false
@@ -54,5 +49,3 @@ function menu_preferences_tray_item:on_button_press_event()
     end
     config:save('sodplayer.json', conf)
 end
-
-menu_preferences_tray_item:set_active(conf.general.status_icon)
