@@ -251,16 +251,6 @@
     <property name="can_focus">False</property>
     <property name="stock">gtk-preferences</property>
   </object>
-  <object class="GtkImage" id="img_quit">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <property name="stock">gtk-quit</property>
-  </object>
-  <object class="GtkImage" id="img_url">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <property name="stock">gtk-connect</property>
-  </object>
   <object class="GtkFileFilter" id="media_filter">
     <mime-types>
       <mime-type>video/x-msvideo</mime-type>
@@ -370,32 +360,6 @@
                         <property name="can_focus">False</property>
                         <property name="use_underline">True</property>
                         <property name="image">img_file</property>
-                        <property name="use_stock">False</property>
-                      </object>
-                    </child>
-                    <child>
-                      <object class="GtkImageMenuItem" id="menu_archive_item_url">
-                        <property name="label">URL...</property>
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="use_underline">True</property>
-                        <property name="image">img_url</property>
-                        <property name="use_stock">False</property>
-                      </object>
-                    </child>
-                    <child>
-                      <object class="GtkSeparatorMenuItem">
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                      </object>
-                    </child>
-                    <child>
-                      <object class="GtkImageMenuItem" id="menu_archive_item_quit">
-                        <property name="label">_Salir</property>
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="use_underline">True</property>
-                        <property name="image">img_quit</property>
                         <property name="use_stock">False</property>
                       </object>
                     </child>
