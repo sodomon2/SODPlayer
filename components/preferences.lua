@@ -57,5 +57,3 @@ function ui.menu_preferences_tray:on_button_press_event()
     config:save('sodplayer.json', conf)
 end
 
-ui.setting_show_toolbar:set_active(conf.general.show_toolbar)
-

@@ -15,6 +15,13 @@ function show_and_hide_toolbar()
 end
 show_and_hide_toolbar()
 
+GLib.timeout_add_seconds(GLib.PRIORITY_DEFAULT, 1,
+    function ()
+        show_and_hide_toolbar()
+        return true
+    end
+)
+
 function ui.btn_toolbar_file:on_clicked()
     ui.file_media_chooser:run()
     ui.file_media_chooser:hide()
@@ -41,4 +48,6 @@ end
 function ui.btn_toolbar_close:on_clicked()
     quit()
 end
+
+ui.setting_show_toolbar:set_active(conf.general.show_toolbar)
 
