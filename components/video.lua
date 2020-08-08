@@ -11,21 +11,21 @@ play        = Gst.ElementFactory.make('playbin', 'play')
 main_loop   = GLib.MainLoop()
 
 function panel_sensitive(state)
-    ui.btn_play.sensitive = state
-    ui.btn_prev.sensitive = state
-    ui.btn_next.sensitive = state
-    ui.btn_stop.sensitive = state
-    ui.media_slider.sensitive = state
-    ui.btn_volume.sensitive = state
-    ui.btn_fullscreen.sensitive = state
+	ui.btn_play.sensitive = state
+	ui.btn_prev.sensitive = state
+	ui.btn_next.sensitive = state
+	ui.btn_stop.sensitive = state
+	ui.media_slider.sensitive = state
+	ui.btn_volume.sensitive = state
+	ui.btn_fullscreen.sensitive = state
 end
 
 function stop_media()
-    pipeline.state = 'NULL'
-    panel_sensitive(false)
-    main_loop:quit()
-    ui.media_slider:set_value(0)
-    ui.img_media_state.icon_name = 'media-playback-start'
+	pipeline.state = 'NULL'
+	panel_sensitive(false)
+	main_loop:quit()
+	ui.media_slider:set_value(0)
+	ui.img_media_state.icon_name = 'media-playback-start'
 end
 
 local btn_play_trigger = true
@@ -68,40 +68,40 @@ local function bus_callback(bus, message)
 end
 
 function ui.btn_chooser_open:on_clicked()
-    media_name = ui.file_media_chooser:get_filename(chooser)
-    table.insert(conf.history.recents, media_name)
-    ui.file_media_chooser:hide()
-    config:save('sodplayer.json', conf)
-    stop_media()
-    play.uri = 'file://' .. media_name
-    play_media()
+	media_name = ui.file_media_chooser:get_filename(chooser)
+	table.insert(conf.history.recents, media_name)
+	ui.file_media_chooser:hide()
+	config:save('sodplayer.json', conf)
+	stop_media()
+	play.uri = 'file://' .. media_name
+	play_media()
 end
 
 function ui.btn_chooser_close:on_clicked()
-    ui.file_media_chooser:hide()
+	ui.file_media_chooser:hide()
 end
 
 function ui.btn_url_ok:on_clicked()
-    ui.entry_url:grab_focus()
-    play.uri = ui.entry_url.text
-    ui.dialog_url:hide()
-    stop_media()
-    play_media()
+	ui.entry_url:grab_focus()
+	play.uri = ui.entry_url.text
+	ui.dialog_url:hide()
+	stop_media()
+	play_media()
 end
 
 function ui.btn_url_cancel:on_clicked()
-    ui.dialog_url:hide()
+	ui.dialog_url:hide()
 end
 
 function ui.btn_play:on_clicked()
-    toggle_pause()
+	toggle_pause()
 end
 
 pipeline:add_many(play)
 pipeline.bus:add_watch(GLib.PRIORITY_DEFAULT, bus_callback)
 
 function ui.btn_stop:on_clicked()
-    stop_media()
+	stop_media()
 end
 
 function ui.media_slider:on_value_changed(id)
@@ -117,11 +117,11 @@ end
 
 -- Retarget video output to the drawingarea.
 function ui.video:on_realize()
-    print(self.window:get_xid())
-    play:set_window_handle(self.window:get_xid())
+	print(self.window:get_xid())
+	play:set_window_handle(self.window:get_xid())
 end
 
 -- paint the background
 function ui.video:on_draw(cr)
-    cr:paint()
+	cr:paint()
 end

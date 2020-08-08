@@ -31,14 +31,14 @@ ui.recents_spin:set_value(recent_item_max)
 ui.url_spin:set_value(url_item_max)
 
 function showtoolbar()
-    local check_toolbar = ui.setting_show_toolbar:get_active()
-    conf.general.show_toolbar = check_toolbar
+	local check_toolbar = ui.setting_show_toolbar:get_active()
+	conf.general.show_toolbar = check_toolbar
 end
 
 function ui.btn_preferences_apply:on_clicked()
 	subtitles()
 	recent_max_item()
-    showtoolbar()
+	showtoolbar()
 	config:save('sodplayer.json', conf)
 end
 
@@ -47,13 +47,13 @@ function ui.btn_preferences_ok:on_clicked()
 end
 
 function ui.menu_preferences_tray:on_button_press_event()
-    if (self:get_active()) then
+	if (self:get_active()) then
 		ui.tray:set_visible(false)
 		conf.general.status_icon = false
-    else
+	else
 		ui.tray:set_visible(true)
 		conf.general.status_icon = true
-    end
-    config:save('sodplayer.json', conf)
+	end
+	config:save('sodplayer.json', conf)
 end
 

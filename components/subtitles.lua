@@ -9,19 +9,19 @@
 subtitle_size = conf.subtitles.font_size
 
 function subtitle_load()
-    srt_file = ui.file_subtitle_chooser:get_filename(chooser)
-    play.suburi = 'file://' .. srt_file
-    play.subtitle_font_desc = subtitle_size
-    print (subtitle_size)
+	srt_file = ui.file_subtitle_chooser:get_filename(chooser)
+	play.suburi = 'file://' .. srt_file
+	play.subtitle_font_desc = subtitle_size
+	print (subtitle_size)
 end
 
 function ui.btn_subtitle_open:on_clicked()
-    subtitle_load()
-    ui.file_subtitle_chooser:hide()
+	subtitle_load()
+	ui.file_subtitle_chooser:hide()
 end
 
 function ui.btn_subtitle_close:on_clicked()
-    ui.file_subtitle_chooser:hide()
+	ui.file_subtitle_chooser:hide()
 end
 
 ui.subtitle_font_widget:set_font(subtitle_size)
