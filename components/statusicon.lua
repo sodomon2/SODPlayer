@@ -1,7 +1,7 @@
 --[[--
  @package   SODPlayer
  @filename  statusicon.lua
- @version   1.5
+ @version   2.0
  @author    Diaz Urbaneja Victor Diego Alejandro <sodomon2@gmail.com>
  @date      26.07.2020 12:19:29 -04
 --]]  

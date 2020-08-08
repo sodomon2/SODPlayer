@@ -1,7 +1,7 @@
 --[[--
  @package   SODplayer
  @filename  recents.lua
- @version   1.0
+ @version   2.0
  @author    Díaz Urbaneja Víctor Eduardo Diex <victor.vector008@gmail.com>
  @date      31.07.2020 02:24:50 -04
 --]]
