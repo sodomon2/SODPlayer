@@ -59,9 +59,9 @@ local function bus_callback(bus, message)
 		print 'end of stream'
 		stop_media()
 		quit_fullscreen()
-    elseif message.type.STATE_CHANGED then
-      local old, new, pending = message:parse_state_changed()
-      print(string.format('state changed: %s->%s:%s', old, new, pending))
+	elseif message.type.STATE_CHANGED then
+		local old, new, pending = message:parse_state_changed()
+		print(string.format('state changed: %s->%s:%s', old, new, pending))
 	end
 
 	return true

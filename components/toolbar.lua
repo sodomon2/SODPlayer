@@ -7,18 +7,18 @@
 --]]
 
 function show_and_hide_toolbar()
-    if conf.general.show_toolbar == true then
-        ui.box:add(ui.main_toolbar)
-    elseif conf.general.show_toolbar == false then
-        ui.box:remove(ui.main_toolbar)
-    end
+	if conf.general.show_toolbar == true then
+		ui.box:add(ui.main_toolbar)
+	elseif conf.general.show_toolbar == false then
+		ui.box:remove(ui.main_toolbar)
+	end
 end
 
 GLib.timeout_add_seconds(GLib.PRIORITY_DEFAULT, 1,
-    function ()
-        show_and_hide_toolbar()
-        return true
-    end
+	function ()
+		show_and_hide_toolbar()
+		return true
+	end
 )
 
 function ui.btn_toolbar_file:on_clicked()
