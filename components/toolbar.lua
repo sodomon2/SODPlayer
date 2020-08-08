@@ -13,7 +13,6 @@ function show_and_hide_toolbar()
         ui.box:remove(ui.main_toolbar)
     end
 end
-show_and_hide_toolbar()
 
 GLib.timeout_add_seconds(GLib.PRIORITY_DEFAULT, 1,
     function ()
