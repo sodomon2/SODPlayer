@@ -467,7 +467,7 @@
                 <child>
                   <object class="GtkToolButton" id="btn_toolbar_file">
                     <property name="visible">True</property>
-                    <property name="can_focus">False</property>
+                    <property name="can_focus">True</property>
                     <property name="tooltip_text" translatable="yes">Abrir Archivo</property>
                     <property name="label" translatable="yes">Abrir</property>
                     <property name="use_underline">True</property>
@@ -482,7 +482,7 @@
                 <child>
                   <object class="GtkToolButton" id="btn_toolbar_url">
                     <property name="visible">True</property>
-                    <property name="can_focus">False</property>
+                    <property name="can_focus">True</property>
                     <property name="tooltip_text" translatable="yes">Abrir Desde Una URL</property>
                     <property name="label" translatable="yes">URL...</property>
                     <property name="use_underline">True</property>
@@ -497,7 +497,7 @@
                 <child>
                   <object class="GtkToolButton" id="btn_toolbar_preferences">
                     <property name="visible">True</property>
-                    <property name="can_focus">False</property>
+                    <property name="can_focus">True</property>
                     <property name="tooltip_text" translatable="yes">Preferencias</property>
                     <property name="label" translatable="yes">Preferencias</property>
                     <property name="use_underline">True</property>
@@ -512,7 +512,7 @@
                 <child>
                   <object class="GtkToolButton" id="btn_toolbar_prev">
                     <property name="visible">True</property>
-                    <property name="can_focus">False</property>
+                    <property name="can_focus">True</property>
                     <property name="tooltip_text" translatable="yes">Anterior</property>
                     <property name="label" translatable="yes">Previo</property>
                     <property name="use_underline">True</property>
@@ -526,7 +526,7 @@
                 <child>
                   <object class="GtkToolButton" id="btn_toolbar_next">
                     <property name="visible">True</property>
-                    <property name="can_focus">False</property>
+                    <property name="can_focus">True</property>
                     <property name="tooltip_text" translatable="yes">Siguiente</property>
                     <property name="label" translatable="yes">Siguiente</property>
                     <property name="use_underline">True</property>
@@ -540,7 +540,7 @@
                 <child>
                   <object class="GtkToolButton" id="btn_toolbar_close">
                     <property name="visible">True</property>
-                    <property name="can_focus">False</property>
+                    <property name="can_focus">True</property>
                     <property name="tooltip_text" translatable="yes">Salir de SODPlayer</property>
                     <property name="label" translatable="yes">Salir</property>
                     <property name="use_underline">True</property>
