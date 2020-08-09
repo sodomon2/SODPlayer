@@ -41,6 +41,7 @@ require('components.preferences')
 require('components.statusicon')
 require('components.menus')
 require('components.toolbar')
+require('components.duration')
 require('components.recents')
 
 function quit()
