@@ -15,9 +15,7 @@ end
 
 function subtitles()
 	local font_size = ui.subtitle_font_widget:get_font(fontchooser)
-	conf.subtitles = {
-		font_size = font_size
-	}
+	conf.subtitles.font_size = font_size
 end
 
 function recent_max_item()

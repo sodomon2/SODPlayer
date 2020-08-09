@@ -26,6 +26,8 @@ function stop_media()
 	main_loop:quit()
 	ui.media_slider:set_value(0)
 	ui.img_media_state.icon_name = 'media-playback-start'
+	ui.info_current_time.label = '0:00'
+	ui.info_full_time.label = '0:00'
 end
 
 local btn_play_trigger = true
@@ -44,6 +46,8 @@ function play_media()
 			ui.media_slider:set_value( math.floor(current / Gst.SECOND) )
 			btn_play_trigger = true
 		end
+        ui.info_current_time.label = get_position()
+        ui.info_full_time.label = get_duration()
 		return true
 	end)
 	pipeline.state = 'PLAYING'
