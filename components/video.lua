@@ -46,8 +46,8 @@ function play_media()
 			ui.media_slider:set_value( math.floor(current / Gst.SECOND) )
 			btn_play_trigger = true
 		end
-        ui.info_current_time.label = get_position()
-        ui.info_full_time.label = get_duration()
+		ui.info_current_time.label = get_position()
+		ui.info_full_time.label = get_duration()
 		return true
 	end)
 	pipeline.state = 'PLAYING'
