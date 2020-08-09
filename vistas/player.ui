@@ -1123,6 +1123,7 @@
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
                                             <property name="margin_top">3</property>
+                                            <property name="margin_bottom">3</property>
                                             <property name="label" translatable="yes">Max. Items</property>
                                           </object>
                                           <packing>
@@ -1135,6 +1136,7 @@
                                           <object class="GtkSpinButton" id="recents_spin">
                                             <property name="visible">True</property>
                                             <property name="can_focus">True</property>
+                                            <property name="margin_bottom">3</property>
                                             <property name="max_width_chars">0</property>
                                             <property name="text" translatable="yes">0</property>
                                             <property name="adjustment">recents_spin_control</property>
@@ -1196,6 +1198,7 @@
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
                                             <property name="margin_top">3</property>
+                                            <property name="margin_bottom">3</property>
                                             <property name="label" translatable="yes">Max. Items</property>
                                           </object>
                                           <packing>
@@ -1208,6 +1211,7 @@
                                           <object class="GtkSpinButton" id="url_spin">
                                             <property name="visible">True</property>
                                             <property name="can_focus">True</property>
+                                            <property name="margin_bottom">3</property>
                                             <property name="max_width_chars">0</property>
                                             <property name="text" translatable="yes">0</property>
                                             <property name="adjustment">url_spin_control</property>
