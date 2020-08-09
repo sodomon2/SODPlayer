@@ -7,18 +7,18 @@
 ]]
 
 menu_archive_recent = Gtk.ImageMenuItem {
-    label    = "Recientes",
+    label    = gettext("Recents"),
     image = Gtk.Image {stock = "gtk-directory"}
 }
 
 menu_archive_item_url = Gtk.ImageMenuItem {
-    label    = "URL...",
+    label    = gettext("URL..."),
     image = Gtk.Image {stock = "gtk-connect"}
 }
 
 separator = Gtk.SeparatorMenuItem()
 
 menu_archive_item_quit = Gtk.ImageMenuItem {
-    label    = "Salir",
+    label    = gettext("Quit"),
     image = Gtk.Image {stock = "gtk-quit"}
 }

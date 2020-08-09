@@ -183,7 +183,7 @@
   </object>
   <object class="GtkFileChooserDialog" id="file_subtitle_chooser">
     <property name="can_focus">False</property>
-    <property name="title" translatable="yes">Select susbtitle</property>
+    <property name="title" translatable="yes">Select subtitle</property>
     <property name="type_hint">dialog</property>
     <child type="titlebar">
       <placeholder/>
@@ -199,7 +199,7 @@
             <property name="layout_style">end</property>
             <child>
               <object class="GtkButton" id="btn_subtitle_open">
-                <property name="label" translatable="yes">Abrir</property>
+                <property name="label" translatable="yes">Open</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -212,7 +212,7 @@
             </child>
             <child>
               <object class="GtkButton" id="btn_subtitle_close">
-                <property name="label" translatable="yes">Cancelar</property>
+                <property name="label" translatable="yes">Cancel</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -269,7 +269,7 @@
   </object>
   <object class="GtkFileChooserDialog" id="file_media_chooser">
     <property name="can_focus">False</property>
-    <property name="title" translatable="yes">Select media</property>
+    <property name="title" translatable="yes">Select File</property>
     <property name="type_hint">dialog</property>
     <property name="filter">media_filter</property>
     <child type="titlebar">
@@ -286,7 +286,7 @@
             <property name="layout_style">end</property>
             <child>
               <object class="GtkButton" id="btn_chooser_open">
-                <property name="label" translatable="yes">Abrir</property>
+                <property name="label" translatable="yes">Open</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -299,7 +299,7 @@
             </child>
             <child>
               <object class="GtkButton" id="btn_chooser_close">
-                <property name="label" translatable="yes">Cancelar</property>
+                <property name="label" translatable="yes">Cancel</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -347,7 +347,7 @@
               <object class="GtkMenuItem">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">_Archivo</property>
+                <property name="label" translatable="yes">_Open</property>
                 <property name="use_underline">True</property>
                 <child type="submenu">
                   <object class="GtkMenu" id="menu_archive">
@@ -371,7 +371,7 @@
               <object class="GtkMenuItem">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">_Subtitulos</property>
+                <property name="label" translatable="yes">_Subtitles</property>
                 <property name="use_underline">True</property>
                 <child type="submenu">
                   <object class="GtkMenu" id="menu_subtitles">
@@ -395,7 +395,7 @@
               <object class="GtkMenuItem">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">Opciones</property>
+                <property name="label" translatable="yes">Options</property>
                 <property name="use_underline">True</property>
                 <child type="submenu">
                   <object class="GtkMenu" id="menu_preferences">
@@ -403,7 +403,7 @@
                     <property name="can_focus">False</property>
                     <child>
                       <object class="GtkImageMenuItem" id="menu_preferences_item">
-                        <property name="label">Preferencias</property>
+                        <property name="label" translatable="yes">Preferences</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="image">img_preferences</property>
@@ -427,7 +427,7 @@
               <object class="GtkMenuItem">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">Ay_uda</property>
+                <property name="label" translatable="yes">Hel_p</property>
                 <property name="use_underline">True</property>
                 <child type="submenu">
                   <object class="GtkMenu" id="menu_about">
@@ -435,7 +435,7 @@
                     <property name="can_focus">False</property>
                     <child>
                       <object class="GtkImageMenuItem" id="menu_about_item">
-                        <property name="label">_Acerca de SODPlayer</property>
+                        <property name="label" translatable="yes">_About SODPlayer</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="use_underline">True</property>
@@ -468,8 +468,8 @@
                   <object class="GtkToolButton" id="btn_toolbar_file">
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
-                    <property name="tooltip_text" translatable="yes">Abrir Archivo</property>
-                    <property name="label" translatable="yes">Abrir</property>
+                    <property name="tooltip_text" translatable="yes">Open File</property>
+                    <property name="label" translatable="yes">Open</property>
                     <property name="use_underline">True</property>
                     <property name="stock_id">gtk-open</property>
                     <accelerator key="o" signal="clicked" modifiers="GDK_CONTROL_MASK"/>
@@ -483,7 +483,7 @@
                   <object class="GtkToolButton" id="btn_toolbar_url">
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
-                    <property name="tooltip_text" translatable="yes">Abrir Desde Una URL</property>
+                    <property name="tooltip_text" translatable="yes">Open From URL</property>
                     <property name="label" translatable="yes">URL...</property>
                     <property name="use_underline">True</property>
                     <property name="stock_id">gtk-connect</property>
@@ -498,8 +498,8 @@
                   <object class="GtkToolButton" id="btn_toolbar_preferences">
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
-                    <property name="tooltip_text" translatable="yes">Preferencias</property>
-                    <property name="label" translatable="yes">Preferencias</property>
+                    <property name="tooltip_text" translatable="yes">Preferences</property>
+                    <property name="label" translatable="yes">Preferences</property>
                     <property name="use_underline">True</property>
                     <property name="stock_id">gtk-preferences</property>
                     <accelerator key="p" signal="clicked" modifiers="GDK_CONTROL_MASK"/>
@@ -513,8 +513,8 @@
                   <object class="GtkToolButton" id="btn_toolbar_prev">
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
-                    <property name="tooltip_text" translatable="yes">Anterior</property>
-                    <property name="label" translatable="yes">Previo</property>
+                    <property name="tooltip_text" translatable="yes">Prev</property>
+                    <property name="label" translatable="yes">Prev</property>
                     <property name="use_underline">True</property>
                     <property name="icon_name">media-skip-backward</property>
                   </object>
@@ -527,8 +527,8 @@
                   <object class="GtkToolButton" id="btn_toolbar_next">
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
-                    <property name="tooltip_text" translatable="yes">Siguiente</property>
-                    <property name="label" translatable="yes">Siguiente</property>
+                    <property name="tooltip_text" translatable="yes">Next</property>
+                    <property name="label" translatable="yes">Next</property>
                     <property name="use_underline">True</property>
                     <property name="icon_name">media-skip-forward</property>
                   </object>
@@ -541,8 +541,8 @@
                   <object class="GtkToolButton" id="btn_toolbar_close">
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
-                    <property name="tooltip_text" translatable="yes">Salir de SODPlayer</property>
-                    <property name="label" translatable="yes">Salir</property>
+                    <property name="tooltip_text" translatable="yes">Quit SODPlayer</property>
+                    <property name="label" translatable="yes">Quit</property>
                     <property name="use_underline">True</property>
                     <property name="stock_id">gtk-quit</property>
                     <accelerator key="q" signal="clicked" modifiers="GDK_CONTROL_MASK"/>
@@ -799,7 +799,7 @@
           <object class="GtkLabel">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="label" translatable="yes">Volumen</property>
+            <property name="label" translatable="yes">Volume</property>
           </object>
           <packing>
             <property name="expand">False</property>
@@ -846,7 +846,7 @@
   </object>
   <object class="GtkDialog" id="preferences_window">
     <property name="can_focus">False</property>
-    <property name="title" translatable="yes">SODPlayer - Preferencias</property>
+    <property name="title" translatable="yes">SODPlayer - Preferences</property>
     <property name="type_hint">dialog</property>
     <child type="titlebar">
       <placeholder/>
@@ -862,7 +862,7 @@
             <property name="layout_style">end</property>
             <child>
               <object class="GtkButton" id="btn_preferences_apply">
-                <property name="label" translatable="yes">Aplicar</property>
+                <property name="label" translatable="yes">Apply</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -888,7 +888,7 @@
             </child>
             <child>
               <object class="GtkButton" id="btn_preferences_cancel">
-                <property name="label" translatable="yes">Cancelar</property>
+                <property name="label" translatable="yes">Cancel</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -957,8 +957,8 @@
                     <property name="language">es-es</property>
                   </object>
                   <packing>
-                    <property name="name">subtitulos</property>
-                    <property name="title" translatable="yes">Subtitulos</property>
+                    <property name="name">subtitles</property>
+                    <property name="title" translatable="yes">Subtitles</property>
                     <property name="position">1</property>
                   </packing>
                 </child>
@@ -996,7 +996,7 @@
                                             <property name="can_focus">False</property>
                                             <property name="margin_right">5</property>
                                             <property name="margin_top">3</property>
-                                            <property name="label" translatable="yes">Lenguaje :</property>
+                                            <property name="label" translatable="yes">Language :</property>
                                           </object>
                                           <packing>
                                             <property name="expand">False</property>
@@ -1026,7 +1026,7 @@
                                     </child>
                                     <child>
                                       <object class="GtkCheckButton" id="setting_show_toolbar">
-                                        <property name="label" translatable="yes">Mostar toolbar</property>
+                                        <property name="label" translatable="yes">Show toolbar</property>
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
                                         <property name="focus_on_click">False</property>
@@ -1040,7 +1040,7 @@
                                     </child>
                                     <child>
                                       <object class="GtkCheckButton" id="setting_pause_check">
-                                        <property name="label" translatable="yes">Pausar al minimizar </property>
+                                        <property name="label" translatable="yes">Paused When Minimized</property>
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
                                         <property name="focus_on_click">False</property>
@@ -1086,7 +1086,7 @@
                       <object class="GtkLabel">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="label" translatable="yes">Interfaz</property>
+                        <property name="label" translatable="yes">Interface</property>
                       </object>
                       <packing>
                         <property name="tab_fill">False</property>
@@ -1162,7 +1162,7 @@
                               <object class="GtkLabel">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
-                                <property name="label" translatable="yes">Recientes :</property>
+                                <property name="label" translatable="yes">Recents :</property>
                               </object>
                             </child>
                           </object>
@@ -1256,7 +1256,7 @@
                       <object class="GtkLabel">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="label" translatable="yes">Recientes</property>
+                        <property name="label" translatable="yes">Recents</property>
                       </object>
                       <packing>
                         <property name="position">1</property>
@@ -1286,8 +1286,8 @@
                     </child>
                   </object>
                   <packing>
-                    <property name="name">recientes</property>
-                    <property name="title" translatable="yes">Interfaz</property>
+                    <property name="name">interface</property>
+                    <property name="title" translatable="yes">Interface</property>
                     <property name="position">2</property>
                   </packing>
                 </child>

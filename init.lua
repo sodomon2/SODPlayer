@@ -12,6 +12,7 @@ require 'lib.middleclass'
 json      = require 'lib.json'
 config    = require 'lib.configuration'
 utils     = require 'lib.utils'
+gettext   = require 'lib.gettext'
 
 lgi       = require 'lgi'             -- La libreria que me permitira usar GTK
 GObject   = lgi.GObject               -- Parte de lgi
@@ -26,7 +27,9 @@ end
 
 print(Gst._version)
 assert    = lgi.assert
-builder   = Gtk.Builder()
+builder   = Gtk.Builder({
+	translation_domain = 'sodplayer'
+})
 
 assert(builder:add_from_file('vistas/player.ui'))
 ui = builder.objects
