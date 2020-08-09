@@ -1,0 +1,235 @@
+# SODPlayer Traduccion al español.
+# Copyright (C) 2020
+# Este archivo puede ser modificado siempre y cuando se mantenga al autor original bajo la licensia Zlib
+# Primer Autor Sodomon <sodomon2@gmail.com>, 09/08/2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SODPlayer\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-09 17:15-0400\n"
+"PO-Revision-Date: 2020-08-09 17:15-0400\n"
+"Last-Translator: Victor \"Diego\" Alejandro <sodomon2@gmail.com>\n"
+"Language-Team: Spanish / Español\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: vistas/player.ui:10
+msgid ""
+"Copyright (c) 2020 Diaz Urbaneja Victor Diego Alejandro (Sodomon) \n"
+"\n"
+"  "
+msgstr ""
+
+#: vistas/player.ui:13
+msgid ""
+"Un reproductor hecho en Lua Gtk y Gstreamer\n"
+"© 2020 Sodomon"
+msgstr ""
+
+#: vistas/player.ui:16
+msgid "Github"
+msgstr ""
+
+#: vistas/player.ui:17
+msgid ""
+"zlib License\n"
+"\n"
+"/* zlib.h -- interface of the 'zlib' general purpose compression library\n"
+"  version 1.2.2, October 3rd, 2004\n"
+"\n"
+"  Copyright (C) 1995-2004 Jean-loup Gailly and Mark Adler\n"
+"\n"
+"  This software is provided 'as-is', without any express or implied\n"
+"  warranty.  In no event will the authors be held liable for any damages\n"
+"  arising from the use of this software.\n"
+"\n"
+"  Permission is granted to anyone to use this software for any purpose,\n"
+"  including commercial applications, and to alter it and redistribute it\n"
+"  freely, subject to the following restrictions:\n"
+"\n"
+"  1. The origin of this software must not be misrepresented; you must not\n"
+"     claim that you wrote the original software. If you use this software\n"
+"     in a product, an acknowledgment in the product documentation would be\n"
+"     appreciated but is not required.\n"
+"  2. Altered source versions must be plainly marked as such, and must not "
+"be\n"
+"     misrepresented as being the original software.\n"
+"  3. This notice may not be removed or altered from any source "
+"distribution.\n"
+"\n"
+"  Jean-loup Gailly jloup@gzip.org\n"
+"  Mark Adler madler@alumni.caltech.edu\n"
+"\n"
+"*/ "
+msgstr ""
+
+#: vistas/player.ui:73
+msgid "SODPlayer - Enter URL"
+msgstr "SODPlayer - Abrir URL"
+
+#: vistas/player.ui:91 vistas/player.ui:878
+msgid "Ok"
+msgstr ""
+
+#: vistas/player.ui:104 vistas/player.ui:215 vistas/player.ui:302
+#: vistas/player.ui:891
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: vistas/player.ui:150
+msgid "URL:"
+msgstr "URL :"
+
+#: vistas/player.ui:186
+msgid "Select subtitle"
+msgstr "Selecciona un susbtitulo"
+
+#: vistas/player.ui:202 vistas/player.ui:289 vistas/player.ui:472
+msgid "Open"
+msgstr "Abrir"
+
+#: vistas/player.ui:272
+msgid "Select File"
+msgstr "Selecciona un archivo"
+
+#: vistas/player.ui:330 vistas/player.ui:839 vistas/player.ui:840
+msgid "SODPlayer"
+msgstr ""
+
+#: vistas/player.ui:350
+msgid "_Open"
+msgstr "_Archivo"
+
+#: vistas/player.ui:374
+msgid "_Subtitles"
+msgstr "_Subtitulos"
+
+#: vistas/player.ui:398
+msgid "Options"
+msgstr "Opciones"
+
+#: vistas/player.ui:418
+msgid "_Show icon in system tray"
+msgstr ""
+
+#: vistas/player.ui:430
+msgid "Hel_p"
+msgstr "Ay_uda"
+
+#: vistas/player.ui:438
+msgid "_About SODPlayer"
+msgstr "_Acerca De SODPlayer"
+
+#: vistas/player.ui:471
+msgid "Open File"
+msgstr "Abrir Archivo"
+
+#: vistas/player.ui:486
+msgid "Open From URL"
+msgstr "Abrir Desde Una URL"
+
+#: vistas/player.ui:487 components/statusicon.lua:36 components/menus.lua:15
+msgid "URL..."
+msgstr ""
+
+
+#: vistas/player.ui:406 vistas/player.ui:501 vistas/player.ui:502
+#: components/statusicon.lua:46
+msgid "Preferences"
+msgstr "Preferencias"
+
+#: vistas/player.ui:516 vistas/player.ui:517
+msgid "Prev"
+msgstr "Anterior"
+
+#: vistas/player.ui:530 vistas/player.ui:531
+msgid "Next"
+msgstr "Siguiente"
+
+#: vistas/player.ui:544
+msgid "Quit SODPlayer"
+msgstr "Salir De SODPlayer"
+
+#: vistas/player.ui:545 components/statusicon.lua:56 components/menus.lua:22
+msgid "Quit"
+msgstr "Salir"
+
+#: vistas/player.ui:681 vistas/player.ui:710
+msgid "0:00"
+msgstr ""
+
+#: vistas/player.ui:802
+msgid "Volume"
+msgstr "Volumen"
+
+#: vistas/player.ui:849
+msgid "SODPlayer - Preferences"
+msgstr "SODPlayer - Preferencias"
+
+#: vistas/player.ui:865
+msgid "Apply"
+msgstr "Aplicar"
+
+#: vistas/player.ui:946 vistas/player.ui:1270 vistas/player.ui:1280
+msgid "@TODO"
+msgstr ""
+
+#: vistas/player.ui:950
+msgid "General"
+msgstr ""
+
+#: vistas/player.ui:961
+msgid "Subtitles"
+msgstr "Subtitulos"
+
+#: vistas/player.ui:999
+msgid "Lenguaje :"
+msgstr ""
+
+#: vistas/player.ui:1012
+msgid "<System Languaje>"
+msgstr ""
+
+#: vistas/player.ui:1029
+msgid "Show toolbar"
+msgstr "Mostar toolbar"
+
+#: vistas/player.ui:1043
+msgid "Paused When Minimized"
+msgstr "Pausar al minimizar "
+
+#: vistas/player.ui:1073
+msgid "main window :"
+msgstr ""
+
+#: vistas/player.ui:1089 vistas/player.ui:1290
+msgid "Interface"
+msgstr "Interfaz"
+
+#: vistas/player.ui:1127 vistas/player.ui:1202
+msgid "Max. Items"
+msgstr ""
+
+#: vistas/player.ui:1141 vistas/player.ui:1216
+msgid "0"
+msgstr ""
+
+#: vistas/player.ui:1165
+msgid "Recents :"
+msgstr "Recientes :"
+
+#: vistas/player.ui:1240
+msgid "URL :"
+msgstr ""
+
+#: vistas/player.ui:1259 components/menus.lua:10
+msgid "Recents"
+msgstr "Recientes"
+
+#: components/statusicon.lua:27
+msgid "File"
+msgstr "Archivo"
