@@ -122,7 +122,7 @@ msgstr "Ay_uda"
 
 #: vistas/player.ui:438
 msgid "_About SODPlayer"
-msgstr "_Acerca De SODPlayer"
+msgstr "_Acerca de SODPlayer"
 
 #: vistas/player.ui:471
 msgid "Open File"
