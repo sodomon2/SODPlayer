@@ -1,5 +1,6 @@
 {
   "general": {
+    "language": "default",
     "pause_minimized": false,
     "show_toolbar": true,
     "status_icon": false

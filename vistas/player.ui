@@ -347,7 +347,7 @@
               <object class="GtkMenuItem">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">_Open</property>
+                <property name="label" translatable="yes">_File</property>
                 <property name="use_underline">True</property>
                 <child type="submenu">
                   <object class="GtkMenu" id="menu_archive">
@@ -1005,11 +1005,13 @@
                                           </packing>
                                         </child>
                                         <child>
-                                          <object class="GtkComboBoxText">
+                                          <object class="GtkComboBoxText" id="setting_language">
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
                                             <items>
-                                              <item translatable="yes">&lt;System Languaje&gt;</item>
+                                              <item id="default" translatable="yes">&lt;System Languaje&gt;</item>
+                                              <item id="es" translatable="yes">spanish</item>
+                                              <item id="en" translatable="yes">english</item>
                                             </items>
                                           </object>
                                           <packing>

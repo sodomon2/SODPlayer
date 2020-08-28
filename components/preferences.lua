@@ -55,3 +55,16 @@ function ui.menu_preferences_tray:on_button_press_event()
 	config:save('sodplayer.json', conf)
 end
 
+function ui.setting_language:on_changed()
+	if (self:get_active_id() == 'es') then
+		conf.general.language = 'es'
+	elseif (self:get_active_id() == 'en') then
+		conf.general.language = 'en'
+    else
+        conf.general.language = 'default'
+	end
+	config:save('sodplayer.json', conf)
+end
+
+ui.setting_language:set_active_id(conf.general.language)
+

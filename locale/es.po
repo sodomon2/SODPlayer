@@ -82,15 +82,15 @@ msgstr "Cancelar"
 
 #: vistas/player.ui:150
 msgid "URL:"
-msgstr "URL :"
+msgstr "URL:"
 
 #: vistas/player.ui:186
 msgid "Select subtitle"
 msgstr "Selecciona un susbtitulo"
 
 #: vistas/player.ui:202 vistas/player.ui:289 vistas/player.ui:472
-msgid "Open"
-msgstr "Abrir"
+msgid "_File"
+msgstr "_Archivo"
 
 #: vistas/player.ui:272
 msgid "Select File"
@@ -102,7 +102,7 @@ msgstr ""
 
 #: vistas/player.ui:350
 msgid "_Open"
-msgstr "_Archivo"
+msgstr "_Abrir"
 
 #: vistas/player.ui:374
 msgid "_Subtitles"
@@ -111,6 +111,11 @@ msgstr "_Subtitulos"
 #: vistas/player.ui:398
 msgid "Options"
 msgstr "Opciones"
+
+#: vistas/player.ui:406 vistas/player.ui:501 vistas/player.ui:502
+#: components/statusicon.lua:46
+msgid "Preferences"
+msgstr "Preferencias"
 
 #: vistas/player.ui:418
 msgid "_Show icon in system tray"
@@ -135,12 +140,6 @@ msgstr "Abrir Desde Una URL"
 #: vistas/player.ui:487 components/statusicon.lua:36 components/menus.lua:15
 msgid "URL..."
 msgstr ""
-
-
-#: vistas/player.ui:406 vistas/player.ui:501 vistas/player.ui:502
-#: components/statusicon.lua:46
-msgid "Preferences"
-msgstr "Preferencias"
 
 #: vistas/player.ui:516 vistas/player.ui:517
 msgid "Prev"
@@ -174,7 +173,7 @@ msgstr "SODPlayer - Preferencias"
 msgid "Apply"
 msgstr "Aplicar"
 
-#: vistas/player.ui:946 vistas/player.ui:1270 vistas/player.ui:1280
+#: vistas/player.ui:946 vistas/player.ui:1272 vistas/player.ui:1282
 msgid "@TODO"
 msgstr ""
 
@@ -187,46 +186,54 @@ msgid "Subtitles"
 msgstr "Subtitulos"
 
 #: vistas/player.ui:999
-msgid "Lenguaje :"
-msgstr ""
+msgid "Language :"
+msgstr "Lenguaje :"
 
 #: vistas/player.ui:1012
 msgid "<System Languaje>"
 msgstr ""
 
-#: vistas/player.ui:1029
+#: vistas/player.ui:1013
+msgid "spanish"
+msgstr ""
+
+#: vistas/player.ui:1014
+msgid "english"
+msgstr ""
+
+#: vistas/player.ui:1031
 msgid "Show toolbar"
-msgstr "Mostar toolbar"
+msgstr "Mostrar toolbar"
 
-#: vistas/player.ui:1043
+#: vistas/player.ui:1045
 msgid "Paused When Minimized"
-msgstr "Pausar al minimizar "
+msgstr "Pausar al minimizar"
 
-#: vistas/player.ui:1073
+#: vistas/player.ui:1075
 msgid "main window :"
 msgstr ""
 
-#: vistas/player.ui:1089 vistas/player.ui:1290
+#: vistas/player.ui:1091 vistas/player.ui:1292
 msgid "Interface"
 msgstr "Interfaz"
 
-#: vistas/player.ui:1127 vistas/player.ui:1202
+#: vistas/player.ui:1129 vistas/player.ui:1204
 msgid "Max. Items"
 msgstr ""
 
-#: vistas/player.ui:1141 vistas/player.ui:1216
+#: vistas/player.ui:1143 vistas/player.ui:1218
 msgid "0"
 msgstr ""
 
-#: vistas/player.ui:1165
+#: vistas/player.ui:1167
 msgid "Recents :"
 msgstr "Recientes :"
 
-#: vistas/player.ui:1240
+#: vistas/player.ui:1242
 msgid "URL :"
 msgstr ""
 
-#: vistas/player.ui:1259 components/menus.lua:10
+#: vistas/player.ui:1261 components/menus.lua:10
 msgid "Recents"
 msgstr "Recientes"
 
