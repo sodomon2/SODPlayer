@@ -14,13 +14,6 @@ function show_and_hide_toolbar()
 	end
 end
 
-GLib.timeout_add_seconds(GLib.PRIORITY_DEFAULT, 1,
-	function ()
-		show_and_hide_toolbar()
-		return true
-	end
-)
-
 function ui.btn_toolbar_file:on_clicked()
 	ui.file_media_chooser:run()
 	ui.file_media_chooser:hide()
