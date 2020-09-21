@@ -13,6 +13,7 @@ function show_and_hide_toolbar()
 		ui.box:remove(ui.main_toolbar)
 	end
 end
+show_and_hide_toolbar()
 
 function ui.btn_toolbar_file:on_clicked()
 	ui.file_media_chooser:run()
