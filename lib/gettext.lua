@@ -73,7 +73,9 @@ function Gettext:parseData(mo_data)
 end
 
 local locale	= (os.getenv("LC_ALL"))
-local file	= ('/usr/share/locale/%s/LC_MESSAGES/sodplayer.mo'):format(locale)
+local file	= ml.exists(
+	('/usr/share/locale/%s/LC_MESSAGES/sodplayer.mo'):format(locale)
+)
 if (file) then
 	local  fd,err=io.open(file,"rb")
 	if not fd then return nil,err end
