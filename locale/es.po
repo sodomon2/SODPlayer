@@ -82,15 +82,15 @@ msgstr "Cancelar"
 
 #: vistas/player.ui:150
 msgid "URL:"
-msgstr "URL:"
+msgstr ""
 
 #: vistas/player.ui:186
 msgid "Select subtitle"
 msgstr "Selecciona un susbtitulo"
 
 #: vistas/player.ui:202 vistas/player.ui:289 vistas/player.ui:472
-msgid "_File"
-msgstr "_Archivo"
+msgid "Open"
+msgstr "Abrir"
 
 #: vistas/player.ui:272
 msgid "Select File"
@@ -101,8 +101,8 @@ msgid "SODPlayer"
 msgstr ""
 
 #: vistas/player.ui:350
-msgid "_Open"
-msgstr "_Abrir"
+msgid "_File"
+msgstr "_Archivo"
 
 #: vistas/player.ui:374
 msgid "_Subtitles"
@@ -149,13 +149,9 @@ msgstr "Anterior"
 msgid "Next"
 msgstr "Siguiente"
 
-#: vistas/player.ui:544
+#: vistas/player.ui:544 vistas/player.ui:545
 msgid "Quit SODPlayer"
-msgstr "Salir De SODPlayer"
-
-#: vistas/player.ui:545 components/statusicon.lua:56 components/menus.lua:22
-msgid "Quit"
-msgstr "Salir"
+msgstr "Salir de SODPlayer"
 
 #: vistas/player.ui:681 vistas/player.ui:710
 msgid "0:00"
@@ -173,7 +169,7 @@ msgstr "SODPlayer - Preferencias"
 msgid "Apply"
 msgstr "Aplicar"
 
-#: vistas/player.ui:946 vistas/player.ui:1272 vistas/player.ui:1282
+#: vistas/player.ui:946 vistas/player.ui:1260 vistas/player.ui:1270
 msgid "@TODO"
 msgstr ""
 
@@ -181,62 +177,66 @@ msgstr ""
 msgid "General"
 msgstr ""
 
-#: vistas/player.ui:961
-msgid "Subtitles"
-msgstr "Subtitulos"
-
-#: vistas/player.ui:999
+#: vistas/player.ui:987
 msgid "Language :"
 msgstr "Lenguaje :"
 
-#: vistas/player.ui:1012
+#: vistas/player.ui:1000
 msgid "<System Languaje>"
 msgstr ""
 
-#: vistas/player.ui:1013
+#: vistas/player.ui:1001
 msgid "spanish"
 msgstr ""
 
-#: vistas/player.ui:1014
+#: vistas/player.ui:1002
 msgid "english"
 msgstr ""
 
-#: vistas/player.ui:1031
+#: vistas/player.ui:1019
 msgid "Show toolbar"
 msgstr "Mostrar toolbar"
 
-#: vistas/player.ui:1045
+#: vistas/player.ui:1033
 msgid "Paused When Minimized"
 msgstr "Pausar al minimizar"
 
-#: vistas/player.ui:1075
+#: vistas/player.ui:1063
 msgid "main window :"
 msgstr ""
 
-#: vistas/player.ui:1091 vistas/player.ui:1292
+#: vistas/player.ui:1079 vistas/player.ui:1280
 msgid "Interface"
 msgstr "Interfaz"
 
-#: vistas/player.ui:1129 vistas/player.ui:1204
+#: vistas/player.ui:1117 vistas/player.ui:1192
 msgid "Max. Items"
 msgstr ""
 
-#: vistas/player.ui:1143 vistas/player.ui:1218
+#: vistas/player.ui:1131 vistas/player.ui:1206
 msgid "0"
 msgstr ""
 
-#: vistas/player.ui:1167
+#: vistas/player.ui:1155
 msgid "Recents :"
 msgstr "Recientes :"
 
-#: vistas/player.ui:1242
+#: vistas/player.ui:1230
 msgid "URL :"
 msgstr ""
 
-#: vistas/player.ui:1261 components/menus.lua:10
+#: vistas/player.ui:1249 components/menus.lua:10
 msgid "Recents"
 msgstr "Recientes"
+
+#: vistas/player.ui:1292
+msgid "Subtitles"
+msgstr "Subtitulos"
 
 #: components/statusicon.lua:27
 msgid "File"
 msgstr "Archivo"
+
+#: components/statusicon.lua:56 components/menus.lua:22
+msgid "Quit"
+msgstr "Salir"
