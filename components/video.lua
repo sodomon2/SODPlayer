@@ -88,10 +88,10 @@ function ui.btn_chooser_close:on_clicked()
 end
 
 function ui.btn_url_ok:on_clicked()
+	stop_media()
 	ui.entry_url:grab_focus()
 	play.uri = ui.entry_url.text
 	ui.dialog_url:hide()
-	stop_media()
 	play_media()
 end
 
