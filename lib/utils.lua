@@ -15,6 +15,10 @@ function utils:split(str,sep)
     return fields
 end
 
+function utils:isfile(file)
+	return (io.open(tostring(file), "r") ~= nil)
+end
+
 function utils:path_name(uri)
     local uri   = uri or ''
     local _turi =  utils:split(uri,'/')

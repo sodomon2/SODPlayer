@@ -24,7 +24,6 @@ install: locale
 	cp -r lib/ /usr/share/sodplayer
 	mkdir -p $(LOCALES)
 	cp -r locale/es.mo $(LOCALES)/sodplayer.mo
-	install -m775 sodplayer.json /usr/share/sodplayer
 	install -m644 vistas/images/player.svg /usr/share/pixmaps/sodplayer.svg
 	install -m644 sodplayer.desktop /usr/share/applications
 

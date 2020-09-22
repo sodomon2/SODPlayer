@@ -34,7 +34,10 @@ builder   = Gtk.Builder({
 
 assert(builder:add_from_file('vistas/player.ui'))
 ui = builder.objects
-conf = config:load('sodplayer.json')
+
+config:create_config('sodplayer','sodplayer.json')
+dir = ('%s/sodplayer'):format(GLib.get_user_config_dir())
+conf = config:load(('%s/sodplayer.json'):format(dir))
 
 -- SODPlayer
 require('components.volume')

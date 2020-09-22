@@ -37,7 +37,7 @@ function ui.btn_preferences_apply:on_clicked()
 	subtitles()
 	recent_max_item()
 	showtoolbar()
-	config:save('sodplayer.json', conf)
+	config:save(('%s/sodplayer.json'):format(dir), conf)
 end
 
 function ui.btn_preferences_ok:on_clicked()
@@ -52,7 +52,7 @@ function ui.menu_preferences_tray:on_button_press_event()
 		ui.tray:set_visible(true)
 		conf.general.status_icon = true
 	end
-	config:save('sodplayer.json', conf)
+	config:save(('%s/sodplayer.json'):format(dir), conf)
 end
 
 function ui.setting_language:on_changed()
@@ -63,7 +63,7 @@ function ui.setting_language:on_changed()
     else
         conf.general.language = 'default'
 	end
-	config:save('sodplayer.json', conf)
+	config:save(('%s/sodplayer.json'):format(dir), conf)
 end
 
 ui.setting_language:set_active_id(conf.general.language)
