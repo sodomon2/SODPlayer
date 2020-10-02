@@ -22,6 +22,7 @@ Gdk       = lgi.Gdk                   -- para las keybindings
 Gtk       = lgi.require('Gtk', '3.0') -- El objeto GTK
 Gst       = lgi.require("Gst", "1.0")
 GdkX11    = lgi.GdkX11
+Gio       = lgi.Gio
 if tonumber(Gst._version) >= 1.0 then
    GstVideo = lgi.GstVideo
 end
@@ -34,12 +35,14 @@ builder   = Gtk.Builder({
 
 assert(builder:add_from_file('vistas/player.ui'))
 ui = builder.objects
+app = Gtk.Application.new ('org.SODPlayer',Gio.ApplicationFlags.HANDLES_OPEN)
 
 config:create_config('sodplayer','sodplayer.json')
 dir = ('%s/sodplayer'):format(GLib.get_user_config_dir())
 conf = config:load(('%s/sodplayer.json'):format(dir))
 
 -- SODPlayer
+require('components.SODPlayer-app')
 require('components.volume')
 require('components.video')
 require('components.keys')
@@ -93,6 +96,6 @@ ui.menu_archive:add({menu_archive_item_url})
 ui.menu_archive:add({separator})
 ui.menu_archive:add({menu_archive_item_quit})
 
-ui.main_window:show_all()
+app:run { arg[1], ... }
 panel_sensitive(false)
 Gtk.main()
