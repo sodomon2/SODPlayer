@@ -57,6 +57,7 @@ require('components.recents')
 function quit()
     Gtk.main_quit()
     main_loop:quit()
+    os.exit(0)
 end 
 
 function ui.main_window:on_destroy()
