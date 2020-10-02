@@ -18,17 +18,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: vistas/player.ui:10
-msgid ""
-"Copyright (c) 2020 Diaz Urbaneja Victor Diego Alejandro (Sodomon) \n"
-"\n"
-"  "
+msgid "Copyright © 2020 Diaz Urbaneja Victor Diego Alejandro (Sodomon) \n"
 msgstr ""
 
-#: vistas/player.ui:13
-msgid ""
-"Un reproductor hecho en Lua Gtk y Gstreamer\n"
-"© 2020 Sodomon"
-msgstr ""
+#: vistas/player.ui:12
+msgid "A lua-based video playing software made with GTK and GStreamer"
+msgstr "Un software de reproduccion de video basado en lua hecho con GTK y GStreamer"
 
 #: vistas/player.ui:16
 msgid "Github"
