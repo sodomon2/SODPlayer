@@ -64,11 +64,15 @@ end
 function show_control()
     show = not show
     if ( show ) then
-        ui.header_control:hide()
+      ui.revealer.set_reveal_child(ui.revealer,true)
     else
-        ui.header_control:show()        
+      ui.revealer.set_reveal_child(ui.revealer,false) 
     end
 end
+
+--function ui.main_window:on_enter_notify_event(event)
+        --print("ss")
+--end
 
 function quit_fullscreen()
     fullscreen = not fullscreen
