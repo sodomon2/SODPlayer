@@ -3,6 +3,7 @@
  @filename  recents.lua
  @version   2.0
  @author    Díaz Urbaneja Víctor Eduardo Diex <victor.vector008@gmail.com>
+ @co-author Diaz Urbaneja Victor Diego Alejandro <sodomon2@gmail.com>
  @date      31.07.2020 02:24:50 -04
 --]]
 
@@ -21,9 +22,8 @@ function create_submenu(depth)
 			label = ("%d. %s"):format(i, filename),
 			submenu = create_submenu(depth - 1, true),
 			on_button_press_event = function ()
-				-- @TODO: esto se puede mejorar
 			    stop_media()
-			    play.uri = 'file://' .. uri
+			    play.uri = uri
 			    play_media()
 			end
 		}
