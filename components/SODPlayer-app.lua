@@ -1,5 +1,5 @@
 --[[--
- @package   SODplayer
+ @package   SODPlayer
  @filename  SODPlayer-app.lua
  @version   2.0
  @author    Diaz Urbaneja Victor Diego Alejandro <sodomon2@gmail.com>

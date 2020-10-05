@@ -1,6 +1,6 @@
 --[[--
- @package   SODplayer
- @filename  recents.lua
+ @package   SODPlayer
+ @filename  SODPlayer-recents.lua
  @version   2.0
  @author    Díaz Urbaneja Víctor Eduardo Diex <victor.vector008@gmail.com>
  @co-author Diaz Urbaneja Victor Diego Alejandro <sodomon2@gmail.com>

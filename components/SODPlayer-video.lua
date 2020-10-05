@@ -1,6 +1,6 @@
 --[[--
- @package   SODplayer
- @filename  video.lua
+ @package   SODPlayer
+ @filename  SODPlayer-video.lua
  @version   2.0
  @author    Diaz Urbaneja Victor Diego Alejandro <sodomon2@gmail.com>
  @date      19.06.2020 15:58:49 -04

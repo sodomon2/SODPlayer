@@ -1,6 +1,6 @@
 --[[--
- @package   SODplayer
- @filename  toolbar.lua
+ @package   SODPlayer
+ @filename  SODPlayer-toolbar.lua
  @version   2.0
  @author    Diaz Urbaneja Victor Diego Alejandro <sodomon2@gmail.com>
  @date      07.08.2020 18:22:27 -04
