@@ -6,7 +6,7 @@ A lua-based video playing software made with GTK and GStreamer
 
 ## Screenshot
 
-![screenshot](vistas/images/screenshot5.png) 
+![screenshot](vistas/images/screenshot6.png) 
 
 ## Instalation
 

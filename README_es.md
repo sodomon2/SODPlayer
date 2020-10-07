@@ -4,7 +4,7 @@ Un software de reproducción de video basado en lua hecho con GTK y GStreamer
 
 ## Screenshot
 
-![screenshot](vistas/images/screenshot5.png) 
+![screenshot](vistas/images/screenshot6.png) 
 
 ## Instalacion
 
