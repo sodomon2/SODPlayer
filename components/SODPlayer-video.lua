@@ -78,7 +78,7 @@ function ui.btn_chooser_open:on_clicked()
 	table.insert(conf.history.recents, 'file://' .. media_name)
 	ui.file_media_chooser:hide()
 	config:save(('%s/sodplayer.json'):format(dir), conf)
-    title(media_name)
+	title(media_name)
 	stop_media()
 	play.uri = 'file://' .. media_name
 	play_media()
@@ -95,7 +95,7 @@ function ui.btn_url_ok:on_clicked()
 	ui.dialog_url:hide()
 	table.insert(conf.history.recents, ui.entry_url.text)
 	config:save(('%s/sodplayer.json'):format(dir), conf)
-    --title(ui.entry_url.text) @TODO
+	--title(ui.entry_url.text) @TODO
 	play_media()
 end
 
