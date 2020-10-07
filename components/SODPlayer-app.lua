@@ -20,6 +20,8 @@ function app:on_open(files)
         end
     end
     print('Playing', uri)
+	table.insert(conf.history.recents, uri)
+	config:save(('%s/sodplayer.json'):format(dir), conf)
     ui.main_window:show_all()
     play.uri = uri
     play_media()
