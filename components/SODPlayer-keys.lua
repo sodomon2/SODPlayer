@@ -114,3 +114,9 @@ end
 function ui.btn_prev:on_clicked(id)
     prev_state()
 end
+
+function ui.entry_url:on_key_release_event(event)
+    if ( event.keyval  == Gdk.KEY_Return ) then
+		url()
+    end
+end
