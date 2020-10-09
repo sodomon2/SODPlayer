@@ -1,6 +1,6 @@
-¡Lee la versión en español [aquí](README_es.md)!
-					
-		 ![SODPlayer-logo](vistas/images/logo.png)
+![SODPlayer-logo](vistas/images/logo.png)
+
+¡Lee la versión en español [aquí](README_es.md)!			
 		 
 # SODPlayer 
 
