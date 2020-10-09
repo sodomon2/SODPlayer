@@ -1,6 +1,7 @@
 ¡Lee la versión en español [aquí](README_es.md)!			
 
 ![SODPlayer-logo](vistas/images/logo.png)
+
 A lua-based video playing software made with GTK and GStreamer
 
 ## Screenshot
