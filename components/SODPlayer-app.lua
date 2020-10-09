@@ -8,7 +8,7 @@
 
 function title(media)
     filename = utils:path_name(media)['name']
-    ui.main_window.title = 'SODPlayer - ' .. filename
+    ui.main_window.title = ('SODPlayer - %s'):format(filename)
 end
 
 function app:on_activate()
