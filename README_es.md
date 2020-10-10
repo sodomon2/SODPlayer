@@ -1,4 +1,4 @@
-![SODPlayer-logo](vistas/images/logo.png)
+#SODPlayer
 
 Un software de reproducción de video basado en lua hecho con GTK y GStreamer
 
