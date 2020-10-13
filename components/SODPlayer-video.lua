@@ -65,6 +65,7 @@ local function bus_callback(bus, message)
 		print 'end of stream'
 		stop_media()
 		quit_fullscreen()
+		ui.main_window.title = 'SODPlayer'
 	elseif message.type.STATE_CHANGED then
 		local old, new, pending = message:parse_state_changed()
 		print(string.format('state changed: %s->%s:%s', old, new, pending))
@@ -90,6 +91,7 @@ end
 
 function url()
 	stop_media()
+	ui.main_window.title = 'SODPlayer'
 	ui.entry_url:grab_focus()
 	play.uri = ui.entry_url.text
 	ui.dialog_url:hide()
