@@ -12,8 +12,10 @@ function statusicon()
 	visible = not visible
     if visible then
       ui.main_window:show_all()
+      pipeline.state = 'PLAYING'
     else
       ui.main_window:hide()
+      pipeline.state = 'PAUSED'
     end 
 end
 
