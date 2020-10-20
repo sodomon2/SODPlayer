@@ -9,7 +9,7 @@
 ui.tray:set_visible(conf.general.status_icon)
 
 function statusicon()
-	visible = not visible
+    visible = not visible
     if visible then
       ui.main_window:show_all()
       pipeline.state = 'PLAYING'
