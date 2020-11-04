@@ -119,6 +119,7 @@ pipeline.bus:add_watch(GLib.PRIORITY_DEFAULT, bus_callback)
 
 function ui.btn_stop:on_clicked()
 	stop_media()
+	ui.main_window.title = 'SODPlayer'
 end
 
 function ui.media_slider:on_value_changed(id)
