@@ -6,7 +6,6 @@
  @date      19.06.2020 15:43:09 -04
 --]]  
 
-
 function ui.volume_control:on_value_changed()
 	if  (ui.volume_control:get_value() == 100) then
 		conf.general.volume = 100

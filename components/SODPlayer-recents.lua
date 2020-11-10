@@ -22,7 +22,6 @@ function create_submenu(depth)
 			label = ("%d. %s"):format(i, filename),
 			submenu = create_submenu(depth - 1, true),
 			on_button_press_event = function ()
-			    --ui.main_window.title = 'SODPlayer - ' .. filename
                 title(uri)
 			    stop_media()
 			    play.uri = uri
