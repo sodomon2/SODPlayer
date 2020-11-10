@@ -39,5 +39,20 @@ if #recents_item < 1 then
     return
 end 
 
+function ui.btn_clear_recent:on_clicked()
+    ui.delete_dialog:run()
+    ui.delete_dialog:hide()
+end
+
+function ui.btn_dialog_delete:on_clicked()
+    conf.history.recents = {}
+    config:save(('%s/sodplayer.json'):format(dir), conf)
+    ui.delete_dialog:hide()
+end
+
+function ui.btn_dialog_cancel:on_clicked()
+    ui.delete_dialog:hide()
+end
+
 menu_archive_recent.submenu = create_submenu(1)
 
