@@ -3,7 +3,8 @@
     "language": "default",
     "pause_minimized": false,
     "show_toolbar": true,
-    "status_icon": false
+    "status_icon": false,
+    "volume": 100
   },
   "history": {
     "max_item": 10,
