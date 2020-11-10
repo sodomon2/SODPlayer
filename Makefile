@@ -22,6 +22,7 @@ install: locale
 	cp -r components/ /usr/share/sodplayer
 	cp -r vistas/ /usr/share/sodplayer
 	cp -r lib/ /usr/share/sodplayer
+	cp -r sodplayer.json /usr/share/sodplayer
 	mkdir -p $(LOCALES)
 	cp -r locale/es.mo $(LOCALES)/sodplayer.mo
 	install -m644 vistas/images/player.svg /usr/share/pixmaps/sodplayer.svg
