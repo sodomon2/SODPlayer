@@ -10,9 +10,9 @@
 function ui.volume_control:on_value_changed()
 	if  (ui.volume_control:get_value() == 100) then
 		conf.general.volume = 100
-    else
+	else
 		conf.general.volume = (math.floor(ui.volume_control:get_value())/100)
-    end
+	end
 	config:save(('%s/sodplayer.json'):format(dir), conf)
 end
 
