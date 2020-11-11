@@ -6,6 +6,8 @@
  @date      19.06.2020 15:43:09 -04
 --]]  
 
+ui.volume_control:set_value(conf.general.volume)
+
 function ui.volume_control:on_value_changed()
 	if  (ui.volume_control:get_value() == 100) then
 		conf.general.volume = 100
@@ -25,5 +27,3 @@ function ui.volume_control:on_value_changed()
 	print( value )
 	play.volume = conf.general.volume
 end
-
-ui.volume_control:set_value(conf.general.volume)

@@ -22,7 +22,7 @@ function create_submenu(depth)
 			label = ("%d. %s"):format(i, filename),
 			submenu = create_submenu(depth - 1, true),
 			on_button_press_event = function ()
-                title(uri)
+			    title(uri)
 			    stop_media()
 			    play.uri = uri
 			    play_media()
