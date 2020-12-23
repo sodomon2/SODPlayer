@@ -1035,10 +1035,22 @@
                 <property name="can_focus">False</property>
                 <property name="transition_type">slide-left-right</property>
                 <child>
-                  <object class="GtkLabel">
+                  <object class="GtkLayout">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="label" translatable="yes">@TODO</property>
+                    <child>
+                      <object class="GtkCheckButton" id="setting_general_delete_recents">
+                        <property name="label" translatable="yes">Confirm delete of recent</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">False</property>
+                        <property name="draw_indicator">True</property>
+                      </object>
+                      <packing>
+                        <property name="x">5</property>
+                        <property name="y">10</property>
+                      </packing>
+                    </child>
                   </object>
                   <packing>
                     <property name="name">general</property>

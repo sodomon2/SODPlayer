@@ -55,6 +55,17 @@ function ui.menu_preferences_tray:on_button_press_event()
 	config:save(('%s/sodplayer.json'):format(dir), conf)
 end
 
+function ui.setting_general_delete_recents:on_clicked()
+	if (self:get_active()) then
+		conf.general.clear_recent = true
+	else
+		conf.general.clear_recent = false
+	end
+	config:save(('%s/sodplayer.json'):format(dir), conf)
+end
+
+ui.setting_general_delete_recents:set_active(conf.general.clear_recent)
+
 function ui.setting_language:on_changed()
 	if (self:get_active_id() == 'es') then
 		conf.general.language = 'es'

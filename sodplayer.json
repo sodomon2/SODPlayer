@@ -13,5 +13,8 @@
   },
   "subtitles": {
     "font_size": "Sans 18"
+  },
+  "other":{
+    "delete_recents": true
   }
 }

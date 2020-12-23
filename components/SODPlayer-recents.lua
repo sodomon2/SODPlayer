@@ -34,14 +34,23 @@ function create_submenu(depth)
 end
 
 if #recents_item < 1 then
-    ui.menu_archive:popdown({menu_archive_recent})
+	ui.btn_clear_recent.sensitive = false
+	ui.menu_archive:popdown({menu_archive_recent})
     return
 end 
 
 function ui.btn_clear_recent:on_clicked()
-    ui.delete_dialog:run()
-    ui.delete_dialog:hide()
-end
+    if conf.general.clear_recent == true then
+        ui.delete_dialog:run()
+        ui.delete_dialog:hide()
+        ui.btn_clear_recent.sensitive = false			
+    else
+        ui.btn_clear_recent.sensitive = false			
+        conf.history.recents = {}
+        config:save(('%s/sodplayer.json'):format(dir), conf)
+        ui.delete_dialog:hide()
+    end
+end 
 
 function ui.btn_dialog_delete:on_clicked()
     conf.history.recents = {}

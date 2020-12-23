@@ -181,71 +181,75 @@ msgstr "SODPlayer - Preferencias"
 msgid "Apply"
 msgstr "Aplicar"
 
-#: vistas/player.ui:1041 vistas/player.ui:1373 vistas/player.ui:1383
-msgid "@TODO"
-msgstr ""
+#: vistas/player.ui:1043
+msgid "Confirm delete of recent"
+msgstr "Confirmar Borrado de recientes"
 
-#: vistas/player.ui:1045
+#: vistas/player.ui:1057
 msgid "General"
 msgstr ""
 
-#: vistas/player.ui:1082
+#: vistas/player.ui:1094
 msgid "Language :"
 msgstr "Lenguaje :"
 
-#: vistas/player.ui:1095
+#: vistas/player.ui:1107
 msgid "<System Languaje>"
 msgstr ""
 
-#: vistas/player.ui:1096
+#: vistas/player.ui:1108
 msgid "spanish"
 msgstr ""
 
-#: vistas/player.ui:1097
+#: vistas/player.ui:1109
 msgid "english"
 msgstr ""
 
-#: vistas/player.ui:1114
+#: vistas/player.ui:1126
 msgid "Show toolbar"
 msgstr "Mostrar toolbar"
 
-#: vistas/player.ui:1128
+#: vistas/player.ui:1140
 msgid "Paused When Minimized"
 msgstr "Pausar al minimizar"
 
-#: vistas/player.ui:1158
+#: vistas/player.ui:1170
 msgid "main window :"
 msgstr ""
 
-#: vistas/player.ui:1174 vistas/player.ui:1393
+#: vistas/player.ui:1186 vistas/player.ui:1405
 msgid "Interface"
 msgstr "Interfaz"
 
-#: vistas/player.ui:1212 vistas/player.ui:1287
+#: vistas/player.ui:1224 vistas/player.ui:1299
 msgid "Max. Items"
 msgstr ""
 
-#: vistas/player.ui:1226 vistas/player.ui:1301
+#: vistas/player.ui:1238 vistas/player.ui:1313
 msgid "0"
 msgstr ""
 
-#: vistas/player.ui:1250
+#: vistas/player.ui:1262
 msgid "Recents :"
 msgstr "Recientes :"
 
-#: vistas/player.ui:1325
+#: vistas/player.ui:1337
 msgid "URL :"
 msgstr ""
 
-#: vistas/player.ui:1337
+#: vistas/player.ui:1349
 msgid "Delete Recents"
 msgstr "Eliminar Recientes"
 
-#: vistas/player.ui:1362 components/SODPlayer-menus.lua:10
+#: vistas/player.ui:1374 components/SODPlayer-menus.lua:10
 msgid "Recents"
 msgstr "Recientes"
 
-#: vistas/player.ui:1405
+#: vistas/player.ui:1385 vistas/player.ui:1395
+msgid "@TODO"
+msgstr ""
+
+#: vistas/player.ui:1417
 msgid "Subtitles"
 msgstr "Subtitulos"
 
