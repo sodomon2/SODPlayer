@@ -1,0 +1,262 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-01-04 16:38-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: vistas/player.ui:10
+msgid "Copyright © 2020 Diaz Urbaneja Victor Diego Alejandro (Sodomon) \n"
+msgstr ""
+
+#: vistas/player.ui:12
+msgid "A lua-based video playing software made with GTK and GStreamer"
+msgstr ""
+
+#: vistas/player.ui:14
+msgid "Github"
+msgstr ""
+
+#: vistas/player.ui:15
+msgid ""
+"zlib License\n"
+"\n"
+"/* zlib.h -- interface of the 'zlib' general purpose compression library\n"
+"  version 1.2.2, October 3rd, 2004\n"
+"\n"
+"  Copyright (C) 1995-2004 Jean-loup Gailly and Mark Adler\n"
+"\n"
+"  This software is provided 'as-is', without any express or implied\n"
+"  warranty.  In no event will the authors be held liable for any damages\n"
+"  arising from the use of this software.\n"
+"\n"
+"  Permission is granted to anyone to use this software for any purpose,\n"
+"  including commercial applications, and to alter it and redistribute it\n"
+"  freely, subject to the following restrictions:\n"
+"\n"
+"  1. The origin of this software must not be misrepresented; you must not\n"
+"     claim that you wrote the original software. If you use this software\n"
+"     in a product, an acknowledgment in the product documentation would be\n"
+"     appreciated but is not required.\n"
+"  2. Altered source versions must be plainly marked as such, and must not "
+"be\n"
+"     misrepresented as being the original software.\n"
+"  3. This notice may not be removed or altered from any source "
+"distribution.\n"
+"\n"
+"  Jean-loup Gailly jloup@gzip.org\n"
+"  Mark Adler madler@alumni.caltech.edu\n"
+"\n"
+"*/ "
+msgstr ""
+
+#: vistas/player.ui:71
+msgid "Clear Recents"
+msgstr ""
+
+#: vistas/player.ui:88
+msgid "Delete"
+msgstr ""
+
+#: vistas/player.ui:101 vistas/player.ui:198 vistas/player.ui:309
+#: vistas/player.ui:396 vistas/player.ui:986
+msgid "Cancel"
+msgstr ""
+
+#: vistas/player.ui:130
+msgid "¿Clear Recents?"
+msgstr ""
+
+#: vistas/player.ui:147
+msgid "Delete the list of recent files?"
+msgstr ""
+
+#: vistas/player.ui:167
+msgid "SODPlayer - Enter URL"
+msgstr ""
+
+#: vistas/player.ui:185 vistas/player.ui:973
+msgid "Ok"
+msgstr ""
+
+#: vistas/player.ui:244
+msgid "URL:"
+msgstr ""
+
+#: vistas/player.ui:280
+msgid "Select subtitle"
+msgstr ""
+
+#: vistas/player.ui:296 vistas/player.ui:383 vistas/player.ui:561
+msgid "Open"
+msgstr ""
+
+#: vistas/player.ui:366
+msgid "Select File"
+msgstr ""
+
+#: vistas/player.ui:424 vistas/player.ui:934 vistas/player.ui:935
+msgid "SODPlayer"
+msgstr ""
+
+#: vistas/player.ui:444
+msgid "_File"
+msgstr ""
+
+#: vistas/player.ui:468
+msgid "_Subtitles"
+msgstr ""
+
+#: vistas/player.ui:492
+msgid "Options"
+msgstr ""
+
+#: vistas/player.ui:500 vistas/player.ui:590 vistas/player.ui:591
+#: components/SODPlayer-statusicon.lua:48
+msgid "Preferences"
+msgstr ""
+
+#: vistas/player.ui:512
+msgid "_Show icon in system tray"
+msgstr ""
+
+#: vistas/player.ui:524
+msgid "Hel_p"
+msgstr ""
+
+#: vistas/player.ui:532
+msgid "_About SODPlayer"
+msgstr ""
+
+#: vistas/player.ui:560
+msgid "Open File"
+msgstr ""
+
+#: vistas/player.ui:575
+msgid "Open From URL"
+msgstr ""
+
+#: vistas/player.ui:576 components/SODPlayer-statusicon.lua:38
+#: components/SODPlayer-menus.lua:15
+msgid "URL..."
+msgstr ""
+
+#: vistas/player.ui:605 vistas/player.ui:606
+msgid "Prev"
+msgstr ""
+
+#: vistas/player.ui:619 vistas/player.ui:620
+msgid "Next"
+msgstr ""
+
+#: vistas/player.ui:633 vistas/player.ui:634
+msgid "Quit SODPlayer"
+msgstr ""
+
+#: vistas/player.ui:774 vistas/player.ui:802
+msgid "0:00"
+msgstr ""
+
+#: vistas/player.ui:897
+msgid "Volume"
+msgstr ""
+
+#: vistas/player.ui:944
+msgid "SODPlayer - Preferences"
+msgstr ""
+
+#: vistas/player.ui:960
+msgid "Apply"
+msgstr ""
+
+#: vistas/player.ui:1043
+msgid "Confirm delete of recent"
+msgstr ""
+
+#: vistas/player.ui:1057
+msgid "General"
+msgstr ""
+
+#: vistas/player.ui:1094
+msgid "Language :"
+msgstr ""
+
+#: vistas/player.ui:1107
+msgid "<System Languaje>"
+msgstr ""
+
+#: vistas/player.ui:1108
+msgid "spanish"
+msgstr ""
+
+#: vistas/player.ui:1109
+msgid "english"
+msgstr ""
+
+#: vistas/player.ui:1126
+msgid "Show toolbar"
+msgstr ""
+
+#: vistas/player.ui:1140
+msgid "Paused When Minimized"
+msgstr ""
+
+#: vistas/player.ui:1170
+msgid "main window :"
+msgstr ""
+
+#: vistas/player.ui:1186 vistas/player.ui:1405
+msgid "Interface"
+msgstr ""
+
+#: vistas/player.ui:1224 vistas/player.ui:1299
+msgid "Max. Items"
+msgstr ""
+
+#: vistas/player.ui:1238 vistas/player.ui:1313
+msgid "0"
+msgstr ""
+
+#: vistas/player.ui:1262
+msgid "Recents :"
+msgstr ""
+
+#: vistas/player.ui:1337
+msgid "URL :"
+msgstr ""
+
+#: vistas/player.ui:1349
+msgid "Delete Recents"
+msgstr ""
+
+#: vistas/player.ui:1374 components/SODPlayer-menus.lua:10
+msgid "Recents"
+msgstr ""
+
+#: vistas/player.ui:1385 vistas/player.ui:1395
+msgid "@TODO"
+msgstr ""
+
+#: vistas/player.ui:1417
+msgid "Subtitles"
+msgstr ""
+
+#: components/SODPlayer-statusicon.lua:29
+msgid "File"
+msgstr ""
+
+#: components/SODPlayer-statusicon.lua:58 components/SODPlayer-menus.lua:22
+msgid "Quit"
+msgstr ""
