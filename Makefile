@@ -8,7 +8,7 @@
 EXECUTABLE  = ./sodplayer
 MSGFMT      = /usr/bin/msgfmt
 LOCALE_PO   = locale
-LOCALE_ES   = /usr/share/locale/es_ES.UTF-8/LC_MESSAGES
+LOCALE_ES   = /usr/share/locale/es_ES/LC_MESSAGES
 LOCALE_EN   = /usr/share/locale/en_US/LC_MESSAGES
 
 all: locale

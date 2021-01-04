@@ -35,7 +35,7 @@ dir = ('%s/sodplayer'):format(GLib.get_user_config_dir())
 conf = config:load(('%s/sodplayer.json'):format(dir))
 
 if conf.general.language == 'es' then
-  gettext   = lgettext.translation('sodplayer', '/usr/share/locale', {'es_ES.UTF-8'}, 'UTF-8')
+  gettext   = lgettext.translation('sodplayer', '/usr/share/locale', {'es_ES'}, 'UTF-8')
   builder   = Gtk.Builder({translation_domain = 'sodplayer'})
 else
   gettext   = lgettext.translation('sodplayer', '/usr/share/locale', {'en_US'}, 'UTF-8')
