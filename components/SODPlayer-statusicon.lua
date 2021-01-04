@@ -26,7 +26,7 @@ end
 function create_menu(event_button, event_time)
     menu = Gtk.Menu {
         Gtk.ImageMenuItem {
-            label = gettext("File"),
+            label = gettext:gettext("File"),
             image = Gtk.Image {
               stock = "gtk-open"
             },
@@ -35,7 +35,7 @@ function create_menu(event_button, event_time)
             end
         },
         Gtk.ImageMenuItem {
-            label = gettext("URL..."),
+            label = gettext:gettext("URL..."),
             image = Gtk.Image {
               stock = "gtk-connect"
             },
@@ -45,7 +45,7 @@ function create_menu(event_button, event_time)
         },
         Gtk.SeparatorMenuItem {},
         Gtk.ImageMenuItem {
-            label = gettext("Preferences"),
+            label = gettext:gettext("Preferences"),
             image = Gtk.Image {
               stock = "gtk-preferences"
             },
@@ -55,7 +55,7 @@ function create_menu(event_button, event_time)
         },
         Gtk.SeparatorMenuItem {},
         Gtk.ImageMenuItem {
-            label = gettext("Quit"),
+            label = gettext:gettext("Quit"),
             image = Gtk.Image {
               stock = "gtk-quit"
             },

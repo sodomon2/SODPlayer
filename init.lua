@@ -13,7 +13,7 @@ json      = require 'lib.json'
 config    = require 'lib.configuration'
 utils     = require 'lib.utils'
 ml        = require 'lib.ml'
-gettext   = require 'lib.gettext'
+lgettext  = require 'lib.lgettext'
 
 lgi       = require 'lgi'             -- La libreria que me permitira usar GTK
 GObject   = lgi.GObject               -- Parte de lgi
@@ -29,17 +29,22 @@ end
 
 print(Gst._version)
 assert    = lgi.assert
-builder   = Gtk.Builder({
-	translation_domain = 'sodplayer'
-})
-
-assert(builder:add_from_file('vistas/player.ui'))
-ui = builder.objects
-app = Gtk.Application.new ('org.SODPlayer',Gio.ApplicationFlags.HANDLES_OPEN)
 
 config:create_config('sodplayer','sodplayer.json')
 dir = ('%s/sodplayer'):format(GLib.get_user_config_dir())
 conf = config:load(('%s/sodplayer.json'):format(dir))
+
+if conf.general.language == 'es' then
+  gettext   = lgettext.translation('sodplayer', '/usr/share/locale', {'es_ES.UTF-8'}, 'UTF-8')
+  builder   = Gtk.Builder({translation_domain = 'sodplayer'})
+else
+  gettext   = lgettext.translation('sodplayer', '/usr/share/locale', {'en_US'}, 'UTF-8')
+  builder   = Gtk.Builder()
+end 
+
+assert(builder:add_from_file('vistas/player.ui'))
+ui = builder.objects
+app = Gtk.Application.new ('org.SODPlayer',Gio.ApplicationFlags.HANDLES_OPEN)
 
 -- SODPlayer
 require('components.SODPlayer-app')
