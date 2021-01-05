@@ -22,6 +22,7 @@ cd SODPlayer/
 - [Lua-LGI](https://github.com/pavouk/lgi)
 - [Lua5.1](https://www.lua.org/download.html) 
 - [LuaJIT](https://luajit.org/download.html) (Optional replacement for Lua5.1)
+- [Lua-BitOp](http://bitop.luajit.org/download.html) (For Gettext)
 
 ### Execute
 
