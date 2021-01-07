@@ -6,14 +6,14 @@ A lua-based video playing software made with GTK and GStreamer
 
 ## Screenshot
 
-![screenshot](vistas/images/screenshot6.png) 
+![screenshot](data/images/screenshot6.png) 
 
 ## Instalation
 
 ```
 git clone https://github.com/sodomon2/SODPlayer.git
-cd SODPlayer/
-[sudo] make install
+meson build && cd build
+[sudo] ninja install
 ```
 
 ## Dependencies 
