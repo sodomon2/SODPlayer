@@ -4,14 +4,15 @@ Un software de reproducción de video basado en lua hecho con GTK y GStreamer
 
 ## Screenshot
 
-![screenshot](vistas/images/screenshot6.png) 
+![screenshot](data/images/screenshot6.png) 
 
 ## Instalacion
 
 ```
 git clone https://github.com/sodomon2/SODPlayer.git
 cd SODPlayer/
-[sudo] make install
+meson build && cd build
+[sudo] ninja install
 ```
 
 ## Dependencias 
@@ -24,4 +25,4 @@ cd SODPlayer/
 
 ### Execute
 
-lua5.1 `init.lua` (o luajit `init.lua`)
+`lua5.1 init.lua` (o `luajit init.lua`)
