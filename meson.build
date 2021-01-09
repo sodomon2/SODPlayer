@@ -7,7 +7,7 @@ add_project_arguments(
     language: 'lua'
 )
 
-lua_dep = dependency('lua5.1', required: false)
+lua = find_program('lua')
 gtk3_dep = dependency('gtk+-3.0')
 gstreamer_dep = dependency('gstreamer-1.0')
 
