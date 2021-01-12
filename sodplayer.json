@@ -11,10 +11,10 @@
     "recents": [],
     "url_max_item": 50
   },
+  "other": {
+    "clear_recent": true
+  },
   "subtitles": {
     "font_size": "Sans 18"
-  },
-  "other":{
-    "delete_recents": true
   }
 }

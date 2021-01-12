@@ -40,10 +40,9 @@ if #recents_item < 1 then
 end 
 
 function ui.btn_clear_recent:on_clicked()
-    if conf.general.clear_recent == true then
+    if conf.other.clear_recent == true then
         ui.delete_dialog:run()
         ui.delete_dialog:hide()
-        ui.btn_clear_recent.sensitive = false			
     else
         ui.btn_clear_recent.sensitive = false			
         conf.history.recents = {}
@@ -56,6 +55,7 @@ function ui.btn_dialog_delete:on_clicked()
     conf.history.recents = {}
     config:save(('%s/sodplayer.json'):format(dir), conf)
     ui.delete_dialog:hide()
+    ui.btn_clear_recent.sensitive = false
 end
 
 function ui.btn_dialog_cancel:on_clicked()

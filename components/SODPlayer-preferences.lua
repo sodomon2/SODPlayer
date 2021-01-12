@@ -57,14 +57,14 @@ end
 
 function ui.setting_general_delete_recents:on_clicked()
 	if (self:get_active()) then
-		conf.general.clear_recent = true
+		conf.other.clear_recent = true
 	else
-		conf.general.clear_recent = false
+		conf.other.clear_recent = false
 	end
 	config:save(('%s/sodplayer.json'):format(dir), conf)
 end
 
-ui.setting_general_delete_recents:set_active(conf.general.clear_recent)
+ui.setting_general_delete_recents:set_active(conf.other.clear_recent)
 
 function ui.setting_language:on_changed()
 	if (self:get_active_id() == 'es') then
