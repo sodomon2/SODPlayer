@@ -4,7 +4,6 @@ sources = [
     'lgettext.lua',
     'luar-locale.lua',
     'middleclass.lua',
-    'ml.lua',
     'utils.lua'
 ]
 
