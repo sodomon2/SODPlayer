@@ -82,7 +82,7 @@ function ui.btn_chooser_open:on_clicked()
 	config:save(('%s/sodplayer.json'):format(dir), conf)
 	title(media_name)
 	stop_media()
-	play.uri = 'file://' .. media_name
+	play.uri = ('file://%s'):format(media_name)
 	play_media()
 end
 
@@ -92,7 +92,6 @@ end
 
 function url()
 	stop_media()
-	ui.main_window.title = 'SODPlayer'
 	ui.entry_url:grab_focus()
 	play.uri = ui.entry_url.text
 	ui.dialog_url:hide()
