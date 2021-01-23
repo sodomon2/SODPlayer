@@ -1,14 +1,13 @@
 ¡Lee la versión en español [aquí](README_es.md)!			
 
 # SODPlayer
-
 A lua-based video playing software made with GTK and GStreamer
 
 ## Screenshot
 
 ![screenshot](data/images/screenshot6.png) 
 
-## Instalation
+## Installation
 
 ```
 git clone https://github.com/sodomon2/SODPlayer.git

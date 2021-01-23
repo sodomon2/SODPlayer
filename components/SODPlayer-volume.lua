@@ -11,13 +11,13 @@ ui.volume_control:set_value(conf.general.volume)
 function ui.volume_control:on_value_changed()
 	local value = (math.floor(ui.volume_control:get_value())/100)
 	ui.volume_control:set_range(0, 100 )
-    if  (value == 1) then
+	if  (value == 1) then
 		conf.general.volume = 100
 	else
 		conf.general.volume = value
 	end
 	play.volume = conf.general.volume
-    print( value )
+	print( value )
 	config:save(('%s/sodplayer.json'):format(dir), conf)
 end
 
