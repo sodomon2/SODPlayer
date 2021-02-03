@@ -59,27 +59,27 @@ require('components.SODPlayer-duration')
 require('components.SODPlayer-recents')
 
 function quit()
-    Gtk.main_quit()
-    main_loop:quit()
-    os.exit(0)
+	Gtk.main_quit()
+	main_loop:quit()
+	os.exit(0)
 end 
 
 function ui.main_window:on_destroy()
-    quit()
+	quit()
 end
 
 function menu_archive_item_quit:on_button_press_event()
-    quit()
+	quit()
 end
 
 function ui.menu_archive_item_open:on_button_press_event()
-    ui.file_media_chooser:run()
-    ui.file_media_chooser:hide()
+	ui.file_media_chooser:run()
+	ui.file_media_chooser:hide()
 end
 
 function ui.menu_subtitles_item:on_button_press_event()
-    ui.file_subtitle_chooser:run()
-    ui.file_subtitle_chooser:hide()
+	ui.file_subtitle_chooser:run()
+	ui.file_subtitle_chooser:hide()
 end
 
 function ui.menu_about_item:on_button_press_event()
@@ -93,8 +93,8 @@ function ui.menu_preferences_item:on_button_press_event()
 end
 
 function menu_archive_item_url:on_button_press_event()
-    ui.dialog_url:run()
-    ui.dialog_url:hide()
+	ui.dialog_url:run()
+	ui.dialog_url:hide()
 end
 
 ui.menu_archive:add({menu_archive_item_url})

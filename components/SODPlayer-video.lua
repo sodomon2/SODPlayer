@@ -18,9 +18,9 @@ function panel_sensitive(state)
 	ui.media_slider.sensitive = state
 	ui.btn_volume.sensitive = state
 	ui.btn_fullscreen.sensitive = state
-    ui.info_current_time.sensitive = state
-    ui.info_full_time.sensitive = state
-    ui.menu_volume:hide()
+	ui.info_current_time.sensitive = state
+	ui.info_full_time.sensitive = state
+	ui.menu_volume:hide()
 end
 
 function stop_media()

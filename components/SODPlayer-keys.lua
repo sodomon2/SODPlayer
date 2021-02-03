@@ -25,60 +25,60 @@ function next_state()
 end
 
 function toggle_pause()
-    playstate = not playstate
-    if (playstate) then
-        pipeline.state = 'PAUSED'
-        ui.img_media_state.icon_name = 'media-playback-start'
-    else
-        pipeline.state = 'PLAYING'
-        ui.img_media_state.icon_name = 'media-playback-pause'
-    end
+	playstate = not playstate
+	if (playstate) then
+		pipeline.state = 'PAUSED'
+		ui.img_media_state.icon_name = 'media-playback-start'
+	else
+		pipeline.state = 'PLAYING'
+		ui.img_media_state.icon_name = 'media-playback-pause'
+	end
 end 
 
 function toggle_fullscreen()
-    fullscreen = not fullscreen
-    if ( fullscreen ) then
-        ui.main_window:fullscreen()
-        ui.menu_media:hide()
-        ui.main_toolbar:hide()
-        ui.img_fullscreen.stock = 'gtk-leave-fullscreen'
-    else
-        ui.img_fullscreen.stock = 'gtk-fullscreen'
-        ui.main_window:unfullscreen()
-        ui.menu_media:show()
-        ui.main_toolbar:show()
-    end
+	fullscreen = not fullscreen
+	if ( fullscreen ) then
+		ui.main_window:fullscreen()
+		ui.menu_media:hide()
+		ui.main_toolbar:hide()
+		ui.img_fullscreen.stock = 'gtk-leave-fullscreen'
+	else
+		ui.img_fullscreen.stock = 'gtk-fullscreen'
+		ui.main_window:unfullscreen()
+		ui.menu_media:show()
+		ui.main_toolbar:show()
+	end
 end 
 
 function toggle_mute()
-    mute = not mute
-    if ( mute ) then
-        ui.volume_control:set_value(0)
-        ui.img_volume_state.icon_name = 'audio-volume-muted'
-    else
-        ui.volume_control:set_value(100)
-        ui.img_volume_state.icon_name = 'audio-volume-high'
-    end
+	mute = not mute
+	if ( mute ) then
+		ui.volume_control:set_value(0)
+		ui.img_volume_state.icon_name = 'audio-volume-muted'
+	else
+		ui.volume_control:set_value(100)
+		ui.img_volume_state.icon_name = 'audio-volume-high'
+	end
 end
 
 function show_control()
-    show = not show
-    if ( show ) then
-      ui.revealer.set_reveal_child(ui.revealer,true)
-    else
-      ui.revealer.set_reveal_child(ui.revealer,false) 
-    end
+	show = not show
+	if ( show ) then
+	  ui.revealer.set_reveal_child(ui.revealer,true)
+	else
+	  ui.revealer.set_reveal_child(ui.revealer,false) 
+	end
 end
 
 --function ui.main_window:on_enter_notify_event(event)
-        --print("ss")
+		--print("ss")
 --end
 
 function quit_fullscreen()
-    fullscreen = not fullscreen
-    ui.img_fullscreen.stock = 'gtk-fullscreen'
-    ui.main_window:unfullscreen()
-    ui.menu_media:show()
+	fullscreen = not fullscreen
+	ui.img_fullscreen.stock = 'gtk-fullscreen'
+	ui.main_window:unfullscreen()
+	ui.menu_media:show()
 end
 
 keybindings = {
@@ -104,19 +104,19 @@ function ui.main_window:on_key_press_event(event)
 end
 
 function ui.btn_fullscreen:on_clicked()
-    toggle_fullscreen()
+	toggle_fullscreen()
 end 
 
 function ui.btn_next:on_clicked(id)
-    next_state()
+	next_state()
 end
 
 function ui.btn_prev:on_clicked(id)
-    prev_state()
+	prev_state()
 end
 
 function ui.entry_url:on_key_release_event(event)
-    if ( event.keyval  == Gdk.KEY_Return ) then
+	if ( event.keyval  == Gdk.KEY_Return ) then
 		url()
-    end
+	end
 end

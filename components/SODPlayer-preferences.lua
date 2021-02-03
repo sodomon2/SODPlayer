@@ -71,8 +71,8 @@ function ui.setting_language:on_changed()
 		conf.general.language = 'es'
 	elseif (self:get_active_id() == 'en') then
 		conf.general.language = 'en'
-    else
-        conf.general.language = 'default'
+	else
+		conf.general.language = 'default'
 	end
 	config:save(('%s/sodplayer.json'):format(dir), conf)
 end

@@ -12,7 +12,7 @@ function ns_to_str (ns)
 		minutes = math.floor(seconds / 60)
 		seconds = math.floor(seconds - (minutes * 60))
 		str = minutes .. ':' .. seconds
-        return str
+		return str
 end
 
 function get_position()
