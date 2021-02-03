@@ -24,7 +24,7 @@ function ui.tray:on_activate()
 end
 
 function create_menu(event_button, event_time)
-    menu = Gtk.Menu {
+    local menu = Gtk.Menu {
         Gtk.ImageMenuItem {
             label = gettext:gettext("File"),
             image = Gtk.Image {
@@ -51,6 +51,7 @@ function create_menu(event_button, event_time)
             },
             on_activate = function()
                 ui.preferences_window:run()
+                ui.preferences_window:hide()
             end
         },
         Gtk.SeparatorMenuItem {},
