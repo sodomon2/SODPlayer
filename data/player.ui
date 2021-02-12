@@ -345,80 +345,6 @@
     <property name="can_focus">False</property>
     <property name="stock">gtk-preferences</property>
   </object>
-  <object class="GtkFileFilter" id="media_filter">
-    <mime-types>
-      <mime-type>video/x-msvideo</mime-type>
-      <mime-type>video/mp4</mime-type>
-      <mime-type>video/mpeg</mime-type>
-      <mime-type>video/ogg</mime-type>
-      <mime-type>audio/x-wav</mime-type>
-      <mime-type>audio/ogg</mime-type>
-      <mime-type>audio/mpeg</mime-type>
-      <mime-type>audio/x-mpegurl</mime-type>
-      <mime-type>video/x-matroska</mime-type>
-      <mime-type>audio/x-matroska</mime-type>
-      <mime-type>video/webm</mime-type>
-      <mime-type>audio/webm</mime-type>
-    </mime-types>
-  </object>
-  <object class="GtkFileChooserDialog" id="file_media_chooser">
-    <property name="can_focus">False</property>
-    <property name="title" translatable="yes">Select File</property>
-    <property name="type_hint">dialog</property>
-    <property name="filter">media_filter</property>
-    <child type="titlebar">
-      <placeholder/>
-    </child>
-    <child internal-child="vbox">
-      <object class="GtkBox">
-        <property name="can_focus">False</property>
-        <property name="orientation">vertical</property>
-        <property name="spacing">2</property>
-        <child internal-child="action_area">
-          <object class="GtkButtonBox">
-            <property name="can_focus">False</property>
-            <property name="layout_style">end</property>
-            <child>
-              <object class="GtkButton" id="btn_chooser_open">
-                <property name="label" translatable="yes">Open</property>
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">True</property>
-              </object>
-              <packing>
-                <property name="expand">True</property>
-                <property name="fill">True</property>
-                <property name="position">0</property>
-              </packing>
-            </child>
-            <child>
-              <object class="GtkButton" id="btn_chooser_close">
-                <property name="label" translatable="yes">Cancel</property>
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">True</property>
-              </object>
-              <packing>
-                <property name="expand">True</property>
-                <property name="fill">True</property>
-                <property name="position">1</property>
-              </packing>
-            </child>
-          </object>
-          <packing>
-            <property name="expand">False</property>
-            <property name="fill">False</property>
-            <property name="position">0</property>
-          </packing>
-        </child>
-      </object>
-    </child>
-  </object>
-  <object class="GtkAdjustment" id="media_player_control">
-    <property name="upper">100</property>
-    <property name="step_increment">1</property>
-    <property name="page_increment">10</property>
-  </object>
   <object class="GtkWindow" id="main_window">
     <property name="can_focus">False</property>
     <property name="title" translatable="yes">SODPlayer</property>
@@ -662,151 +588,127 @@
           </packing>
         </child>
         <child>
-          <object class="GtkEventBox" id="eventbox">
+          <object class="GtkRevealer" id="revealer">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="visible_window">False</property>
+            <property name="transition_type">slide-up</property>
+            <property name="reveal_child">True</property>
             <child>
-              <object class="GtkRevealer" id="revealer">
+              <object class="GtkHeaderBar" id="header_control">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="transition_type">crossfade</property>
-                <property name="reveal_child">True</property>
                 <child>
-                  <object class="GtkHeaderBar" id="header_control">
+                  <object class="GtkButton" id="btn_prev">
+                    <property name="name">btnPrev</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <property name="relief">none</property>
+                    <child>
+                      <object class="GtkImage">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="icon_name">media-skip-backward</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkButton" id="btn_play">
+                    <property name="name">btnPlay</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <property name="relief">none</property>
+                    <child>
+                      <object class="GtkImage" id="img_media_state">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="icon_name">media-playback-start</property>
+                      </object>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="position">1</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="btn_stop">
+                    <property name="name">btnStop</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <property name="relief">none</property>
+                    <child>
+                      <object class="GtkImage">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="icon_name">media-playback-stop</property>
+                      </object>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="position">2</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="btn_next">
+                    <property name="name">btnNext</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <property name="relief">none</property>
+                    <child>
+                      <object class="GtkImage">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="icon_name">media-skip-forward</property>
+                      </object>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="position">3</property>
+                  </packing>
+                </child>
+                <child type="title">
+                  <object class="GtkBox">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
+                    <property name="valign">baseline</property>
+                    <property name="margin_left">10</property>
+                    <property name="margin_right">10</property>
+                    <property name="margin_start">10</property>
+                    <property name="margin_end">10</property>
+                    <property name="hexpand">True</property>
+                    <property name="vexpand">False</property>
+                    <property name="orientation">vertical</property>
                     <child>
-                      <object class="GtkButton" id="btn_prev">
-                        <property name="name">btnPrev</property>
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="receives_default">True</property>
-                        <property name="relief">none</property>
-                        <child>
-                          <object class="GtkImage">
-                            <property name="visible">True</property>
-                            <property name="can_focus">False</property>
-                            <property name="icon_name">media-skip-backward</property>
-                          </object>
-                        </child>
-                      </object>
-                    </child>
-                    <child>
-                      <object class="GtkButton" id="btn_play">
-                        <property name="name">btnPlay</property>
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="receives_default">True</property>
-                        <property name="relief">none</property>
-                        <child>
-                          <object class="GtkImage" id="img_media_state">
-                            <property name="visible">True</property>
-                            <property name="can_focus">False</property>
-                            <property name="icon_name">media-playback-start</property>
-                          </object>
-                        </child>
-                      </object>
-                      <packing>
-                        <property name="position">1</property>
-                      </packing>
-                    </child>
-                    <child>
-                      <object class="GtkButton" id="btn_stop">
-                        <property name="name">btnStop</property>
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="receives_default">True</property>
-                        <property name="relief">none</property>
-                        <child>
-                          <object class="GtkImage">
-                            <property name="visible">True</property>
-                            <property name="can_focus">False</property>
-                            <property name="icon_name">media-playback-stop</property>
-                          </object>
-                        </child>
-                      </object>
-                      <packing>
-                        <property name="position">2</property>
-                      </packing>
-                    </child>
-                    <child>
-                      <object class="GtkButton" id="btn_next">
-                        <property name="name">btnNext</property>
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="receives_default">True</property>
-                        <property name="relief">none</property>
-                        <child>
-                          <object class="GtkImage">
-                            <property name="visible">True</property>
-                            <property name="can_focus">False</property>
-                            <property name="icon_name">media-skip-forward</property>
-                          </object>
-                        </child>
-                      </object>
-                      <packing>
-                        <property name="position">3</property>
-                      </packing>
-                    </child>
-                    <child type="title">
                       <object class="GtkBox">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="valign">baseline</property>
-                        <property name="margin_left">10</property>
-                        <property name="margin_right">10</property>
-                        <property name="margin_start">10</property>
-                        <property name="margin_end">10</property>
-                        <property name="hexpand">True</property>
-                        <property name="vexpand">False</property>
-                        <property name="orientation">vertical</property>
+                        <property name="margin_top">5</property>
+                        <property name="spacing">10</property>
                         <child>
-                          <object class="GtkBox">
+                          <object class="GtkLabel" id="info_current_time">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
-                            <property name="margin_top">5</property>
-                            <property name="spacing">10</property>
-                            <child>
-                              <object class="GtkLabel" id="info_current_time">
-                                <property name="visible">True</property>
-                                <property name="can_focus">False</property>
-                                <property name="label" translatable="yes">0:00</property>
-                              </object>
-                              <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                                <property name="position">0</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkScale" id="media_slider">
-                                <property name="visible">True</property>
-                                <property name="can_focus">False</property>
-                                <property name="adjustment">media_player_control</property>
-                                <property name="restrict_to_fill_level">False</property>
-                                <property name="fill_level">100</property>
-                                <property name="digits">0</property>
-                                <property name="draw_value">False</property>
-                              </object>
-                              <packing>
-                                <property name="expand">True</property>
-                                <property name="fill">True</property>
-                                <property name="position">1</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkLabel" id="info_full_time">
-                                <property name="visible">True</property>
-                                <property name="can_focus">False</property>
-                                <property name="label" translatable="yes">0:00</property>
-                              </object>
-                              <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                                <property name="position">2</property>
-                              </packing>
-                            </child>
+                            <property name="label" translatable="yes">0:00</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkScale" id="media_slider">
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="adjustment">media_player_control</property>
+                            <property name="restrict_to_fill_level">False</property>
+                            <property name="fill_level">100</property>
+                            <property name="digits">0</property>
+                            <property name="draw_value">False</property>
                           </object>
                           <packing>
                             <property name="expand">True</property>
@@ -814,51 +716,68 @@
                             <property name="position">1</property>
                           </packing>
                         </child>
-                      </object>
-                      <packing>
-                        <property name="position">-1</property>
-                      </packing>
-                    </child>
-                    <child>
-                      <object class="GtkButton" id="btn_fullscreen">
-                        <property name="name">btnNext</property>
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="receives_default">True</property>
-                        <property name="relief">none</property>
                         <child>
-                          <object class="GtkImage" id="img_fullscreen">
+                          <object class="GtkLabel" id="info_full_time">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
-                            <property name="icon_name">gtk-fullscreen</property>
+                            <property name="label" translatable="yes">0:00</property>
                           </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">2</property>
+                          </packing>
                         </child>
                       </object>
                       <packing>
-                        <property name="pack_type">end</property>
-                        <property name="position">4</property>
-                      </packing>
-                    </child>
-                    <child>
-                      <object class="GtkButton" id="btn_volume">
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="receives_default">True</property>
-                        <property name="relief">none</property>
-                        <child>
-                          <object class="GtkImage" id="img_volume_state">
-                            <property name="visible">True</property>
-                            <property name="can_focus">False</property>
-                            <property name="icon_name">audio-volume-high</property>
-                          </object>
-                        </child>
-                      </object>
-                      <packing>
-                        <property name="pack_type">end</property>
-                        <property name="position">5</property>
+                        <property name="expand">True</property>
+                        <property name="fill">True</property>
+                        <property name="position">1</property>
                       </packing>
                     </child>
                   </object>
+                  <packing>
+                    <property name="position">-1</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="btn_fullscreen">
+                    <property name="name">btnNext</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <property name="relief">none</property>
+                    <child>
+                      <object class="GtkImage" id="img_fullscreen">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="icon_name">gtk-fullscreen</property>
+                      </object>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="pack_type">end</property>
+                    <property name="position">4</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="btn_volume">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <property name="relief">none</property>
+                    <child>
+                      <object class="GtkImage" id="img_volume_state">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="icon_name">audio-volume-high</property>
+                      </object>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="pack_type">end</property>
+                    <property name="position">5</property>
+                  </packing>
                 </child>
               </object>
             </child>
@@ -871,6 +790,80 @@
         </child>
       </object>
     </child>
+  </object>
+  <object class="GtkFileFilter" id="media_filter">
+    <mime-types>
+      <mime-type>video/x-msvideo</mime-type>
+      <mime-type>video/mp4</mime-type>
+      <mime-type>video/mpeg</mime-type>
+      <mime-type>video/ogg</mime-type>
+      <mime-type>audio/x-wav</mime-type>
+      <mime-type>audio/ogg</mime-type>
+      <mime-type>audio/mpeg</mime-type>
+      <mime-type>audio/x-mpegurl</mime-type>
+      <mime-type>video/x-matroska</mime-type>
+      <mime-type>audio/x-matroska</mime-type>
+      <mime-type>video/webm</mime-type>
+      <mime-type>audio/webm</mime-type>
+    </mime-types>
+  </object>
+  <object class="GtkFileChooserDialog" id="file_media_chooser">
+    <property name="can_focus">False</property>
+    <property name="title" translatable="yes">Select File</property>
+    <property name="type_hint">dialog</property>
+    <property name="filter">media_filter</property>
+    <child type="titlebar">
+      <placeholder/>
+    </child>
+    <child internal-child="vbox">
+      <object class="GtkBox">
+        <property name="can_focus">False</property>
+        <property name="orientation">vertical</property>
+        <property name="spacing">2</property>
+        <child internal-child="action_area">
+          <object class="GtkButtonBox">
+            <property name="can_focus">False</property>
+            <property name="layout_style">end</property>
+            <child>
+              <object class="GtkButton" id="btn_chooser_open">
+                <property name="label" translatable="yes">Open</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="btn_chooser_close">
+                <property name="label" translatable="yes">Cancel</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">False</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkAdjustment" id="media_player_control">
+    <property name="upper">100</property>
+    <property name="step_increment">1</property>
+    <property name="page_increment">10</property>
   </object>
   <object class="GtkAdjustment" id="media_volume_control">
     <property name="upper">100</property>

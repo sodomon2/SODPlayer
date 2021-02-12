@@ -64,9 +64,9 @@ end
 function show_control()
 	show = not show
 	if ( show ) then
-	  ui.revealer.set_reveal_child(ui.revealer,true)
+	  ui.revealer:set_reveal_child(true)
 	else
-	  ui.revealer.set_reveal_child(ui.revealer,false) 
+	  ui.revealer:set_reveal_child(false)
 	end
 end
 
