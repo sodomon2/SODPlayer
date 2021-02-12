@@ -1,0 +1,4 @@
+#!/bin/sh
+
+cd @prefix@/@datadir@/sodplayer
+exec @prefix@/@datadir@/sodplayer/init.lua "$@"

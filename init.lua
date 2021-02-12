@@ -34,10 +34,10 @@ dir = ('%s/sodplayer'):format(GLib.get_user_config_dir())
 conf = config:load(('%s/sodplayer.json'):format(dir))
 
 if conf.general.language == 'es' then
-  gettext   = lgettext.translation('sodplayer', '/usr/share/locale', {'es'}, 'UTF-8')
+  gettext   = lgettext.translation('sodplayer', '@prefix@/@localedir@/', {'es'}, 'UTF-8')
   builder   = Gtk.Builder({translation_domain = 'sodplayer'})
 else
-  gettext   = lgettext.translation('sodplayer', '/usr/share/locale', {'en'}, 'UTF-8')
+  gettext   = lgettext.translation('sodplayer', '@prefix@/@localedir@/', {'en'}, 'UTF-8')
   builder   = Gtk.Builder()
 end 
 
@@ -101,6 +101,6 @@ ui.menu_archive:add({menu_archive_item_url})
 ui.menu_archive:add({separator})
 ui.menu_archive:add({menu_archive_item_quit})
 
-app:run { arg[1], ... }
 panel_sensitive(false)
+app:run({ arg[1], ... })
 Gtk.main()
