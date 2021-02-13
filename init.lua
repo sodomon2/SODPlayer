@@ -43,7 +43,7 @@ end
 
 assert(builder:add_from_file('vistas/player.ui'))
 ui = builder.objects
-app = Gtk.Application.new ('org.SODPlayer',Gio.ApplicationFlags.HANDLES_OPEN)
+app = Gtk.Application.new ('com.github.sodomon2.SODPlayer',Gio.ApplicationFlags.HANDLES_OPEN)
 
 -- SODPlayer
 require('components.SODPlayer-app')
