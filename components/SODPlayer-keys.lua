@@ -6,21 +6,21 @@
  @date      02.07.2020 17:27:23 -04
 --]]
 
-function prev_state()
+function prev_state(offset)
 	local current = pipeline:query_position(Gst.Format.TIME)
 	pipeline:seek_simple(
 		Gst.Format.TIME,
 		{Gst.SeekFlags.FLUSH, Gst.SeekFlags.KEY_UNIT},
-		current-10 * Gst.SECOND
+		current-offset * Gst.SECOND
 	)
 end
 
-function next_state()
+function next_state(offset)
 	local current = pipeline:query_position(Gst.Format.TIME)
 	pipeline:seek_simple(
 		Gst.Format.TIME,
 		{Gst.SeekFlags.FLUSH, Gst.SeekFlags.KEY_UNIT},
-		current+10 * Gst.SECOND
+		current+offset * Gst.SECOND
 	)
 end
 
@@ -83,8 +83,10 @@ end
 
 keybindings = {
    [Gdk.KEY_space]    = function() toggle_pause() end,
-   [Gdk.KEY_Left]     = function() prev_state() end,
-   [Gdk.KEY_Right]    = function() next_state() end,
+   [Gdk.KEY_Up]       = function() next_state(10) end,
+   [Gdk.KEY_Down]     = function() prev_state(10) end,
+   [Gdk.KEY_Left]     = function() prev_state(5) end,
+   [Gdk.KEY_Right]    = function() next_state(5) end,
    [Gdk.KEY_q]        = function() quit() end,
    [Gdk.KEY_Q]        = function() quit() end,
    [Gdk.KEY_f]        = function() toggle_fullscreen() end,
