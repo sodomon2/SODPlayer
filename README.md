@@ -19,8 +19,7 @@ meson build && cd build
 
 - [Gstreamer](https://gstreamer.freedesktop.org/download/)
 - [Lua-LGI](https://github.com/pavouk/lgi)
-- [Lua5.1](https://www.lua.org/download.html) 
-- [LuaJIT](https://luajit.org/download.html) (Optional replacement for Lua5.1)
+- [Lua5.1+](https://www.lua.org/download.html) (or [LuaJIT 2.0+](https://luajit.org/))
 - [Lua-BitOp](http://bitop.luajit.org/download.html) (For Gettext)
 
 ### Execute
