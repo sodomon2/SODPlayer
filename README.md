@@ -5,7 +5,7 @@ A lua-based video playing software made with GTK and GStreamer
 
 ## Screenshot
 
-![screenshot](data/images/screenshot6.png) 
+![screenshot](https://github.com/sodomon2/project-screenshot/blob/master/SODPlayer/screenshot.png?raw=true)
 
 ## Installation
 
