@@ -25,7 +25,7 @@ install_data(
 
 install_data(
     'player.ui',
-    install_dir: join_paths(get_option('datadir'), 'sodplayer/vistas')
+    install_dir: join_paths(get_option('datadir'), 'sodplayer/data')
 )
 
-install_subdir('images/', install_dir : join_paths(get_option('datadir'), 'sodplayer/vistas')) 
+install_subdir('images/', install_dir : join_paths(get_option('datadir'), 'sodplayer/data')) 

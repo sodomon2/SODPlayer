@@ -41,7 +41,7 @@ else
   builder   = Gtk.Builder()
 end 
 
-assert(builder:add_from_file('vistas/player.ui'))
+assert(builder:add_from_file('data/player.ui'))
 ui = builder.objects
 app = Gtk.Application.new ('com.github.sodomon2.SODPlayer',Gio.ApplicationFlags.HANDLES_OPEN)
 
