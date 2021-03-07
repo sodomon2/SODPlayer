@@ -35,6 +35,13 @@ function toggle_pause()
 	end
 end 
 
+function quit_fullscreen()
+	ui.img_fullscreen.stock = 'gtk-fullscreen'
+	ui.main_window:unfullscreen()
+	ui.menu_media:show()
+	ui.main_toolbar:show()
+end
+
 function toggle_fullscreen()
 	fullscreen = not fullscreen
 	if ( fullscreen ) then
@@ -43,10 +50,7 @@ function toggle_fullscreen()
 		ui.main_toolbar:hide()
 		ui.img_fullscreen.stock = 'gtk-leave-fullscreen'
 	else
-		ui.img_fullscreen.stock = 'gtk-fullscreen'
-		ui.main_window:unfullscreen()
-		ui.menu_media:show()
-		ui.main_toolbar:show()
+		quit_fullscreen()
 	end
 end 
 
@@ -73,13 +77,6 @@ end
 --function ui.main_window:on_enter_notify_event(event)
 		--print("ss")
 --end
-
-function quit_fullscreen()
-	fullscreen = not fullscreen
-	ui.img_fullscreen.stock = 'gtk-fullscreen'
-	ui.main_window:unfullscreen()
-	ui.menu_media:show()
-end
 
 keybindings = {
    [Gdk.KEY_space]    = function() toggle_pause() end,
