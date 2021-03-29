@@ -345,6 +345,80 @@
     <property name="can_focus">False</property>
     <property name="stock">gtk-preferences</property>
   </object>
+  <object class="GtkFileFilter" id="media_filter">
+    <mime-types>
+      <mime-type>video/x-msvideo</mime-type>
+      <mime-type>video/mp4</mime-type>
+      <mime-type>video/mpeg</mime-type>
+      <mime-type>video/ogg</mime-type>
+      <mime-type>audio/x-wav</mime-type>
+      <mime-type>audio/ogg</mime-type>
+      <mime-type>audio/mpeg</mime-type>
+      <mime-type>audio/x-mpegurl</mime-type>
+      <mime-type>video/x-matroska</mime-type>
+      <mime-type>audio/x-matroska</mime-type>
+      <mime-type>video/webm</mime-type>
+      <mime-type>audio/webm</mime-type>
+    </mime-types>
+  </object>
+  <object class="GtkFileChooserDialog" id="file_media_chooser">
+    <property name="can_focus">False</property>
+    <property name="title" translatable="yes">Select File</property>
+    <property name="type_hint">dialog</property>
+    <property name="filter">media_filter</property>
+    <child type="titlebar">
+      <placeholder/>
+    </child>
+    <child internal-child="vbox">
+      <object class="GtkBox">
+        <property name="can_focus">False</property>
+        <property name="orientation">vertical</property>
+        <property name="spacing">2</property>
+        <child internal-child="action_area">
+          <object class="GtkButtonBox">
+            <property name="can_focus">False</property>
+            <property name="layout_style">end</property>
+            <child>
+              <object class="GtkButton" id="btn_chooser_open">
+                <property name="label" translatable="yes">Open</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="btn_chooser_close">
+                <property name="label" translatable="yes">Cancel</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">False</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkAdjustment" id="media_player_control">
+    <property name="upper">100</property>
+    <property name="step_increment">1</property>
+    <property name="page_increment">10</property>
+  </object>
   <object class="GtkWindow" id="main_window">
     <property name="can_focus">False</property>
     <property name="title" translatable="yes">SODPlayer</property>
@@ -576,8 +650,6 @@
         </child>
         <child>
           <object class="GtkDrawingArea" id="video">
-            <property name="width_request">600</property>
-            <property name="height_request">400</property>
             <property name="visible">True</property>
             <property name="can_focus">False</property>
           </object>
@@ -790,80 +862,6 @@
         </child>
       </object>
     </child>
-  </object>
-  <object class="GtkFileFilter" id="media_filter">
-    <mime-types>
-      <mime-type>video/x-msvideo</mime-type>
-      <mime-type>video/mp4</mime-type>
-      <mime-type>video/mpeg</mime-type>
-      <mime-type>video/ogg</mime-type>
-      <mime-type>audio/x-wav</mime-type>
-      <mime-type>audio/ogg</mime-type>
-      <mime-type>audio/mpeg</mime-type>
-      <mime-type>audio/x-mpegurl</mime-type>
-      <mime-type>video/x-matroska</mime-type>
-      <mime-type>audio/x-matroska</mime-type>
-      <mime-type>video/webm</mime-type>
-      <mime-type>audio/webm</mime-type>
-    </mime-types>
-  </object>
-  <object class="GtkFileChooserDialog" id="file_media_chooser">
-    <property name="can_focus">False</property>
-    <property name="title" translatable="yes">Select File</property>
-    <property name="type_hint">dialog</property>
-    <property name="filter">media_filter</property>
-    <child type="titlebar">
-      <placeholder/>
-    </child>
-    <child internal-child="vbox">
-      <object class="GtkBox">
-        <property name="can_focus">False</property>
-        <property name="orientation">vertical</property>
-        <property name="spacing">2</property>
-        <child internal-child="action_area">
-          <object class="GtkButtonBox">
-            <property name="can_focus">False</property>
-            <property name="layout_style">end</property>
-            <child>
-              <object class="GtkButton" id="btn_chooser_open">
-                <property name="label" translatable="yes">Open</property>
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">True</property>
-              </object>
-              <packing>
-                <property name="expand">True</property>
-                <property name="fill">True</property>
-                <property name="position">0</property>
-              </packing>
-            </child>
-            <child>
-              <object class="GtkButton" id="btn_chooser_close">
-                <property name="label" translatable="yes">Cancel</property>
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">True</property>
-              </object>
-              <packing>
-                <property name="expand">True</property>
-                <property name="fill">True</property>
-                <property name="position">1</property>
-              </packing>
-            </child>
-          </object>
-          <packing>
-            <property name="expand">False</property>
-            <property name="fill">False</property>
-            <property name="position">0</property>
-          </packing>
-        </child>
-      </object>
-    </child>
-  </object>
-  <object class="GtkAdjustment" id="media_player_control">
-    <property name="upper">100</property>
-    <property name="step_increment">1</property>
-    <property name="page_increment">10</property>
   </object>
   <object class="GtkAdjustment" id="media_volume_control">
     <property name="upper">100</property>

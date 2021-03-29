@@ -6,6 +6,10 @@
  @date      01.10.2020 18:21:47 -04
 --]]
 
+local screen					= Gdk.Screen:get_default()
+ui.main_window.default_width	= screen:get_width()
+ui.main_window.default_height	= screen:get_height()
+
 function title(media)
 	filename = utils:path_name(media)['name']
 	ui.main_window.title = ('SODPlayer - %s'):format(filename)
