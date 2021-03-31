@@ -74,10 +74,6 @@ function show_control()
 	end
 end
 
---function ui.main_window:on_enter_notify_event(event)
-		--print("ss")
---end
-
 keybindings = {
    [Gdk.KEY_space]    = function() toggle_pause() end,
    [Gdk.KEY_Up]       = function() next_state(10) end,
