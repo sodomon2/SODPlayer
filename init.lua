@@ -14,16 +14,16 @@ config    = require 'lib.configuration'
 utils     = require 'lib.utils'
 lgettext  = require 'lib.lgettext'
 
-lgi       = require 'lgi'             -- La libreria que me permitira usar GTK
-GObject   = lgi.GObject               -- Parte de lgi
-GLib      = lgi.GLib                  -- para el treeview
-Gdk       = lgi.Gdk                   -- para las keybindings
-Gtk       = lgi.require('Gtk', '3.0') -- El objeto GTK
+lgi       = require 'lgi'                -- La libreria que me permitira usar GTK
+GObject   = lgi.require('GObject','2.0') -- Parte de lgi
+GLib      = lgi.require('GLib','2.0')    -- para el bucle de reproducción
+Gdk       = lgi.require('Gdk', '3.0')    -- para las keybindings
+Gtk       = lgi.require('Gtk', '3.0')    -- El objeto GTK
 Gst       = lgi.require("Gst", "1.0")
-GdkX11    = lgi.GdkX11
-Gio       = lgi.Gio
+GdkX11    = lgi.require('GdkX11', '3.0')
+Gio       = lgi.require('Gio','2.0')
 if tonumber(Gst._version) >= 1.0 then
-   GstVideo = lgi.GstVideo
+   GstVideo = lgi.require('GstVideo','1.0')
 end
 
 print(Gst._version)
