@@ -16,8 +16,7 @@ end
 show_and_hide_toolbar()
 
 function ui.btn_toolbar_file:on_clicked()
-	ui.file_media_chooser:run()
-	ui.file_media_chooser:hide()
+	open_media()
 end
 
 function ui.btn_toolbar_url:on_clicked()

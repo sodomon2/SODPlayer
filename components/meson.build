@@ -9,7 +9,8 @@ sources = [
     'SODPlayer-subtitles.lua',
     'SODPlayer-toolbar.lua',
     'SODPlayer-video.lua',
-    'SODPlayer-volume.lua'
+    'SODPlayer-volume.lua',
+    'SODPlayer-chooser.lua'
 ]
 
 install_data(

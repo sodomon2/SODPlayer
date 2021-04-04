@@ -75,21 +75,6 @@ local function bus_callback(bus, message)
 	return true
 end
 
-function ui.btn_chooser_open:on_clicked()
-	media_name = ui.file_media_chooser:get_filename(chooser)
-	table.insert(conf.history.recents, 'file://' .. media_name)
-	ui.file_media_chooser:hide()
-	config:save(('%s/sodplayer.json'):format(dir), conf)
-	title(media_name)
-	stop_media()
-	play.uri = ('file://%s'):format(media_name)
-	play_media()
-end
-
-function ui.btn_chooser_close:on_clicked()
-	ui.file_media_chooser:hide()
-end
-
 function url()
 	stop_media()
 	ui.entry_url:grab_focus()

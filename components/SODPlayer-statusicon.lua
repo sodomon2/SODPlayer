@@ -31,7 +31,7 @@ function create_menu(event_button, event_time)
 			  stock = "gtk-open"
 			},
 			on_activate = function()
-				ui.file_media_chooser:run()
+				open_media()
 			end
 		},
 		Gtk.ImageMenuItem {

@@ -57,6 +57,7 @@ require('components.SODPlayer-menus')
 require('components.SODPlayer-toolbar')
 require('components.SODPlayer-duration')
 require('components.SODPlayer-recents')
+require('components.SODPlayer-chooser')
 
 function quit()
 	Gtk.main_quit()
@@ -70,11 +71,6 @@ end
 
 function menu_archive_item_quit:on_button_press_event()
 	quit()
-end
-
-function ui.menu_archive_item_open:on_button_press_event()
-	ui.file_media_chooser:run()
-	ui.file_media_chooser:hide()
 end
 
 function ui.menu_subtitles_item:on_button_press_event()
