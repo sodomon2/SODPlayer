@@ -73,11 +73,6 @@ function menu_archive_item_quit:on_button_press_event()
 	quit()
 end
 
-function ui.menu_subtitles_item:on_button_press_event()
-	ui.file_subtitle_chooser:run()
-	ui.file_subtitle_chooser:hide()
-end
-
 function ui.menu_about_item:on_button_press_event()
 	ui.about_window:run()
 	ui.about_window:hide()

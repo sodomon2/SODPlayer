@@ -15,6 +15,14 @@ file_media_chooser = Gtk.FileChooserDialog({
 file_media_chooser:add_button(gettext:gettext("Open"), Gtk.ResponseType.OK)
 file_media_chooser:add_button(gettext:gettext("Cancel"), Gtk.ResponseType.CANCEL)
 
+file_subtitle_chooser = Gtk.FileChooserDialog({
+	title 		      = gettext:gettext("Select subtitle"),
+	action		      = Gtk.FileChooserAction.OPEN
+})
+
+file_subtitle_chooser:add_button(gettext:gettext("Open"), Gtk.ResponseType.OK)
+file_subtitle_chooser:add_button(gettext:gettext("Cancel"), Gtk.ResponseType.CANCEL)
+
 function open_media()
 	chooser = file_media_chooser:run()
 	if chooser == Gtk.ResponseType.OK then

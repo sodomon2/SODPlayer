@@ -8,20 +8,20 @@
 
 subtitle_size = conf.subtitles.font_size
 
-function subtitle_load()
-	srt_file = ui.file_subtitle_chooser:get_filename(chooser)
-	play.suburi = 'file://' .. srt_file
-	play.subtitle_font_desc = subtitle_size
-	print (subtitle_size)
+function open_subtitle()
+	chooser = file_subtitle_chooser:run()
+	if chooser == Gtk.ResponseType.OK then
+		srt_file = file_subtitle_chooser:get_filename(chooser)
+		play.suburi = ('file://%s'):format(srt_file)
+		play.subtitle_font_desc = subtitle_size
+		file_subtitle_chooser:hide()
+	elseif chooser == Gtk.ResponseType.CANCEL then
+		file_subtitle_chooser:hide()
+	end
 end
 
-function ui.btn_subtitle_open:on_clicked()
-	subtitle_load()
-	ui.file_subtitle_chooser:hide()
-end
-
-function ui.btn_subtitle_close:on_clicked()
-	ui.file_subtitle_chooser:hide()
+function ui.menu_subtitles_item:on_button_press_event()
+	open_subtitle()
 end
 
 ui.subtitle_font_widget:set_font(subtitle_size)
