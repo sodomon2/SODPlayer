@@ -9,7 +9,7 @@
 subtitle_size = conf.subtitles.font_size
 
 function open_subtitle()
-	chooser = file_subtitle_chooser:run()
+	local chooser = file_subtitle_chooser:run()
 	if chooser == Gtk.ResponseType.OK then
 		srt_file = file_subtitle_chooser:get_filename(chooser)
 		play.suburi = ('file://%s'):format(srt_file)

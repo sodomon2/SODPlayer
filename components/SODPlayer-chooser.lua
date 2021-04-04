@@ -24,7 +24,7 @@ file_subtitle_chooser:add_button(gettext:gettext("Open"), Gtk.ResponseType.OK)
 file_subtitle_chooser:add_button(gettext:gettext("Cancel"), Gtk.ResponseType.CANCEL)
 
 function open_media()
-	chooser = file_media_chooser:run()
+	local chooser = file_media_chooser:run()
 	if chooser == Gtk.ResponseType.OK then
 		media_name = file_media_chooser:get_filename(chooser)
 		table.insert(conf.history.recents, 'file://' .. media_name)
