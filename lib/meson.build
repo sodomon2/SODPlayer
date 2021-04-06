@@ -2,7 +2,6 @@ sources = [
     'configuration.lua',
     'json.lua',
     'lgettext.lua',
-    'luar-locale.lua',
     'middleclass.lua',
     'utils.lua'
 ]
