@@ -30,11 +30,11 @@ function ui.btn_toolbar_preferences:on_clicked()
 end
 
 function ui.btn_toolbar_next:on_clicked()
-	next_state()
+	next_state(15)
 end
 
 function ui.btn_toolbar_prev:on_clicked()
-	prev_state()
+	prev_state(15)
 end
 
 function ui.btn_toolbar_close:on_clicked()
