@@ -1,9 +1,9 @@
 --[[--
  @package   SODPlayer
  @filename  SODPlayer-duration.lua
- @version   2.0
+ @version   3.0
  @autor     Diaz Urbaneja Victor Diego Alejandro <sodomon2@gmail.com>
- @date      09.08.2020 13:36:42 -04 
+ @date      09.08.2020 13:36:42 -04
 ]]
 
 function ns_to_str (ns)

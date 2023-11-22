@@ -1,7 +1,7 @@
 --[[--
  @package   SODPlayer
  @filename  SODPlayer-menus.lua
- @version   2.0
+ @version   3.0
  @autor     Diaz Urbaneja Victor Diego Alejandro <sodomon2@gmail.com>
  @date      03.08.2020 10:52:55 -04
 ]]
@@ -23,7 +23,7 @@ menu_archive_item_quit = Gtk.ImageMenuItem {
 	image = Gtk.Image {stock = "gtk-quit"}
 }
 
-function ui.main_window:on_button_press_event(event)	
+function ui.main_window:on_button_press_event(event)
 	if (event.type == 'BUTTON_PRESS' and event.button == 3) then
 		local menu = Gtk.Menu {
 			Gtk.ImageMenuItem {

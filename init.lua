@@ -2,9 +2,9 @@
 
 --[[--
  @package   SODplayer
- @filename  init.lua  
- @version   2.0
- @author    Diaz Urbaneja Victor Diego Alejandro <sodomon2@gmail.com> 
+ @filename  init.lua
+ @version   3.0
+ @author    Diaz Urbaneja Victor Diego Alejandro <sodomon2@gmail.com>
  @date      19.06.2020 15:43:09 -04
 --]]
 
@@ -39,7 +39,7 @@ if conf.general.language == 'es' then
 else
   gettext   = lgettext.translation('sodplayer', '@prefix@/@localedir@/', {'en'}, 'UTF-8')
   builder   = Gtk.Builder()
-end 
+end
 
 assert(builder:add_from_file('data/player.ui'))
 ui = builder.objects
@@ -63,7 +63,7 @@ function quit()
 	Gtk.main_quit()
 	main_loop:quit()
 	os.exit(0)
-end 
+end
 
 function ui.main_window:on_destroy()
 	quit()

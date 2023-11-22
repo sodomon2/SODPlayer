@@ -1,10 +1,10 @@
 --[[--
  @package   SODPlayer
  @filename  SODPlayer-statusicon.lua
- @version   2.0
+ @version   3.0
  @author    Diaz Urbaneja Victor Diego Alejandro <sodomon2@gmail.com>
  @date      26.07.2020 12:19:29 -04
---]]  
+--]]
 
 ui.tray:set_visible(conf.general.status_icon)
 
@@ -16,7 +16,7 @@ function statusicon()
 	else
 	  ui.main_window:hide()
 	  pipeline.state = 'PAUSED'
-	end 
+	end
 end
 
 function ui.tray:on_activate()

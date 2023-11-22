@@ -1,10 +1,10 @@
 --[[--
  @package   SODPlayer
  @filename  SODPlayer-chooser.lua
- @version   2.0
+ @version   3.0
  @author    Diaz Urbaneja Victor Diego Alejandro <sodomon2@gmail.com>
  @date      03.04.2021 22:47:05 -04
---]]  
+--]]
 
 file_media_chooser = Gtk.FileChooserDialog({
 	title 		   = gettext:gettext("Select File"),

@@ -1,7 +1,7 @@
 --[[--
  @package   SODPlayer
  @filename  SODPlayer-recents.lua
- @version   2.0
+ @version   3.0
  @author    Díaz Urbaneja Víctor Eduardo Diex <victor.vector008@gmail.com>
  @co-author Diaz Urbaneja Victor Diego Alejandro <sodomon2@gmail.com>
  @date      31.07.2020 02:24:50 -04
@@ -37,19 +37,19 @@ if #recents_item < 1 then
 	ui.btn_clear_recent.sensitive = false
 	ui.menu_archive:popdown({menu_archive_recent})
 	return
-end 
+end
 
 function ui.btn_clear_recent:on_clicked()
 	if conf.other.clear_recent == true then
 		ui.delete_dialog:run()
 		ui.delete_dialog:hide()
 	else
-		ui.btn_clear_recent.sensitive = false			
+		ui.btn_clear_recent.sensitive = false
 		conf.history.recents = {}
 		config:save(('%s/sodplayer.json'):format(dir), conf)
 		ui.delete_dialog:hide()
 	end
-end 
+end
 
 function ui.btn_dialog_delete:on_clicked()
 	conf.history.recents = {}

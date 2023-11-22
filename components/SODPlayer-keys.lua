@@ -1,7 +1,7 @@
 --[[--
  @package   SODPlayer
  @filename  SODPlayer-keys.lua
- @version   2.0
+ @version   3.0
  @author    Diaz Urbaneja Victor Diego Alejandro <sodomon2@gmail.com>
  @date      02.07.2020 17:27:23 -04
 --]]
@@ -33,7 +33,7 @@ function toggle_pause()
 		pipeline.state = 'PLAYING'
 		ui.img_media_state.icon_name = 'media-playback-pause'
 	end
-end 
+end
 
 function quit_fullscreen()
 	ui.img_fullscreen.stock = 'gtk-fullscreen'
@@ -52,7 +52,7 @@ function toggle_fullscreen()
 	else
 		quit_fullscreen()
 	end
-end 
+end
 
 function toggle_mute()
 	mute = not mute
@@ -100,7 +100,7 @@ end
 
 function ui.btn_fullscreen:on_clicked()
 	toggle_fullscreen()
-end 
+end
 
 function ui.btn_next:on_clicked(id)
 	next_state()
