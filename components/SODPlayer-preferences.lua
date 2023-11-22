@@ -22,7 +22,7 @@ function recent_max_item()
 	local max_item = ui.recents_spin:get_value_as_int(ui.recents_spin)
 	local url_max_item = ui.url_spin:get_value_as_int(ui.url_spin)
 	conf.history.max_item = max_item
-	conf.history.url_max_item = url_max_item 
+	conf.history.url_max_item = url_max_item
 end
 
 ui.recents_spin:set_value(recent_item_max)
@@ -72,7 +72,7 @@ function ui.setting_language:on_changed()
 	elseif (self:get_active_id() == 'en') then
 		conf.general.language = 'en'
 	else
-		conf.general.language = 'default'
+		conf.general.language = 'en'
 	end
 	config:save(('%s/sodplayer.json'):format(dir), conf)
 end

@@ -52,7 +52,7 @@ function table.reverse(tbl)
 end
 
 
-local _default_localedir = '/usr/share/locale'
+local _default_localedir = '@prefix@/@localedir@/'
 
 local _c2lua = function(plural)
     local correct = plural:gsub('!', '~')
