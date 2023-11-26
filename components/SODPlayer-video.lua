@@ -10,6 +10,16 @@ pipeline    = Gst.Pipeline.new('pipeline')
 play        = Gst.ElementFactory.make('playbin', 'play')
 main_loop   = GLib.MainLoop()
 
+local last_time = os.time()
+local curr_time = os.time()
+local timeout   = 10
+
+function ui.main_window:on_event(event)
+	last_time = os.time()
+end
+
+local visible_control = false
+
 function panel_sensitive(state)
 	ui.btn_play.sensitive = state
 	ui.btn_prev.sensitive = state
@@ -36,8 +46,7 @@ local btn_play_trigger = true
 function play_media()
 	panel_sensitive(true)
 	ui.img_media_state.icon_name = 'media-playback-pause'
-
-	GLib.timeout_add_seconds(GLib.PRIORITY_DEFAULT, 1,function()
+	GLib.timeout_add_seconds(GLib.PRIORITY_DEFAULT, 1, function()
 		local duration = pipeline:query_duration(Gst.Format.TIME)
 		if duration then
 			ui.media_slider:set_range(0, math.floor(duration/Gst.SECOND) )
@@ -50,8 +59,27 @@ function play_media()
 		end
 		ui.info_current_time.label = get_position()
 		ui.info_full_time.label = get_duration()
+
+
+		curr_time = os.time()
+		if (fullscreen) then
+		if ( tonumber(last_time)+timeout < tonumber(curr_time) ) then
+			if visible_control == false then
+				ui.revealer:set_reveal_child(false)
+				visible_control = true
+			end
+		else
+			if visible_control == true then
+				ui.revealer:set_reveal_child(true)
+				visible_control = false
+			end
+		end
+		end
 		return true
-	end)
+	end
+	)
+
+
 	pipeline.state = 'PLAYING'
 	main_loop:run()
 	pipeline.state = 'READY'
