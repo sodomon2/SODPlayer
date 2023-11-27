@@ -5,6 +5,7 @@ Copyright 2017 t-kenji <protect.2501@gmail.com>
 MIT Licensed.
 ]]
 local bit = require('bit')
+local unpack = unpack or table.unpack
 
 local _gettext = {}
 gettext = _gettext

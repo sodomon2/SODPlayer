@@ -36,7 +36,7 @@ end
 
 function seconds_hide_item()
 	local seconds = ui.seconds_spin_hide:get_value_as_int(ui.seconds_spin_hide)
-	conf.other.seconds_hide = seconds
+	conf.other.seconds_for_hide = seconds
 end
 
 function ui.control_animation_checkbutton:on_clicked()
