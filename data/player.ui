@@ -771,6 +771,11 @@ audio-volume-medium-symbolic</property>
     <property name="step-increment">1</property>
     <property name="page-increment">10</property>
   </object>
+  <object class="GtkAdjustment" id="seconds_spin_control">
+    <property name="upper">100</property>
+    <property name="step-increment">1</property>
+    <property name="page-increment">10</property>
+  </object>
   <object class="GtkStatusIcon" id="tray">
     <property name="pixbuf">images/sodplayer.svg</property>
     <property name="visible">False</property>
@@ -910,6 +915,10 @@ audio-volume-medium-symbolic</property>
                           <object class="GtkFrame">
                             <property name="visible">True</property>
                             <property name="can-focus">False</property>
+                            <property name="margin-start">5</property>
+                            <property name="margin-end">5</property>
+                            <property name="margin-top">5</property>
+                            <property name="margin-bottom">5</property>
                             <property name="label-xalign">0</property>
                             <property name="shadow-type">out</property>
                             <child>
@@ -1038,6 +1047,10 @@ audio-volume-medium-symbolic</property>
                           <object class="GtkFrame">
                             <property name="visible">True</property>
                             <property name="can-focus">False</property>
+                            <property name="margin-start">5</property>
+                            <property name="margin-end">5</property>
+                            <property name="margin-top">5</property>
+                            <property name="margin-bottom">5</property>
                             <property name="label-xalign">0</property>
                             <property name="shadow-type">out</property>
                             <child>
@@ -1073,7 +1086,10 @@ audio-volume-medium-symbolic</property>
                                           <object class="GtkSpinButton" id="recents_spin">
                                             <property name="visible">True</property>
                                             <property name="can-focus">True</property>
-                                            <property name="margin-bottom">3</property>
+                                            <property name="margin-start">5</property>
+                                            <property name="margin-end">6</property>
+                                            <property name="margin-top">5</property>
+                                            <property name="margin-bottom">5</property>
                                             <property name="max-width-chars">0</property>
                                             <property name="text" translatable="yes">0</property>
                                             <property name="adjustment">recents_spin_control</property>
@@ -1113,6 +1129,10 @@ audio-volume-medium-symbolic</property>
                           <object class="GtkFrame">
                             <property name="visible">True</property>
                             <property name="can-focus">False</property>
+                            <property name="margin-start">5</property>
+                            <property name="margin-end">5</property>
+                            <property name="margin-top">5</property>
+                            <property name="margin-bottom">5</property>
                             <property name="label-xalign">0</property>
                             <property name="shadow-type">out</property>
                             <child>
@@ -1148,7 +1168,10 @@ audio-volume-medium-symbolic</property>
                                           <object class="GtkSpinButton" id="url_spin">
                                             <property name="visible">True</property>
                                             <property name="can-focus">True</property>
-                                            <property name="margin-bottom">3</property>
+                                            <property name="margin-start">5</property>
+                                            <property name="margin-end">5</property>
+                                            <property name="margin-top">5</property>
+                                            <property name="margin-bottom">5</property>
                                             <property name="max-width-chars">0</property>
                                             <property name="text" translatable="yes">0</property>
                                             <property name="adjustment">url_spin_control</property>
@@ -1191,10 +1214,10 @@ audio-volume-medium-symbolic</property>
                             <property name="can-focus">True</property>
                             <property name="receives-default">True</property>
                             <property name="halign">start</property>
-                            <property name="margin-left">3</property>
-                            <property name="margin-right">3</property>
-                            <property name="margin-top">3</property>
-                            <property name="margin-bottom">3</property>
+                            <property name="margin-start">5</property>
+                            <property name="margin-end">5</property>
+                            <property name="margin-top">5</property>
+                            <property name="margin-bottom">5</property>
                           </object>
                           <packing>
                             <property name="expand">False</property>
@@ -1219,10 +1242,94 @@ audio-volume-medium-symbolic</property>
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkLabel">
+                      <object class="GtkBox">
                         <property name="visible">True</property>
                         <property name="can-focus">False</property>
-                        <property name="label" translatable="yes">@TODO</property>
+                        <property name="orientation">vertical</property>
+                        <child>
+                          <object class="GtkCheckButton" id="control_animation_checkbutton">
+                            <property name="label" translatable="yes">Animation control bar</property>
+                            <property name="visible">True</property>
+                            <property name="can-focus">True</property>
+                            <property name="receives-default">False</property>
+                            <property name="margin-start">5</property>
+                            <property name="margin-end">5</property>
+                            <property name="margin-top">5</property>
+                            <property name="margin-bottom">5</property>
+                            <property name="draw-indicator">True</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkFrame">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="margin-start">5</property>
+                            <property name="margin-end">5</property>
+                            <property name="margin-top">5</property>
+                            <property name="margin-bottom">5</property>
+                            <property name="label-xalign">0</property>
+                            <property name="shadow-type">in</property>
+                            <child>
+                              <object class="GtkAlignment">
+                                <property name="visible">True</property>
+                                <property name="can-focus">False</property>
+                                <property name="left-padding">12</property>
+                                <child>
+                                  <object class="GtkBox">
+                                    <property name="visible">True</property>
+                                    <property name="can-focus">False</property>
+                                    <property name="homogeneous">True</property>
+                                    <child>
+                                      <object class="GtkLabel">
+                                        <property name="visible">True</property>
+                                        <property name="can-focus">False</property>
+                                        <property name="label" translatable="yes">Seconds :</property>
+                                      </object>
+                                      <packing>
+                                        <property name="expand">False</property>
+                                        <property name="fill">True</property>
+                                        <property name="position">0</property>
+                                      </packing>
+                                    </child>
+                                    <child>
+                                      <object class="GtkSpinButton" id="seconds_spin_hide">
+                                        <property name="visible">True</property>
+                                        <property name="can-focus">True</property>
+                                        <property name="margin-start">5</property>
+                                        <property name="margin-end">5</property>
+                                        <property name="margin-top">5</property>
+                                        <property name="margin-bottom">5</property>
+                                        <property name="adjustment">seconds_spin_control</property>
+                                      </object>
+                                      <packing>
+                                        <property name="expand">False</property>
+                                        <property name="fill">True</property>
+                                        <property name="position">1</property>
+                                      </packing>
+                                    </child>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                            <child type="label">
+                              <object class="GtkLabel">
+                                <property name="visible">True</property>
+                                <property name="can-focus">False</property>
+                                <property name="label" translatable="yes">Seconds for hide controls:</property>
+                              </object>
+                            </child>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
                       </object>
                       <packing>
                         <property name="position">2</property>
@@ -1232,7 +1339,7 @@ audio-volume-medium-symbolic</property>
                       <object class="GtkLabel">
                         <property name="visible">True</property>
                         <property name="can-focus">False</property>
-                        <property name="label" translatable="yes">@TODO</property>
+                        <property name="label" translatable="yes">Control</property>
                       </object>
                       <packing>
                         <property name="position">2</property>
