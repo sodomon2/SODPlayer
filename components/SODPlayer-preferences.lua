@@ -6,9 +6,9 @@
  @date      15.07.2020 21:50:42 -04
 --]]
 
-recent_item_max = conf.history.max_item
-url_item_max    = conf.history.url_max_item
-seconds_hide	= conf.other.seconds_for_hide
+recent_item_max = tonumber(conf.history.max_item)
+url_item_max    = tonumber(conf.history.url_max_item)
+seconds_hide	= tonumber(conf.other.seconds_for_hide)
 
 function ui.btn_preferences_cancel:on_clicked()
 	ui.preferences_window:hide()
@@ -49,7 +49,7 @@ function ui.control_animation_checkbutton:on_clicked()
 	end
 	config:save(('%s/sodplayer.json'):format(dir), conf)
 end
-ui.seconds_spin_hide:set_value(seconds_for_hide)
+ui.seconds_spin_hide:set_value(seconds_hide)
 ui.control_animation_checkbutton:set_active(conf.other.control_animation)
 
 function ui.btn_preferences_apply:on_clicked()
