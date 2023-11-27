@@ -33,7 +33,7 @@ configure_file (
     install_dir: join_paths(datadir , 'sodplayer')
 )
 
-subdir('components')
+subdir('src')
 subdir('lib')
 subdir('po')
 subdir('data')

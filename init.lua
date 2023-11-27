@@ -41,24 +41,24 @@ else
   builder   = Gtk.Builder()
 end
 
-assert(builder:add_from_file('data/player.ui'))
+assert(builder:add_from_file('data/SODPlayer.ui'))
 ui = builder.objects
 app = Gtk.Application.new ('com.github.sodomon2.SODPlayer',Gio.ApplicationFlags.HANDLES_OPEN)
 fullscreen = false
 
 -- SODPlayer
-require('components.SODPlayer-app')
-require('components.SODPlayer-volume')
-require('components.SODPlayer-video')
-require('components.SODPlayer-keys')
-require('components.SODPlayer-subtitles')
-require('components.SODPlayer-preferences')
-require('components.SODPlayer-statusicon')
-require('components.SODPlayer-menus')
-require('components.SODPlayer-toolbar')
-require('components.SODPlayer-duration')
-require('components.SODPlayer-recents')
-require('components.SODPlayer-chooser')
+require('src.SODPlayer-app')
+require('src.SODPlayer-volume')
+require('src.SODPlayer-video')
+require('src.SODPlayer-keys')
+require('src.SODPlayer-subtitles')
+require('src.SODPlayer-preferences')
+require('src.SODPlayer-statusicon')
+require('src.SODPlayer-menus')
+require('src.SODPlayer-toolbar')
+require('src.SODPlayer-duration')
+require('src.SODPlayer-recents')
+require('src.SODPlayer-chooser')
 
 function quit()
 	Gtk.main_quit()

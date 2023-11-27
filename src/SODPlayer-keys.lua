@@ -1,6 +1,6 @@
 --[[--
  @package   SODPlayer
- @filename  SODPlayer-keys.lua
+ @filename  src/SODPlayer-keys.lua
  @version   3.0
  @author    Diaz Urbaneja Victor Diego Alejandro <sodomon2@gmail.com>
  @date      02.07.2020 17:27:23 -04

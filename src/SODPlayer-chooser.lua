@@ -1,6 +1,6 @@
 --[[--
  @package   SODPlayer
- @filename  SODPlayer-chooser.lua
+ @filename  src/SODPlayer-chooser.lua
  @version   3.0
  @author    Diaz Urbaneja Victor Diego Alejandro <sodomon2@gmail.com>
  @date      03.04.2021 22:47:05 -04

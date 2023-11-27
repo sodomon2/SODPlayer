@@ -15,5 +15,5 @@ sources = [
 
 install_data(
     sources,
-    install_dir: join_paths(get_option('datadir'), 'sodplayer/components'),
+    install_dir: join_paths(get_option('datadir'), 'sodplayer/src'),
 )

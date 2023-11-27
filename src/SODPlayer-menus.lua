@@ -1,6 +1,6 @@
 --[[--
  @package   SODPlayer
- @filename  SODPlayer-menus.lua
+ @filename  src/SODPlayer-menus.lua
  @version   3.0
  @autor     Diaz Urbaneja Victor Diego Alejandro <sodomon2@gmail.com>
  @date      03.08.2020 10:52:55 -04

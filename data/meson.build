@@ -24,7 +24,7 @@ install_data(
 )
 
 install_data(
-    'player.ui',
+    'SODPlayer.ui',
     install_dir: join_paths(get_option('datadir'), 'sodplayer/data')
 )
 

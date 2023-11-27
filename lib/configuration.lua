@@ -1,7 +1,7 @@
 #!/usr/bin/lua
 --[[--
  @package   SODPlayer
- @filename  configuration.lua
+ @filename  lib/configuration.lua
  @version   1.0
  @author    Díaz Urbaneja Víctor Eduardo Diex
  @date      22.07.2020 10:46:55 -04

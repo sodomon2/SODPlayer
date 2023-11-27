@@ -1,6 +1,6 @@
 --[[--
  @package   SODPlayer
- @filename  SODPlayer-duration.lua
+ @filename  src/SODPlayer-duration.lua
  @version   3.0
  @autor     Diaz Urbaneja Victor Diego Alejandro <sodomon2@gmail.com>
  @date      09.08.2020 13:36:42 -04

@@ -1,6 +1,6 @@
 --[[--
  @package   SODPlayer
- @filename  SODPlayer-statusicon.lua
+ @filename  src/SODPlayer-statusicon.lua
  @version   3.0
  @author    Diaz Urbaneja Victor Diego Alejandro <sodomon2@gmail.com>
  @date      26.07.2020 12:19:29 -04
