@@ -1,7 +1,6 @@
 sources = [
     'configuration.lua',
     'json.lua',
-    'lgettext.lua',
     'middleclass.lua',
     'utils.lua'
 ]
@@ -11,7 +10,7 @@ configure_file (
     output: ('lgettext.lua').format(prefix, localedir),
     configuration: search_mo_files,
     install: true,
-    install_dir: join_paths(datadir , 'sodplayer')
+    install_dir: join_paths(datadir , 'sodplayer/lib')
 )
 
 install_data(
