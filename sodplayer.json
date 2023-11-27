@@ -12,7 +12,9 @@
     "url_max_item": 50
   },
   "other": {
-    "clear_recent": true
+    "clear_recent": true,
+    "control_animation": true,
+    "seconds_for_hide": 10
   },
   "subtitles": {
     "font_size": "Sans 18"
