@@ -549,6 +549,7 @@
           <object class="GtkRevealer" id="revealer">
             <property name="visible">True</property>
             <property name="can-focus">False</property>
+            <property name="transition-type">none</property>
             <property name="reveal-child">True</property>
             <child>
               <object class="GtkHeaderBar" id="header_control">
@@ -1304,6 +1305,7 @@ audio-volume-medium-symbolic</property>
                                         <property name="margin-end">5</property>
                                         <property name="margin-top">5</property>
                                         <property name="margin-bottom">5</property>
+                                        <property name="max-width-chars">0</property>
                                         <property name="adjustment">seconds_spin_control</property>
                                       </object>
                                       <packing>

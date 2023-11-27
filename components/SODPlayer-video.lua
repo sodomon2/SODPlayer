@@ -12,7 +12,7 @@ main_loop   = GLib.MainLoop()
 
 local last_time = os.time()
 local curr_time = os.time()
-local timeout   = 10
+local timeout   = tonumber(conf.other.seconds_for_hide)
 
 function ui.main_window:on_event(event)
 	last_time = os.time()

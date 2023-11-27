@@ -6,8 +6,9 @@
  @date      15.07.2020 21:50:42 -04
 --]]
 
-recent_item_max = tonumber(conf.history.max_item)
-url_item_max    = tonumber(conf.history.url_max_item)
+recent_item_max = conf.history.max_item
+url_item_max    = conf.history.url_max_item
+seconds_hide	= conf.other.seconds_for_hide
 
 function ui.btn_preferences_cancel:on_clicked()
 	ui.preferences_window:hide()
@@ -33,10 +34,29 @@ function showtoolbar()
 	conf.general.show_toolbar = check_toolbar
 end
 
+function seconds_hide_item()
+	local seconds = ui.seconds_spin_hide:get_value_as_int(ui.seconds_spin_hide)
+	conf.other.seconds_hide = seconds
+end
+
+function ui.control_animation_checkbutton:on_clicked()
+	if (self:get_active()) then
+		conf.other.control_animation = true
+		ui.revealer:set_transition_type('SLIDE_DOWN')
+	else
+		conf.other.control_animation = false
+		ui.revealer:set_transition_type('NONE')
+	end
+	config:save(('%s/sodplayer.json'):format(dir), conf)
+end
+ui.seconds_spin_hide:set_value(seconds_for_hide)
+ui.control_animation_checkbutton:set_active(conf.other.control_animation)
+
 function ui.btn_preferences_apply:on_clicked()
 	subtitles()
 	recent_max_item()
 	showtoolbar()
+	seconds_hide_item()
 	config:save(('%s/sodplayer.json'):format(dir), conf)
 end
 
