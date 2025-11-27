@@ -1,7 +1,7 @@
 i18n.merge_file(
     input: 'sodplayer.desktop.in',
     output: 'sodplayer.desktop',
-    po_dir: join_paths(meson.source_root(), 'po'),
+    po_dir: join_paths(meson.project_source_root(), 'po'),
     type: 'desktop',
     install: true,
     install_dir: join_paths(get_option('datadir'), 'applications')

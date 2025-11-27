@@ -66,7 +66,7 @@ function ui.main_window:on_button_press_event(event)
 				end
 			}
 		}
-		menu:attach_to_widget(ui.main_window, null)
+		menu:attach_to_widget(ui.main_window, nil)
 		menu:show_all()
 		menu:popup(nil, nil, nil, event.button, event.time)
 	end
